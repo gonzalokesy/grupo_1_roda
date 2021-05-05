@@ -36,7 +36,7 @@ Otro de los puntos conversados fue que, siempre, las funcionalidades y elementos
 
 Aquí detallaremos algunos de los sitios que nos sirvieron de referencia:
 
- - [https://www.mulberry.com/row/](https://www.mulberry.com/row/)
+ - [https://www.mulberry.com/row/](https://www.mulberry.com/row/) :handbag:
 
 Consideramos que la web de la marca **Mulberry** engloba casi a la perfección esto en lo que hacíamos hincapié. Tiene un diseño sutil y elegante, acorde con los productos ofrecidos. Destacamos la simpleza del menú y que cada botón o desplegable están fácilmente visibles.
 
@@ -46,13 +46,13 @@ En cuanto a las opciones de ingreso o registro, tomamos como referencia que apar
 
   
 
- - [https://olmobikes.net/](https://olmobikes.net/)
+ - [https://olmobikes.net/](https://olmobikes.net/) :mountain_bicyclist:
 
 Sumamos la página de la marca de bicicletas **Olmo** ya que nos ejemplifica cómo publicar este producto. Nos resulta interesante la utilización de los filtros según categoría, rodado, velocidades y tipo de freno.
 
   
 
- - [https://arcorencasa.com/](https://arcorencasa.com/)
+ - [https://arcorencasa.com/](https://arcorencasa.com/) :chocolate_bar:
 
 De la página de alimentos **Arcor** destacamos la navegación por las categorías y el menú desplegable. Otra característica a resaltar son los banners fijos que aparecen al ingresar en cada categoría.
 
@@ -60,11 +60,11 @@ Además, nos interesa que los productos seleccionados para el carrito de compras
 
 Otra característica es su formulario de login, resaltamos la simpleza del mismo.
 
- - [https://www.sushiclub.com.ar/](https://www.sushiclub.com.ar/)
+ - [https://www.sushiclub.com.ar/](https://www.sushiclub.com.ar/) :sushi:
 
 Aquí distinguimos la impronta estética del carrusel que conforma la home de **SushiClub**, ya que ocupa la totalidad de la pantalla, poniendo el peso en la fotografía del producto.
 
- - [https://www.adidas.com.ar/](https://www.adidas.com.ar/)
+ - [https://www.adidas.com.ar/](https://www.adidas.com.ar/) :runner:
 
 De la página de **Adidas** nos parece relevante que a la hora de seleccionar un producto para su compra cuenta con una galería de fotos en la que se permite hacer zoom para ver el producto desde todos sus ángulos; esto es importante ya que lo que estamos comprando no lo estamos tocando. Además nos gustó la sección de detalles. La sección de “valoraciones y compartir el look”, es un gran aporte.
 

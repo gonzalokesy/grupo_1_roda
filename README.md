@@ -1,6 +1,6 @@
 ## **Presentación del proyecto**
 
-### Producto ofrecido ###:bike:
+### Producto ofrecido :bike:
 
 Como equipo de desarrollo vamos a crear el e-commerce de **“Rodá”**, empresa de comercialización de **bicicletas y accesorios de estilo retro**.
 

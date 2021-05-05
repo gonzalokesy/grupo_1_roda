@@ -40,11 +40,11 @@ Aquí detallaremos algunos de los sitios que nos sirvieron de referencia:
 
  - [https://www.mulberry.com/row/](https://www.mulberry.com/row/) :handbag:
 
-Consideramos que la web de la marca **Mulberry** engloba casi a la perfección esto en lo que hacíamos hincapié. Tiene un diseño sutil y elegante, acorde con los productos ofrecidos. Destacamos la simpleza del menú y que cada botón o desplegable están fácilmente visibles.
+*Consideramos que la web de la marca **Mulberry** engloba casi a la perfección esto en lo que hacíamos hincapié. Tiene un diseño sutil y elegante, acorde con los productos ofrecidos. Destacamos la simpleza del menú y que cada botón o desplegable están fácilmente visibles.*
 
-Además, nos gusta que en los productos que tienen variaciones de color se pueda ver una fotografía en esa variante.
+*Además, nos gusta que en los productos que tienen variaciones de color se pueda ver una fotografía en esa variante.*
 
-En cuanto a las opciones de ingreso o registro, tomamos como referencia que aparece un desplegable con la opción de crear una cuenta o ingresar.
+*En cuanto a las opciones de ingreso o registro, tomamos como referencia que aparece un desplegable con la opción de crear una cuenta o ingresar.*
 
   
 

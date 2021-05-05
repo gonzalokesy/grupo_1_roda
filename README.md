@@ -20,11 +20,11 @@ El e-commerce apunta a **usuarios con gusto por la estética retro**, que deseen
 
 El equipo técnico está constituido por Vicente Macchione, Gonzalo Kesy y Andrea Eichenberger.
 
-:boy: **Vicente Macchione** tiene 25 años, es licenciado en Administración de Empresas. Tiene alma de emprendedor y es un apasionado de lo digital.
+- :boy: **Vicente Macchione** tiene 25 años, es licenciado en Administración de Empresas. Tiene alma de emprendedor y es un apasionado de lo digital.
 
-:boy: **Gonzalo Kesy** tiene 28 años. Dando sus primeros pasos en el desarrollo web. Motivado por descubrir nuevas oportunidades laborales y ampliar sus conocimientos. Ve al desarrollo web y la programación como un futuro deseable y se encuentra enfocado en ello.
+- :boy: **Gonzalo Kesy** tiene 28 años. Dando sus primeros pasos en el desarrollo web. Motivado por descubrir nuevas oportunidades laborales y ampliar sus conocimientos. Ve al desarrollo web y la programación como un futuro deseable y se encuentra enfocado en ello.
 
-:raising_hand: **Andrea Eichenberger** tiene 26 años, es licenciada en Comunicación Social y considera que en la actualidad las páginas webs son piezas comunicacionales clave para las instituciones y empresas, por eso decidió aprender a construirlas.
+- :raising_hand: **Andrea Eichenberger** tiene 26 años, es licenciada en Comunicación Social y considera que en la actualidad las páginas webs son piezas comunicacionales clave para las instituciones y empresas, por eso decidió aprender a construirlas.
 
 ### Referencias :mag_right:
 

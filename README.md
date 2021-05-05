@@ -38,7 +38,7 @@ Otro de los puntos conversados fue que, siempre, las funcionalidades y elementos
 
 Aquí detallaremos algunos de los sitios que nos sirvieron de referencia:  
 
-
+  
 
  - [https://www.mulberry.com/row/](https://www.mulberry.com/row/) :handbag:
 

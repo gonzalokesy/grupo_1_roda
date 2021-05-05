@@ -1,4 +1,4 @@
-## **Presentación del proyecto**
+## **Presentación del proyecto** :rocket:
 
 ### Producto ofrecido :bike:
 

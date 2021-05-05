@@ -54,7 +54,7 @@ Aquí detallaremos algunos de los sitios que nos sirvieron de referencia:
 
 Sumamos la página de la marca de bicicletas **Olmo** ya que nos ejemplifica cómo publicar este producto. Nos resulta interesante la utilización de los filtros según categoría, rodado, velocidades y tipo de freno.
 
-  
+ * * *
 
  - [https://arcorencasa.com/](https://arcorencasa.com/) :chocolate_bar:
 

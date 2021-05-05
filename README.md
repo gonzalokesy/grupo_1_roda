@@ -36,7 +36,9 @@ Luego de una puesta en común, pudimos concluir que **tenemos como prioridad con
 
 Otro de los puntos conversados fue que, siempre, las funcionalidades y elementos que se elijan para formar parte de la página a crear, deberán estar al servicio del objetivo de dicha página, es decir, que no deben elegirse a priori.
 
-Aquí detallaremos algunos de los sitios que nos sirvieron de referencia:
+Aquí detallaremos algunos de los sitios que nos sirvieron de referencia:  
+
+
 
  - [https://www.mulberry.com/row/](https://www.mulberry.com/row/) :handbag:
 

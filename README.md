@@ -1,6 +1,6 @@
-# Presentación del proyecto
+## Presentación del proyecto
 
-## Producto ofrecido :bike:
+### Producto ofrecido :bike:
 
 Como equipo de desarrollo vamos a crear el e-commerce de **“Rodá”**, empresa de comercialización de **bicicletas y accesorios de estilo retro**.
 
@@ -8,13 +8,13 @@ Las bicicletas que se pueden encontrar en la web de “Rodá” son de uso urban
 
   
 
-## Público objetivo
+### Público objetivo
 
 El e-commerce apunta a **usuarios con gusto por la estética retro**, que deseen incorporar este estilo a su movilidad diaria o recreativa. Se estima que aquellas personas que consulten el sitio serán **jóvenes**, **adultos** y todo aquel interesado en este tipo de productos.
 
   
 
-## Integrantes del equipo
+### Integrantes del equipo
 
 El equipo técnico está constituido por Vicente Macchione, Gonzalo Kesy y Andrea Eichenberger.
 
@@ -24,7 +24,7 @@ El equipo técnico está constituido por Vicente Macchione, Gonzalo Kesy y Andre
 
 **Andrea Eichenberger** tiene 26 años, es licenciada en Comunicación Social y considera que en la actualidad las páginas webs son piezas comunicacionales clave para las instituciones y empresas, por eso decidió aprender a construirlas.
 
-## Referencias
+### Referencias
 
 Como equipo estuvimos recorriendo varias páginas web para lograr identificar qué de ellas nos resultaba atractivo e interesante para poder aplicar en nuestro proyecto, y qué características no nos gustaban.
 

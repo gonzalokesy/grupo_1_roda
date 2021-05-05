@@ -48,7 +48,7 @@ Aquí detallaremos algunos de los sitios que nos sirvieron de referencia:
 
 *En cuanto a las opciones de ingreso o registro, tomamos como referencia que aparece un desplegable con la opción de crear una cuenta o ingresar.*
 
-  
+  [=========]
 
  - [https://olmobikes.net/](https://olmobikes.net/) :mountain_bicyclist:
 

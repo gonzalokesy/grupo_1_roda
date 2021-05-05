@@ -14,7 +14,7 @@ Las bicicletas que se pueden encontrar en la web de “Rodá” son de uso urban
 
 El e-commerce apunta a **usuarios con gusto por la estética retro**, que deseen incorporar este estilo a su movilidad diaria o recreativa. Se estima que aquellas personas que consulten el sitio serán **jóvenes**, **adultos** y todo aquel interesado en este tipo de productos.
 
-  
+***  
 
 ### Integrantes del equipo :muscle:
 
@@ -25,6 +25,8 @@ El equipo técnico está constituido por Vicente Macchione, Gonzalo Kesy y Andre
 - :boy: **Gonzalo Kesy** tiene 28 años. Dando sus primeros pasos en el desarrollo web. Motivado por descubrir nuevas oportunidades laborales y ampliar sus conocimientos. Ve al desarrollo web y la programación como un futuro deseable y se encuentra enfocado en ello.
 
 - :raising_hand: **Andrea Eichenberger** tiene 26 años, es licenciada en Comunicación Social y considera que en la actualidad las páginas webs son piezas comunicacionales clave para las instituciones y empresas, por eso decidió aprender a construirlas.
+
+***
 
 ### Referencias :mag_right:
 

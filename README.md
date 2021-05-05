@@ -4,7 +4,9 @@
 
 Como equipo de desarrollo vamos a crear el e-commerce de **“Rodá”**, empresa de comercialización de **bicicletas y accesorios de estilo retro**.
 
-Las bicicletas que se pueden encontrar en la web de “Rodá” son de uso urbano o recreativo, abarcando diferentes modelos.
+Las bicicletas que se pueden encontrar en la web de “Rodá” son de uso urbano o recreativo, abarcando diferentes modelos.  
+
+
 
   
 

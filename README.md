@@ -26,7 +26,7 @@ El equipo técnico está constituido por Vicente Macchione, Gonzalo Kesy y Andre
 
 :raising_hand: **Andrea Eichenberger** tiene 26 años, es licenciada en Comunicación Social y considera que en la actualidad las páginas webs son piezas comunicacionales clave para las instituciones y empresas, por eso decidió aprender a construirlas.
 
-### Referencias
+### Referencias :mag_right:
 
 Como equipo estuvimos recorriendo varias páginas web para lograr identificar qué de ellas nos resultaba atractivo e interesante para poder aplicar en nuestro proyecto, y qué características no nos gustaban.
 

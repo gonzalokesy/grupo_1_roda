@@ -7,7 +7,7 @@ Como equipo de desarrollo vamos a crear el e-commerce de **“Rodá”**, empres
 Las bicicletas que se pueden encontrar en la web de “Rodá” son de uso urbano o recreativo, abarcando diferentes modelos.  
 
 
-
+***
   
 
 ### Público objetivo :open_hands:

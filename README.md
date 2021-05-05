@@ -10,7 +10,7 @@ Las bicicletas que se pueden encontrar en la web de “Rodá” son de uso urban
 
   
 
-### Público objetivo :couple: :two_women_holding_hands: :two_men_holding_hands: :family: :bicyclist: :gift:
+### Público objetivo :open_hands:
 
 El e-commerce apunta a **usuarios con gusto por la estética retro**, que deseen incorporar este estilo a su movilidad diaria o recreativa. Se estima que aquellas personas que consulten el sitio serán **jóvenes**, **adultos** y todo aquel interesado en este tipo de productos.
 

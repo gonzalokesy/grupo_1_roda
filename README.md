@@ -1,4 +1,4 @@
-![](https://github.com/gonzalokesy/grupo_1_roda/blob/master/design/logoVersionMarron.png)
+![](https://github.com/gonzalokesy/grupo_1_roda/blob/master/design/logoVersionVerde.png)
 
 ## **Presentación del proyecto** :rocket:
 

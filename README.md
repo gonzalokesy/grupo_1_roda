@@ -1,3 +1,5 @@
+![](https://github.com/gonzalokesy/grupo_1_roda/blob/master/design/logoVersionMarron.png)
+
 ## **Presentación del proyecto** :rocket:
 
 ### Producto ofrecido :bike:

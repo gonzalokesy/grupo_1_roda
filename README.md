@@ -1,7 +1,7 @@
 ![](https://github.com/gonzalokesy/grupo_1_roda/blob/master/design/logoVersionVerde.png)
 
 **¡Nuesto tablero de Trello!**
-https://trello.com/b/x2YiYtID/proyecto-integrador
+<p> https://trello.com/b/x2YiYtID/proyecto-integrador </p>
 
 ## **Presentación del proyecto** :rocket:
 

@@ -1,4 +1,4 @@
-![](https://github.com/gonzalokesy/grupo_1_roda/blob/master/design/logoVersionVerde.png)
+![](https://github.com/gonzalokesy/grupo_1_roda/blob/master/design/logo.png)
 
 **¡Nuesto tablero en Trello!**
 <p> https://trello.com/b/x2YiYtID/proyecto-integrador </p>

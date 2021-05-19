@@ -1,10 +1,25 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+/*Estilos: 
+    Extra-light 200
+    Light 300
+    Regular 400
+    Medium 500
+    Semi-bold 600
+    Bold 700
+*/
+
+
 *{
      box-sizing: border-box;
+     margin: 0;
+     padding: 0;
  }
 
 body{
     margin: 0;    
     background-color: coral;
+    font-family: 'Raleway', sans-serif;
 }
 
  /*Header*/
@@ -47,11 +62,18 @@ header{
     align-items: center;
     border: solid 1px red; 
     justify-content: flex-end;
-    width: 30%;
+    max: 30%;
 }
 
 .icono-right i{
     margin-right: 14px;
-    font-size: 30px;
+    font-size: 2em;
+    max-width: 100%;
+    border: black 1px dotted;
+}
+
+.pruebah4 {
+    font-weight: 700;
+    color: black;
 }
 

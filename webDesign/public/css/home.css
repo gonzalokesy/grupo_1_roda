@@ -62,7 +62,7 @@ header{
     align-items: center;
     border: solid 1px red; 
     justify-content: flex-end;
-    max: 30%;
+    width: 30%;
 }
 
 .icono-right i{

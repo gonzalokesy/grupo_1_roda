@@ -2,7 +2,9 @@
 
 ### Sprint :one: 
 Teniendo en cuenta las fortalezas demostradas por el equipo hasta el momento, y basándonos en la forma de llevar adelante las actividades propuestas, concluimos en que nos es imposible completar todas las aristas de la estrella de mar propuesta.
+
 Entendemos que la retrospectiva es una instancia de reflexión que debería ser crítica y constructiva para el equipo, por lo que no quisimos forzarla con conclusiones que no reflejen las impresiones vividas hasta el momento.
+
 Conforme escale el proyecto en complejidad estamos seguros que surgirán aspectos que puedan categorizarse en "Less of” o “Stop doing” y confiamos también en la capacidad del equipo para identificarlos y superarlos.
 
 #### Start doing:

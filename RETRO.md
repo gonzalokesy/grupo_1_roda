@@ -11,6 +11,9 @@ Conforme escale el proyecto en complejidad estamos seguros que surgirán aspecto
 - Aplicar comentarios en el código para fomentar la organización y una buena estructura de código.
 - Tener flexibilidad para modificar lo existente y/o implementar nuevas ideas.
 
+#### More of:
+- Hacer mayor hincapié en las instancias para compartir ideas y avances individuales, a modo de propiciar una mejor comunicación.
+
 #### Keep doing:
 - Mantener el compromiso y responsabilidad hacia el proyecto y el equipo.
 - Continuar con comunicación fluida y buena onda entre compañeros.

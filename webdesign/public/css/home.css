@@ -1,0 +1,79 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+/*Estilos: 
+    Extra-light 200
+    Light 300
+    Regular 400
+    Medium 500
+    Semi-bold 600
+    Bold 700
+*/
+
+
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+body{
+    margin: 0;    
+    background-color: coral;
+    font-family: 'Raleway', sans-serif;
+}
+
+ /*Header*/
+header{
+    background-color: darkgreen;
+    max-width: 100vw;        
+}
+
+.header-navbar{
+    display: flex;
+    border: solid 1px black;
+    justify-content: space-around;
+}
+
+.icono-left{
+    display: flex;
+    align-items: center; 
+    border: solid 1px red; 
+    justify-content: flex-start;
+    width: 30%;
+}
+
+.icono-left i{
+    margin-right: 14px;
+    font-size: 30px;
+}
+
+.logo-roda{
+    display: flex;
+    width: 20%;
+}
+
+.logo-roda img{
+    width: 100%;
+    text-align: center;
+}
+
+.icono-right{
+    display: flex;
+    align-items: center;
+    border: solid 1px red; 
+    justify-content: flex-end;
+    width: 30%;
+}
+
+.icono-right i{
+    margin-right: 14px;
+    font-size: 2em;
+    max-width: 100%;
+    border: black 1px dotted;
+}
+
+.pruebah4 {
+    font-weight: 700;
+    color: black;
+}
+

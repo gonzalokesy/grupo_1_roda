@@ -1,0 +1,157 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+/*Estilos: 
+    Extra-light 200
+    Light 300
+    Regular 400
+    Medium 500
+    Semi-bold 600
+    Bold 700
+*/
+
+/* Paleta de colores: 
+    marron oscuro 5a1807
+    verde agua 4c956c
+    marron claro eabe7c
+    crema ece4b7
+*/
+
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+.body{
+    margin: 0;    
+    background-color: #f4e8c1;
+    font-family: 'Raleway', sans-serif;
+    width: 100vw;
+}
+
+ /*Header*/
+.header{    
+    width: 100%;        
+}
+
+.navBar{
+    background-color: #5a1807;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.navBar__ul{
+    display: flex;
+    align-self: center;
+    width: 35%;
+    list-style: none;
+}
+
+.navBar__ul--left{
+    justify-content: flex-start;  
+}
+
+.navBar__liLeft{
+    margin-left: 20%;
+}
+
+
+.navBar__icon{
+    width: 100%;
+    font-size: 5vw;
+    align-self: center;
+}
+
+.navBar__ul--right{
+    justify-content: flex-end; 
+}
+
+.navBar__liRight{
+    margin-right: 15%;
+}
+
+.navBar__link{
+    display: flex;
+    color: #ece4b7;
+    text-decoration: none;
+}
+
+.navBar__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.navBar__imageLogo{
+    width: 70%;
+}
+
+.navBarDesktop__logo {
+    display: none;
+}
+
+.navBarDesktop__ul {
+    display: none;
+}
+
+
+/* ---------Media queries ---------*/
+
+@media (min-width: 768px) {
+    .navBar__ul {
+        display: none;
+    }
+
+    .navBar__logo {
+        display: none;
+    }
+
+    .navBarDesktop__logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+    }
+
+    .navBarDesktop__imageLogo{
+        width: 70%;
+    }
+
+    .navBarDesktop__ul{
+        display: flex;
+        align-self: center;
+        width: 35%;
+        list-style: none;
+    }
+
+    .navBarDesktop__link{
+        display: flex;
+        color: #ece4b7;
+        text-decoration: none;
+        font-size: 2vw;
+    }
+
+    .navBarDesktop__ul--left{
+        justify-content: space-around;  
+    }
+
+    .navBarDesktop__liLeft{
+    }
+
+    .navBarDesktop__ul--right{
+        
+        justify-content: space-around; 
+    }
+
+    .navBarDesktop__liRight{
+        
+    }
+
+
+}
+
+
+

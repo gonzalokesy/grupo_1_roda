@@ -13,10 +13,17 @@ app.listen(3030,() => {
 });
 
 //Creando la ruta para mostrar el contenido en el navegador
-app.get("/", (req,res) => {
+/*app.get("/", (req,res) => {
     res.sendFile(path.resolve(__dirname,"./views/home.html"))
+});*/
+
+app.get("/f", (req,res) => {
+    res.sendFile(path.resolve(__dirname,"./views/footer.html"))
 });
 
+app.get("/h", (req,res) => {
+    res.sendFile(path.resolve(__dirname,"./views/header.html"))
+});
 
 
 

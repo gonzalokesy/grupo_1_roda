@@ -8,9 +8,11 @@ const publicPath = path.resolve(__dirname,"./public");
 app.use(express.static(publicPath));
 
 //Levantando server
-app.listen(3030,() => {
-    console.log("Server corriendo en el http://localhost:3030")
-});
+app.set("port", process.env.PORT || 3030);
+
+app.listen(app.get("port"), () => 
+console.log("Server corriendo en el http://localhost:3030"));
+//Levantando server
 
 //Creando la ruta para mostrar el contenido en el navegador
 /*app.get("/", (req,res) => {

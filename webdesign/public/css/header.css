@@ -17,19 +17,20 @@
 */
 
 *{
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
- }
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 .body{
     margin: 0;    
     background-color: #f4e8c1;
     font-family: 'Raleway', sans-serif;
     width: 100vw;
+    font-size: 12px;
 }
 
- /*Header*/
+/*Header*/
 .header{    
     width: 100%;        
 }
@@ -47,6 +48,7 @@
     align-self: center;
     width: 35%;
     list-style: none;
+    font-size: 20px;
 }
 
 .navBar__ul--left{
@@ -60,7 +62,7 @@
 
 .navBar__icon{
     width: 100%;
-    font-size: 5vw;
+    font-size: 1em;
     align-self: center;
 }
 
@@ -99,7 +101,7 @@
 
 
 /* ---------Media queries ---------*/
-
+/* --DESKTOP--*/
 @media (min-width: 768px) {
     .navBar__ul {
         display: none;
@@ -149,8 +151,6 @@
     .navBarDesktop__liRight{
         
     }
-
-
 }
 
 

@@ -26,10 +26,3 @@ app.get("/f", (req,res) => {
 app.get("/h", (req,res) => {
     res.sendFile(path.resolve(__dirname,"./views/header.html"))
 });
-
-
-
-
-
-
-

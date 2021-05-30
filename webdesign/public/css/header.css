@@ -100,9 +100,30 @@
 }
 
 
+/*
+0 - 576 MOBILE
+577 - 768 MOBILE XL
+769 - 992 TABLET/NETBOOK
+993 - 1199 DESKTOP
+1200 - INFINITO 
+/*
+
+
 /* ---------Media queries ---------*/
+/* --MOBILE XL--*/
+@media (min-width: 577px) {
+    .navBar__imageLogo{
+        width: 50%;
+    }
+}
+
+/* --TABLET/NETBOOK--*/
+@media (min-width: 769px) {
+
+}
+
 /* --DESKTOP--*/
-@media (min-width: 768px) {
+@media (min-width: 993px) {
     .navBar__ul {
         display: none;
     }
@@ -119,7 +140,7 @@
     }
 
     .navBarDesktop__imageLogo{
-        width: 70%;
+        width: 50%;
     }
 
     .navBarDesktop__ul{
@@ -127,13 +148,14 @@
         align-self: center;
         width: 35%;
         list-style: none;
+        font-size: 20px;
     }
 
     .navBarDesktop__link{
         display: flex;
         color: #ece4b7;
         text-decoration: none;
-        font-size: 2vw;
+        font-size: 0.9em;
     }
 
     .navBarDesktop__ul--left{
@@ -153,5 +175,9 @@
     }
 }
 
-
-
+/* --INFINITO--*/
+@media (min-width: 1200px) {
+    .navBarDesktop__link {
+        font-size: 0.8em;
+    }
+    }

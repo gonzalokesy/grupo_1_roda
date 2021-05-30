@@ -26,3 +26,13 @@ app.get("/f", (req,res) => {
 app.get("/h", (req,res) => {
     res.sendFile(path.resolve(__dirname,"./views/header.html"))
 });
+
+//Creando ruta al Carrito de Compras
+app.get("/cart", (req,res) => {
+    res.sendFile(path.resolve(__dirname,"./views/cart.html"))
+});
+
+//Creando ruta Detalle de Producto
+app.get("/product", (req,res) => {
+    res.sendFile(path.resolve(__dirname,"./views/product-description.html"))
+});

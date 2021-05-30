@@ -1,0 +1,54 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+/*Estilos: 
+    Extra-light 200
+    Light 300
+    Regular 400
+    Medium 500
+    Semi-bold 600
+    Bold 700
+*/
+
+/* Paleta de colores: 
+    marron oscuro 5a1807
+    verde agua 4c956c
+    marron claro eabe7c
+    crema ece4b7
+*/
+
+
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+.body{
+    margin: 0;    
+    background-color: #f4e8c1;
+    font-family: 'Raleway', sans-serif;
+    width: 100vw;
+    font-size: 12px;
+}
+
+/*Main*/
+.main{    
+    width: 100%;        
+}
+
+.productDetail{
+    border: solid 1px black;
+    display: flex;
+}
+
+
+/*
+0 - 576 MOBILE
+577 - 768 MOBILE XL
+769 - 992 TABLET/NETBOOK
+993 - 1199 DESKTOP
+1200 - INFINITO 
+/*
+
+
+/* ---------Media queries ---------*/

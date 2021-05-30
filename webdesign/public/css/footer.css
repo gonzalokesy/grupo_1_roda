@@ -28,6 +28,19 @@
     background-color: #f4e8c1;
     font-family: 'Raleway', sans-serif;
     width: 100vw;
+    font-size: 12px;
 }
 
+
+
+/*
+0 - 576 MOBILE
+577 - 768 MOBILE XL
+769 - 992 TABLET/NETBOOK
+993 - 1199 DESKTOP
+1200 - INFINITO 
+/*
+
+
+/* ---------Media queries ---------*/
  

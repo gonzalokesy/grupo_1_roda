@@ -15,9 +15,9 @@ console.log("Server corriendo en el http://localhost:3030"));
 //Levantando server
 
 //Creando la ruta para mostrar el contenido en el navegador
-/*app.get("/", (req,res) => {
+app.get("/", (req,res) => {
     res.sendFile(path.resolve(__dirname,"./views/home.html"))
-});*/
+});
 
 app.get("/f", (req,res) => {
     res.sendFile(path.resolve(__dirname,"./views/footer.html"))

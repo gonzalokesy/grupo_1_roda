@@ -65,6 +65,25 @@
     text-align: center;
 }
 
+.totals{
+    background-color: #eabe7c;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.totals__td{
+    width: 50%;
+    border-bottom: solid 1px grey;
+}
+.totals__button{
+    width: 100%;
+    text-align: center;
+    margin-left: 50%;
+}
+
+
+
+
 
 
 /*

@@ -1,0 +1,115 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+/*Estilos: 
+    Extra-light 200
+    Light 300
+    Regular 400
+    Medium 500
+    Semi-bold 600
+    Bold 700
+*/
+
+/* Paleta de colores: 
+    marron oscuro 5a1807
+    verde agua 4c956c
+    marron claro eabe7c
+    crema ece4b7
+*/
+
+
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+.body{
+    margin: 0;    
+    background-color: #f4e8c1;
+    font-family: 'Raleway', sans-serif;
+    width: 100vw;
+    font-size: 12px;
+}
+
+.main {
+    width: 90%;
+    margin: auto;
+}
+
+.buttonBack {
+    margin: 10px 0 10px 0;
+    border-style: none;
+    background-color: #5a1807 ;
+    color: #ece4b7 ;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.buttonBack__icon {
+    margin-right: 10px;
+}
+
+.buttonBack--end {
+    display: block;
+    margin:auto;
+    margin-top:50px
+}
+
+.photoAndName {
+    width: 100%;
+}
+
+.photoAndName__name {
+    width: 100%;
+    padding-bottom: 10px;
+    font-size: 2em;
+    color: #5a1807;
+}
+
+/* Caja de imagen */
+.photoAndName__photo {
+    width: 80%;
+    margin: auto;
+}
+
+/* Imagen */
+.photoAndName__image {
+    width: 100%;
+}
+
+.colorsButton {
+    margin: 10px 0 15px 0;
+    text-align: center;
+}
+
+/* Caja de precios y envios */
+.priceAndShipping {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px 0 0 0;
+}
+
+.priceAndShipping__price {
+    width: 50%;
+    color: #5a1807;
+}
+
+.priceAndShipping__priceValue {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.priceAndShipping__shipping {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.productActions {
+    margin: auto;
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    border: solid 1px;
+}

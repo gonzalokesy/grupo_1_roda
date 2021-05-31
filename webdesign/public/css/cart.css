@@ -37,9 +37,34 @@
 }
 
 .productDetail{
-    border: solid 1px black;
-    display: flex;
+    background-color: #eabe7c;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
 }
+
+.productDetail__td{
+    width: 20%;
+    
+}
+
+.productDetail__imageProduct{
+    width: 40px;
+    height: 40px;
+}
+
+.productDetail__quantityButton{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin:auto;
+}
+
+.productDetail__input{
+    width: 50%;
+    text-align: center;
+}
+
 
 
 /*

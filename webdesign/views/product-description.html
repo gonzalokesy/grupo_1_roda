@@ -9,11 +9,97 @@
       src="https://kit.fontawesome.com/1161afb872.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/product-description.css" />
     <link rel="stylesheet" href="/css/normalize.css" />
 </head>
 <body class="body">
 
+    <header class="header">
+        <nav class="navBar">
+          <ul class="navBar__ul navBar__ul--left">
+            <li class="navBar__liLeft">
+              <a class="navBar__link" href="#">
+                <i class="fas fa-bars navBar__icon"></i>
+              </a>
+            </li>
+            <li class="navBar__liLeft">
+              <a class="navBar__link" href="#">
+                <i class="fas fa-search navBar__icon"></i>
+              </a>
+            </li>
+          </ul>
+          <figure class="navBar__logo">
+            <img
+              class="navBar__imageLogo"
+              src="/images/Logo.png"
+              alt="Logo de Rodá"
+            />
+          </figure>
+          <ul class="navBar__ul navBar__ul--right">
+            <li class="navBar__liRight">
+              <a class="navBar__link" href="#">
+                <i class="fas fa-star navBar__icon"></i>
+              </a>
+            </li>
+            <li class="navBar__liRight">
+              <a class="navBar__link" href="#">
+                <i class="fas fa-user-circle navBar__icon"></i>
+              </a>
+            </li>
+            <li class="navBar__liRight">
+              <a class="navBar__link" href="#">
+                <i class="fas fa-shopping-cart navBar__icon"></i>
+              </a>
+            </li>
+          </ul>
+  
+          <!--Navbar desktop-->
+  
+          <ul class="navBarDesktop__ul navBarDesktop__ul--left">
+            <li class="navBarDesktop__liLeft">
+              <a class="navBarDesktop__link" href="#">
+                <p class="navBarDesktop__p">Bicicletas</p>
+              </a>
+            </li>
+            <li class="navBarDesktop__liLeft">
+              <a class="navBarDesktop__link" href="#">
+                <p class="navBarDesktop__p">Accesorios</p>
+              </a>
+            </li>
+            <li class="navBarDesktop__liLeft">
+              <a class="navBarDesktop__link" href="#">
+                <p class="navBarDesktop__p">Rodá</p>
+              </a>
+            </li>
+          </ul>
+          <figure class="navBarDesktop__logo">
+            <img
+              class="navBarDesktop__imageLogo"
+              src="/images/Logo.png"
+              alt="Logo de Rodá"
+            />
+          </figure>
+          <ul class="navBarDesktop__ul navBarDesktop__ul--right">
+            <li class="navBarDesktop__liRight">
+              <a class="navBarDesktop__link" href="#">
+                <p class="navBarDesktop__p">Favoritos</p>
+              </a>
+            </li>
+            <li class="navBarDesktop__liRight">
+              <a class="navBarDesktop__link" href="#">
+                <p class="navBarDesktop__p">Mi Rodá</p>
+              </a>
+            </li>
+            <li class="navBarDesktop__liRight">
+              <a class="navBarDesktop__link" href="#">
+                <i class="fas fa-shopping-cart navBarDesktop__icon"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
     <main class="main">
 
         <button class="buttonBack"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</button>
@@ -73,5 +159,50 @@
         <!--<button class="buttonAddAccessories">Agregá accesorios</button>-->
         <button class="buttonBack buttonBack--end"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</button>
     </main>
+
+    <footer class="footer">
+        <div class="aboutUs">
+          <div class="aboutUs__socialMedia">
+            <p class="aboutUs__title">Seguinos</p>
+            <ul class="aboutUs__ul">
+              <li class="aboutUs__li">
+                <a class="aboutUs__link" href="#">
+                  <i class="fab fa-facebook aboutUs__icon"></i>
+                </a>
+              </li>
+              <li class="aboutUs__li">
+                <a class="aboutUs__link" href="#">
+                  <i class="fab fa-instagram aboutUs__icon"></i>
+                </a>
+              </li>
+              <li class="aboutUs__li">
+                <a class="aboutUs__link" href="#">
+                  <i class="fab fa-twitter-square aboutUs__icon"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="history">
+            <a class="history__link" href="#">Sobre Rodá</a>
+        </div>
+  
+        <div class="contact">
+            <a class="contact__link" href="#">Contactanos</a>
+        </div>
+  
+        <div class="newsLetter">
+          <form class="newsLetter__form" action="#">
+            <label class="newsLetter__label"> Recibir novedades </label>
+            <fieldset class="newsLetter__fieldset">
+              <input class="newsLetter__input" type="email" placeholder="Ingresá tu email">
+              <button class="newsLetter__button" type="submit"> <i class="fas fa-envelope newsLetter__icon"></i> </button>
+            </fieldset>
+        
+          </form>
+        </div>
+        <p class="copyright"> Creado por Andrea Eichenberger, Vicente Macchione y Gonzalo Kesy.</p>
+      </footer>
+
 </body>
 </html>

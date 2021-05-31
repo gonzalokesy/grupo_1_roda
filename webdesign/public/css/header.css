@@ -162,16 +162,9 @@
         justify-content: space-around;  
     }
 
-    .navBarDesktop__liLeft{
-    }
-
     .navBarDesktop__ul--right{
         
         justify-content: space-around; 
-    }
-
-    .navBarDesktop__liRight{
-        
     }
 }
 
@@ -180,4 +173,4 @@
     .navBarDesktop__link {
         font-size: 0.8em;
     }
-    }
+}

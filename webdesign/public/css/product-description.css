@@ -34,6 +34,7 @@
 .main {
     width: 98%;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 .buttonBack {
@@ -69,7 +70,7 @@
     margin-bottom: 20px;
     font-size: 2em;
     color: #5a1807;
-    background-color: #eabe7c ;
+    
     padding: 0 0 0 10px;
 }
 
@@ -141,6 +142,7 @@
     border-style: none;
     font-size: 1.5em;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .buttonAddFavorite {
@@ -148,6 +150,7 @@
     color: #f4e8c1;
     background-color: #4c956c;
     border-style: none;
+    border-radius: 5px;
 }
 
 /* Caja de envíos */

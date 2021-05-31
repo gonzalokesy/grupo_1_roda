@@ -32,12 +32,12 @@
 }
 
 .main {
-    width: 90%;
+    width: 98%;
     margin: auto;
 }
 
 .buttonBack {
-    margin: 10px 0 10px 0;
+    margin: 10px 0 20px 0;
     border-style: none;
     background-color: #5a1807 ;
     color: #ece4b7 ;
@@ -52,7 +52,12 @@
 .buttonBack--end {
     display: block;
     margin:auto;
-    margin-top:50px
+    margin-top: 30px;
+}
+
+.productConteiner {
+    border: solid 0.3px #5a1807;
+    padding: 13px;
 }
 
 .photoAndName {
@@ -61,55 +66,154 @@
 
 .photoAndName__name {
     width: 100%;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 2em;
     color: #5a1807;
+    background-color: #eabe7c ;
+    padding: 0 0 0 10px;
 }
 
 /* Caja de imagen */
 .photoAndName__photo {
-    width: 80%;
+    width: 100%;
     margin: auto;
+    background-color: #eabe7c ;
+    text-align: center;
 }
 
 /* Imagen */
 .photoAndName__image {
-    width: 100%;
+    padding-top: 23px;
+    padding-bottom: 10px;
+    width: 70%;
 }
 
 .colorsButton {
-    margin: 10px 0 15px 0;
     text-align: center;
+    background-color: #eabe7c ;
+    padding: 0 0 10px 0;
+    margin-bottom: 20px;
 }
 
-/* Caja de precios y envios */
+/* Caja de precios, envios y botones */
 .priceAndShipping {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 10px 0 0 0;
+    margin: 0 0 20px 0;
 }
 
+/* Caja de precios */
 .priceAndShipping__price {
-    width: 50%;
+    width: 30%;
     color: #5a1807;
+    background-color: #eabe7c ;
 }
 
 .priceAndShipping__priceValue {
     font-size: 2em;
     font-weight: 700;
+    padding: 5px 0 10px 10px;
 }
 
-.priceAndShipping__shipping {
-    width: 50%;
+.priceAndShipping__payMethod {
+    display: block;
+    padding: 0 0 10px 10px;
+    color: #5a1807;
+    font-size: 1.2em;
+
+}
+
+/* Caja de botones */
+.priceAndShipping__buttons {
+    width: 38%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.productActions {
-    margin: auto;
+.buttonAddCart {
+    width: 100%;
+    padding: 10px 0;
+    color: #f4e8c1;
+    font-weight: 600;
+    background-color: #4c956c;
+    border-style: none;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.buttonAddFavorite {
+    padding: 5px;
+    color: #f4e8c1;
+    background-color: #4c956c;
+    border-style: none;
+}
+
+/* Caja de envíos */
+.priceAndShipping__shipping {
+    width: 30%;
     display: flex;
-    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eabe7c;
+}
+
+.priceAndShipping__shippingLink {
+    color: #5a1807;
+    font-size: 1.1em;
+    padding: 0 0 10px 0;
+}
+
+.priceAndShipping__shippingIcon {
+    margin-left: 5px;
+}
+
+/* Caja de descripción y ficha técnica */ 
+
+.productDetaill {
+    width: 100%;
+}
+
+/* Pestañas */
+.productDetaill__tabs {
+    display: flex;
     flex-wrap: wrap;
-    border: solid 1px;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #eabe7c;
+    color: #5a1807;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.productDetaill__description {
+    width: 50%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border: solid 1px #5a1807;
+    padding: 10px 0;
+}
+
+.productDetaill__file {
+    width: 50%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border: solid 1px #5a1807;
+    padding: 10px 0;
+    border-left: none;
+}
+
+/* Contenido pestañas */
+
+.productDetaill__content {
+    border: solid 1px #5a1807;
+    border-top: none;
+    padding: 10px;
+    color: #5a1807;
+    font-size: 1em;
+
 }

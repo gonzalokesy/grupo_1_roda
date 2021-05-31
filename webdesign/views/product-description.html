@@ -17,7 +17,7 @@
     <main class="main">
 
         <button class="buttonBack"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</button>
-
+    <div class="productConteiner">
         <section class="photoAndName">
             <h2 class="photoAndName__name">Lorem ipsum</h2>
             <figure class="photoAndName__photo">
@@ -48,32 +48,29 @@
         <section class="priceAndShipping">
             <div class="priceAndShipping__price">
                 <p class="priceAndShipping__priceValue"> $ 30.000</p>
-                <a class="priceAndShipping__payMethod" href=""> Ver medios de pago</a>
+                <a class="priceAndShipping__payMethod" href="">Ver medios de pago</a>
+            </div>
+            <div class="priceAndShipping__buttons">
+                <button class="buttonAddCart">Añadir al carrito</button>
+                <button class="buttonAddFavorite"><i class="fas fa-star navBar__icon"></i></button>
             </div>
             <div class="priceAndShipping__shipping">
-                <a class="priceAndShipping__shippingLink" href=""> Punto de envio <i class="fas fa-map-marker-alt"></i></a>
+                <a class="priceAndShipping__shippingLink" href=""> Punto de envio <i class="priceAndShipping__shippinIicon fas fa-map-marker-alt"></i></a>
                 <a class="priceAndShipping__shippingLink" href="">Condiciones de envíos</a>
             </div>
         </section>
 
         <section class="productDetaill">
-            <ul class="productDetaill__tabs">
-                <li class="productDetaill__description" >
-                    <a href="">Ficha técnica</a>
-                </li>
-                <li class="productDetaill__description" >
-                    <a href="">Descripción</a>
-                </li>
-            </ul>
-            <div class="productDetaill__content"></div>
+            <div class="productDetaill__tabs">
+                <p class="productDetaill__description">Descripción</p>
+                <p class="productDetaill__file">Ficha técnica</p>
+            </div>
+            <div class="productDetaill__content">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi numquam accusamus doloremque deleniti neque voluptatum sequi pariatur sunt tenetur, quae inventore optio aperiam, in iusto.
+            </div>
         </section>
-        
-        <section class="productActions">
-            <button class="productActions__button">Añadir al carrito</button>
-            <button class="productActions__button"><i class="fas fa-star navBar__icon"></i></button>
-            <button class="productActions__button">Agregá accesorios</button>
-        </section>
-
+    </div>
+        <!--<button class="buttonAddAccessories">Agregá accesorios</button>-->
         <button class="buttonBack buttonBack--end"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</button>
     </main>
 </body>

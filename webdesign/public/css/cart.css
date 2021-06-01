@@ -36,49 +36,108 @@
     width: 100%;        
 }
 
+/*Cartel de Warning*/
+.warning{
+    color: #5a1807;
+    margin: 15px 0px;
+}
+
+/*Tabla del carrito con detalle de producto*/
 .productDetail{
     background-color: #eabe7c;
+    border: solid 1px #5a1807;
     width: 90%;
     margin: 20px auto;
     text-align: center;
+    border-collapse: collapse;
+}
+
+.productDetail__th{
+    color: #5a1807;
+    font-weight: bold;
+    padding: 10px;
 }
 
 .productDetail__td{
     width: 20%;
-    
+    color: #5a1807;
+    text-align: center;
+    padding: 20px;
+    border-top: solid 0.3px #5a1807;    
 }
 
 .productDetail__imageProduct{
-    width: 40px;
-    height: 40px;
+    width: 50%;
+    border: solid 1px  #5a1807;
+    border-radius: 5px;
 }
 
 .productDetail__quantityButton{
+    border:none;
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 70%;
     margin:auto;
 }
 
+.productDetail__button{
+    background-color: #5a1807;
+    color: white;
+    border:none;
+    width: 30%;
+}
+
 .productDetail__input{
-    width: 50%;
+    color: #5a1807;
+    width: 40%;
     text-align: center;
 }
 
+/*Tabla del Carrito con detalle de totales*/
+
 .totals{
     background-color: #eabe7c;
+    border: solid 1px #5a1807;
+    border-radius: 5px;
     width: 50%;
     margin: 20px auto;
 }
 
-.totals__td{
-    width: 50%;
-    border-bottom: solid 1px grey;
+.totals__title{
+    text-align: left;
+    font-weight: bold;
+    margin: 15px 0px;
 }
-.totals__button{
+
+.totals__table{
+    text-align: left;
+    margin: auto;
     width: 100%;
-    text-align: center;
-    margin-left: 50%;
+    border-collapse: collapse;
+}
+
+.totals__td{
+    width: 80%;
+    padding: 10px 0px;
+    border-bottom: solid 0.3px #5a1807;
+}
+
+.totals__confirmButton{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.totals__button{
+    width: 50%;
+    padding: 10px 0;
+    color: #f4e8c1;
+    font-weight: 600;
+    background-color: #4c956c;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border-style: none;
 }
 
 

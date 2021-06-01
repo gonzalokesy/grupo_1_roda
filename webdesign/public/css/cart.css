@@ -16,7 +16,6 @@
     crema ece4b7
 */
 
-
 *{
      box-sizing: border-box;
      margin: 0;
@@ -30,6 +29,7 @@
     width: 100vw;
     font-size: 12px;
 }
+
 
 /*Main*/
 .main{    
@@ -46,7 +46,7 @@
 .productDetail{
     background-color: #eabe7c;
     border: solid 1px #5a1807;
-    width: 90%;
+    width: 80%;
     margin: 20px auto;
     text-align: center;
     border-collapse: collapse;
@@ -55,7 +55,7 @@
 .productDetail__th{
     color: #5a1807;
     font-weight: bold;
-    padding: 10px;
+    padding: 10px
 }
 
 .productDetail__td{
@@ -101,9 +101,11 @@
     border-radius: 5px;
     width: 50%;
     margin: 20px auto;
+    padding: 0px 5px;
 }
 
 .totals__title{
+    color: #5a1807;
     text-align: left;
     font-weight: bold;
     margin: 15px 0px;
@@ -118,7 +120,7 @@
 
 .totals__td{
     width: 80%;
-    padding: 10px 0px;
+    padding: 20px 0px;
     border-bottom: solid 0.3px #5a1807;
 }
 
@@ -126,6 +128,7 @@
     width:100%;
     display: flex;
     justify-content: center;
+    margin: 20px auto;
 }
 
 .totals__button{
@@ -140,11 +143,6 @@
     border-style: none;
 }
 
-
-
-
-
-
 /*
 0 - 576 MOBILE
 577 - 768 MOBILE XL
@@ -153,5 +151,39 @@
 1200 - INFINITO 
 /*
 
-
 /* ---------Media queries ---------*/
+/* --MOBILE XL--*/
+@media (min-width: 577px) {}
+
+/* --TABLET/NETBOOK--*/
+@media (min-width: 769px) {
+    .productDetail{
+        max-width: 80%;
+    }
+    .totals{
+        max-width: 40%;
+    }
+}
+
+/* --DESKTOP--*/
+@media (min-width: 993px) {
+    
+    .boxCart{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .productDetail{
+        margin: 20px 5px;
+        max-width: 50%;
+    }
+
+    .totals{
+        max-width: 30%;
+    }
+
+
+}
+
+/* --INFINITO--*/
+@media (min-width: 1200px) {}

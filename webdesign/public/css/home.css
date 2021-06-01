@@ -30,6 +30,11 @@
     font-size: 12px;
 }
 
+/* HEADER */
+header {
+    font-family: "Raleway", sans-serif;
+}
+
 /* MAIN */
 .mainHome {
     display: flex;
@@ -67,6 +72,11 @@
     margin-bottom: -4px;
 }
 
+/* FOOTER */
+footer {
+    font-family: "Raleway", sans-serif;
+    width: 100vw;
+}
 
 /* ---------Media queries ---------*/
 /* --MOBILE XL--*/

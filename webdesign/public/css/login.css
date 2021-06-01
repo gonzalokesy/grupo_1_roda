@@ -30,6 +30,11 @@
     font-size: 12px;
 }
 
+/* HEADER */
+header {
+    font-family: "Raleway", sans-serif;
+}
+
 /* MAIN */
 .mainLogin {
     font-family: "Raleway", sans-serif;
@@ -72,4 +77,9 @@
 
 .form__p {
     color: #5a1807;
+}
+
+/* FOOTER */
+footer {
+    font-family: "Raleway", sans-serif;
 }

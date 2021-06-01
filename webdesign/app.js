@@ -36,3 +36,8 @@ app.get("/cart", (req,res) => {
 app.get("/product", (req,res) => {
     res.sendFile(path.resolve(__dirname,"./views/product-description.html"))
 });
+
+//Creando ruta Formulario de ingreso
+app.get("/login", (req,res) => {
+    res.sendFile(path.resolve(__dirname,"./views/login.html"))
+});

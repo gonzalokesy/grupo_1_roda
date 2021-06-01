@@ -1,0 +1,75 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+/*Estilos: 
+    Extra-light 200
+    Light 300
+    Regular 400
+    Medium 500
+    Semi-bold 600
+    Bold 700
+*/
+
+/* Paleta de colores: 
+    marron oscuro 5a1807
+    verde agua 4c956c
+    marron claro eabe7c
+    crema ece4b7
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    margin: 0;    
+    background-color: #f4e8c1;
+    font-family: 'Raleway', sans-serif;
+    width: 100vw;
+    font-size: 12px;
+}
+
+/* MAIN */
+.mainLogin {
+    font-family: "Raleway", sans-serif;
+    background-color: #ece4b7;
+}
+
+.mainLogin__h3 {
+    color: #5a1807;
+}
+
+.form {
+    background-color: #eabe7c;
+    border-radius: 5px;
+}
+
+.form__fieldset {
+    border: none;
+}
+
+.fieldset__label {
+    color: #5a1807;
+}
+
+.fieldset__input {
+    border: none;
+    border-radius: 5px;
+}
+
+.form__a {
+    color: #5a1807;
+    text-decoration: none;
+}
+
+.form__button {
+    background-color: #4c956c;
+    color: #ece4b7;
+    border: none;
+    border-radius: 5px;
+}
+
+.form__p {
+    color: #5a1807;
+}

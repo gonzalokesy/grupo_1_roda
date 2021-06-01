@@ -30,6 +30,76 @@
     font-size: 12px;
 }
 
+/*Header*/
+.header{    
+    width: 100%;        
+}
+
+.navBar{
+    font-family: "Raleway";
+    background-color: #5a1807;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.navBar__ul{
+    display: flex;
+    align-self: center;
+    width: 35%;
+    list-style: none;
+    font-size: 20px;
+}
+
+.navBar__ul--left{
+    justify-content: flex-start;  
+}
+
+.navBar__liLeft{
+    margin-left: 20%;
+}
+
+
+.navBar__icon{
+    width: 100%;
+    font-size: 1em;
+    align-self: center;
+}
+
+.navBar__ul--right{
+    justify-content: flex-end; 
+}
+
+.navBar__liRight{
+    margin-right: 15%;
+}
+
+.navBar__link{
+    display: flex;
+    color: #ece4b7;
+    text-decoration: none;
+}
+
+.navBar__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.navBar__imageLogo{
+    width: 70%;
+}
+
+.navBarDesktop__logo {
+    display: none;
+}
+
+.navBarDesktop__ul {
+    display: none;
+}
+
 /* MAIN */
 .mainHome {
     display: flex;
@@ -39,14 +109,13 @@
 .sectionHome {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     width: 100%;
     position: relative;
 }
 
 .sectionHome__a {
     position: absolute;
-    top: 77%;
+    top: 79%;
     background-color: #5a1807;
     border-radius: 10px;
     padding: 7px;
@@ -59,16 +128,80 @@
 
 .sectionHome__figure {
     width: 100%;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    margin-bottom: -4px;
 }
 
 .figure__img {
     width: 100%;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    margin-bottom: -4px;
 }
 
+
+/* ---------Media queries ---------*/
+/* --MOBILE XL--*/
+@media (min-width: 577px) {
+    .navBar__imageLogo{
+        width: 50%;
+    }
+}
+
+/* --TABLET/NETBOOK--*/
+@media (min-width: 769px) {
+
+}
+
+/* --DESKTOP--*/
+@media (min-width: 993px) {
+    .navBar__ul {
+        display: none;
+    }
+
+    .navBar__logo {
+        display: none;
+    }
+
+    .navBarDesktop__logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+    }
+
+    .navBarDesktop__imageLogo{
+        width: 50%;
+    }
+
+    .navBarDesktop__ul{
+        display: flex;
+        align-self: center;
+        width: 35%;
+        list-style: none;
+        font-size: 20px;
+    }
+
+    .navBarDesktop__link{
+        display: flex;
+        color: #ece4b7;
+        text-decoration: none;
+        font-size: 0.9em;
+    }
+
+    .navBarDesktop__ul--left{
+        justify-content: space-around;  
+    }
+
+    .navBarDesktop__ul--right{
+        
+        justify-content: space-around; 
+    }
+}
+
+/* --INFINITO--*/
+@media (min-width: 1200px) {
+    .navBarDesktop__link {
+        font-size: 0.8em;
+    }
+}
 /* ---------Media queries ---------*/
 /* --MOBILE XL--*/
 @media (min-width: 577px) {
@@ -89,11 +222,14 @@
     .sectionHome--fifty {
         width: 50%;
     }
-    .sectionHome__figure {
-        width: 50%;
-    }
+    .sectionHome__a {
+        font-size: 1.1em;
+        }
 }
 
 /* --INFINITO--*/
 @media (min-width: 1200px) {
+    .sectionHome__a {
+        font-size: 1.5em;
+        }
     }

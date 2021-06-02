@@ -105,23 +105,20 @@
 }
 
 .shippingDetail{
-    margin: 10px;
+    margin: 20px auto;
+    width: 100%;
 }
 .shippingDetail__article{
     color: #5a1807;
-    margin: 15px 5px;
+    margin: 15px auto;
     border: solid 0.3px #5a1807;
     border-radius: 5px;
     padding: 10px;
-    width: 80%;
+    width: 70%;
 }
-
 .shippingDetail__icon{
     padding-right: 5px;
 }
-
-
-
 
 /*Tabla del Carrito con detalle de totales*/
 
@@ -311,8 +308,17 @@
 /* ---------Media queries ---------*/
 /* --MOBILE XL--*/
 @media (min-width: 577px) {
+    /*HEADER*/
     .navBar__imageLogo{
         width: 50%;
+    }
+
+    /*MAIN*/
+    .shippingDetail{
+        max-width: 50%;
+    }
+    .shippingDetail__article{
+        width: 100%;
     }
 }
 
@@ -364,7 +370,22 @@
         
         justify-content: space-around; 
     }
-        
+
+    /*MAIN*/
+    .boxShippingDetail{
+        display: flex;
+        justify-content:center;
+    }
+
+    .shippingDetail{
+        margin: 20px 10px;
+        width: 40%;
+    }
+
+    .totals{
+        max-width: 30%;
+        margin: 20px 0px;
+    }
 }
 
 /* --INFINITO--*/

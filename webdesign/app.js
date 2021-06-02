@@ -32,6 +32,11 @@ app.get("/cart", (req,res) => {
     res.sendFile(path.resolve(__dirname,"./views/cart.html"))
 });
 
+//Creando ruta al Carrito de Compras (Shipping)
+app.get("/cartShipping", (req,res) => {
+    res.sendFile(path.resolve(__dirname,"./views/cartShipping.html"))
+});
+
 //Creando ruta Detalle de Producto
 app.get("/product", (req,res) => {
     res.sendFile(path.resolve(__dirname,"./views/product-description.html"))

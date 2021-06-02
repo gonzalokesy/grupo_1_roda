@@ -100,10 +100,11 @@
           </ul>
         </nav>
       </header>
-    <main class="main">
 
-        <button class="buttonBack"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</button>
-    <div class="productConteiner">
+    <main class="main">
+      <button class="buttonBack"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</button>
+      <!--Mobile-->
+     <div class="productConteiner productConteiner--mobile">
         <section class="photoAndName">
             <h2 class="photoAndName__name">Lorem ipsum</h2>
             <figure class="photoAndName__photo">
@@ -112,6 +113,7 @@
         </section>
 
         <div class="colorsButton">
+            <p class="colorsButton__title"> Colores disponibles</p>
             <a class="colorsButton__button  href="">
                 <i class="far fa-circle"></i> 
             </a>
@@ -155,9 +157,54 @@
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi numquam accusamus doloremque deleniti neque voluptatum sequi pariatur sunt tenetur, quae inventore optio aperiam, in iusto.
             </div>
         </section>
+     </div>
+     <!--End Mobile-->
+     <!--Desktop-->
+    <div class="productConteiner productConteiner--desktop">
+      <section class="product">
+        <div class="leftColumn">
+          <section class="photoAndColor">
+              <figure class="photoAndName__photo">
+                <img class="photoAndName__image" src="images/bicicleta.jpg" alt="">
+              </figure>
+              <div class="photoAndColor__listConteiner">
+                <div class="photoAndColor__list">
+                  <a class="photoAndColor__link" href=""><i class="fas fa-chevron-circle-left photoAndColor__listIcon"></i></a>
+                  <a class="photoAndColor__link" href=""> <img class="photoAndColor__listPhoto" src="images/bicicleta.jpg" alt=""></a>
+                  <a class="photoAndColor__link" href=""> <img class="photoAndColor__listPhoto" src="images/bicicleta.jpg" alt=""></a>
+                  <a class="photoAndColor__link" href=""> <img class="photoAndColor__listPhoto" src="images/bicicleta.jpg" alt=""></a>
+                  <a class="photoAndColor__link" href=""> <img class="photoAndColor__listPhoto" src="images/bicicleta.jpg" alt=""></a>
+                  <a class="photoAndColor__link" href=""> <img class="photoAndColor__listPhoto" src="images/bicicleta.jpg" alt=""></a>
+                  <a class="photoAndColor__link" href=""> <img class="photoAndColor__listPhoto" src="images/bicicleta.jpg" alt=""></a>
+                  <a class="photoAndColor__link" href=""><i class="fas fa-chevron-circle-right photoAndColor__listIcon"></i></a>
+                </div>
+              </div>
+              <div class="colorsButtonConteiner">
+                <div class="colorsButton colorsButton--desktop">
+                  <p class="colorsButton__title colorsButton__title--desktop"> Colores disponibles</p>
+                  <a class="colorsButton__button  href="><i class="far fa-circle"></i></a>
+                  <a class="colorsButton__button  href="><i class="far fa-circle"></i></a>
+                  <a class="colorsButton__button  href=""><i class="far fa-circle"></i></a>
+                  <a class="colorsButton__button  href=""><i class="far fa-circle"></i></a>
+                  <a class="colorsButton__button  href=""><i class="far fa-circle"></i></a> 
+                  <a class="colorsButton__button  href=""><i class="far fa-circle"></i></a>   
+                </div>
+              </div>
+          
+
+          </section>
+        </div>
+        <div class="rightColumn"></div>
+      </section>
     </div>
-        <!--<button class="buttonAddAccessories">Agregá accesorios</button>-->
-        <button class="buttonBack buttonBack--end"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</button>
+    <!--End desktop-->
+    <button class="buttonBack buttonBack--end"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</button>
+    
+
+    
+
+
+      
     </main>
 
     <footer class="footer">

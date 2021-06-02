@@ -65,6 +65,7 @@ header {
     width: 100%;
     margin-bottom: -4px;
     margin-right: -2px;
+    margin-left: -2px;
 }
 
 .figure__img {
@@ -89,7 +90,7 @@ footer {
 /* --TABLET/NETBOOK--*/
 @media (min-width: 769px) {
     .sectionHome__a {
-        font-size: 1em;
+        font-size: 1.2em;
         }
 }
 

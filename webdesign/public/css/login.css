@@ -39,44 +39,83 @@ header {
 .mainLogin {
     font-family: "Raleway", sans-serif;
     background-color: #ece4b7;
+    padding-bottom: 15%;
 }
 
 .mainLogin__h3 {
     color: #5a1807;
+    text-align: center;
+    font-size: 1em;
+    padding: 5%;
 }
 
 .form {
+    width: 80%;
+    margin: auto;
     background-color: #eabe7c;
     border-radius: 5px;
+    padding: 5%;
+    padding-bottom: 10%;
 }
 
 .form__fieldset {
     border: none;
+    margin: 5%;
+}
+
+.form__fieldset--forgetPass {
+    margin-bottom: 0;
+    padding-bottom: 2%;
 }
 
 .fieldset__label {
+    display: block;
+    width: 100%;
+    margin-bottom: 2%;
     color: #5a1807;
+    text-align: center;
+
 }
 
 .fieldset__input {
+    display: block;
+    margin: auto;
     border: none;
     border-radius: 5px;
+    width: 70%;
 }
 
 .form__a {
+    display: block;
+    text-align: center;
     color: #5a1807;
     text-decoration: none;
+    font-size: 0.6em;
+    font-weight: 600;
 }
 
 .form__button {
-    background-color: #4c956c;
+    display: block;
+    background-color: #5a1807;
     color: #ece4b7;
+    font-weight: 600;
     border: none;
+    padding: 5px;
     border-radius: 5px;
+    margin: 10% auto;
+}
+.form__button:active {
+    background-color: #4c956c;
 }
 
 .form__p {
     color: #5a1807;
+    text-align: center;
+}
+
+.form__a--create {
+    font-size: 0.8em;
+    font-weight: 700;
 }
 
 /* FOOTER */

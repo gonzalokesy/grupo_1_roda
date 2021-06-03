@@ -192,7 +192,8 @@ footer {
   }
 
   .form__fieldset--forgetPass {
-    padding-bottom: 1%;
+    padding-bottom: 0%;
+    margin-bottom: 3%;
   }
 
   .fieldset__label {

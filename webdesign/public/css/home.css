@@ -59,6 +59,10 @@ header {
     font-size: 0.7em;
     color: #ece4b7;
     text-decoration: none;
+    transition: background-color 0.3s;
+}
+.sectionHome__a:active {
+    background-color: #4c956c;
 }
 
 .sectionHome__figure {
@@ -66,6 +70,38 @@ header {
     margin-bottom: -4px;
     margin-right: -2px;
     margin-left: -2px;
+}
+
+/* Slider */
+.sectionHome__figure--slider {
+    overflow: hidden;
+}
+.slider__ul {
+    display: flex;
+    width: 200%;
+    padding: 0;
+    animation: slide 8s infinite alternate ease-in;
+}
+.slider__ul__li {
+    list-style: none;
+    width: 100%;
+}
+.imgSlider {
+    width: 100%;
+}
+@keyframes slide{
+    0% {
+        margin-left: 0;
+    }
+    45% {
+        margin-left: 0;
+    }
+    55% {
+        margin-left: -100%;
+    }
+    100% {
+        margin-left: -100%;
+    }
 }
 
 .figure__img {
@@ -102,6 +138,9 @@ footer {
     .sectionHome__a {
         font-size: 1.1em;
         }
+    .sectionHome__a:hover {
+        background-color: #4c956c;
+    }
 }
 
 /* --INFINITO--*/

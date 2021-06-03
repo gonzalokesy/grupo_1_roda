@@ -78,9 +78,10 @@ header {
 }
 .slider__ul {
     display: flex;
-    width: 200%;
+    width: 300%;
     padding: 0;
-    animation: slide 8s infinite alternate ease-in;
+    animation: slide 15s infinite alternate ease-in;
+    margin-bottom: -2px;
 }
 .slider__ul__li {
     list-style: none;
@@ -93,20 +94,26 @@ header {
     0% {
         margin-left: 0;
     }
-    45% {
+    30% {
         margin-left: 0;
     }
-    55% {
+    35% {
         margin-left: -100%;
     }
-    100% {
+    65% {
         margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: -200%;
     }
 }
 
 .figure__img {
     width: 100%;
-    margin-bottom: -4px;
+    margin: -4 -4 -4px;
 }
 
 /* FOOTER */

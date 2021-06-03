@@ -99,6 +99,36 @@
     display: none;
 }
 
+/* Dropdown */ 
+.navBar__icon--burguerMenu{
+    transition: visibility; /* ?? cómo resolver que aparezca cuando se selecciona */ 
+}
+
+.dropdown {
+    background-color: #5a1807;
+    width: 100%;
+    visibility: visible;
+    padding-bottom: 10px;
+}
+
+.dropdown__li {
+    list-style: none;
+    color: #ece4b7;
+    font-size: 1.5em;
+    padding: 15px 15px 5px;
+}
+.dropdown__li--miRoda {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.dropdown__a {
+    text-decoration: none;
+    color: #ece4b7;
+}
+
+
 
 /*
 0 - 576 MOBILE
@@ -115,11 +145,17 @@
     .navBar__imageLogo{
         width: 50%;
     }
+
+    .dropdown__li {
+        font-size: 2em;
+    }
 }
 
 /* --TABLET/NETBOOK--*/
 @media (min-width: 769px) {
-
+    .dropdown__li {
+        font-size: 2.5em;
+    }
 }
 
 /* --DESKTOP--*/
@@ -165,6 +201,10 @@
     .navBarDesktop__ul--right{
         
         justify-content: space-around; 
+    }
+
+    .dropdown {
+        visibility: hidden;
     }
 }
 

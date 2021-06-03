@@ -30,98 +30,26 @@
     font-size: 12px;
 }
 
-/*Header*/
-.header{    
-    width: 100%;        
-}
-
-.navBar{
-    background-color: #5a1807;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.navBar__ul{
-    display: flex;
-    align-self: center;
-    width: 35%;
-    list-style: none;
-    font-size: 20px;
-}
-
-.navBar__ul--left{
-    justify-content: flex-start;  
-}
-
-.navBar__liLeft{
-    margin-left: 20%;
-}
-
-
-.navBar__icon{
-    width: 100%;
-    font-size: 1em;
-    align-self: center;
-}
-
-.navBar__ul--right{
-    justify-content: flex-end; 
-}
-
-.navBar__liRight{
-    margin-right: 15%;
-}
-
-.navBar__link{
-    display: flex;
-    color: #ece4b7;
-    text-decoration: none;
-}
-
-.navBar__logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-}
-
-.navBar__imageLogo{
-    width: 70%;
-}
-
-.navBarDesktop__logo {
-    display: none;
-}
-
-.navBarDesktop__ul {
-    display: none;
-}
-
 /*MAIN*/
 .main{    
     width: 100%;        
 }
 
 .shippingDetail{
-    margin: 10px;
+    margin: 20px auto;
+    width: 100%;
 }
 .shippingDetail__article{
     color: #5a1807;
-    margin: 15px 5px;
+    margin: 15px auto;
     border: solid 0.3px #5a1807;
     border-radius: 5px;
     padding: 10px;
-    width: 80%;
+    width: 70%;
 }
-
 .shippingDetail__icon{
     padding-right: 5px;
 }
-
-
-
 
 /*Tabla del Carrito con detalle de totales*/
 
@@ -175,131 +103,6 @@
     text-align: center;
 }
 
-/*FOOTER*/
-.footer {
-    display: flex;
-    background-color: #4c956c;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    color: #ece4b7;
-    font-size: 12px;
-}
-
-.aboutUs {
-    width: 33%;
-}
-
-.aboutUs__socialMedia {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.aboutUs__title {
-    margin: 10px 0;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-.aboutUs__ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    width: 50%;
-}
-
-.aboutUs__link {
-    text-decoration: none;
-    color: #ece4b7;
-    font-size: 1.5em;
-}
-
-.history {
-    width: 33%;
-    text-align: center;
-}
-
-.history__link {
-    display: block;
-    text-decoration: none;
-    color: #ece4b7;
-    margin-top: 10px;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.contact {
-    width: 33%;
-    text-align: center;
-}
-
-.contact__link {
-    display: block;
-    text-decoration: none;
-    color: #ece4b7;
-    margin-top: 10px;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.newsLetter {
-    width: 100%;
-}
-
-.copyright {
-    width: 100%;
-    text-align: center;
-    background-color: #5a1807;
-    padding: 5px 0;
-}
-
-.newsLetter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-
-.newsLetter__form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.newsLetter__label {
-    text-align: center;
-    display: block;
-    font-size: 1.5em;
-    margin-bottom: 5px;
-}
-
-.newsLetter__fieldset {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    border: none;
-}
-
-.newsLetter__input {
-    width: 100%;
-    position: relative;
-    padding: 5px 5px;
-    border-radius: 5px;
-    border-style: none;
-}
-
-.newsLetter__button {
-    position: absolute;
-    align-self: center;
-    border-radius: 5px;
-    border-style: none;
-    right: 24%;
-    color: #5a1807;
-    font-size: 1.5em;
-}
-
 /*
 0 - 576 MOBILE
 577 - 768 MOBILE XL
@@ -311,8 +114,12 @@
 /* ---------Media queries ---------*/
 /* --MOBILE XL--*/
 @media (min-width: 577px) {
-    .navBar__imageLogo{
-        width: 50%;
+    /*MAIN*/
+    .shippingDetail{
+        max-width: 50%;
+    }
+    .shippingDetail__article{
+        width: 100%;
     }
 }
 
@@ -322,54 +129,22 @@
 
 /* --DESKTOP--*/
 @media (min-width: 993px) {
-    /*HEADER*/
-    .navBar__ul {
-        display: none;
-    }
-    .navBar__logo {
-        display: none;
-    }
-
-    .navBarDesktop__logo{
+    /*MAIN*/
+    .boxShippingDetail{
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 20%;
+        justify-content:center;
     }
 
-    .navBarDesktop__imageLogo{
-        width: 50%;
+    .shippingDetail{
+        margin: 20px 10px;
+        width: 40%;
     }
 
-    .navBarDesktop__ul{
-        display: flex;
-        align-self: center;
-        width: 35%;
-        list-style: none;
-        font-size: 20px;
+    .totals{
+        max-width: 30%;
+        margin: 20px 0px;
     }
-
-    .navBarDesktop__link{
-        display: flex;
-        color: #ece4b7;
-        text-decoration: none;
-        font-size: 0.9em;
-    }
-
-    .navBarDesktop__ul--left{
-        justify-content: space-around;  
-    }
-
-    .navBarDesktop__ul--right{
-        
-        justify-content: space-around; 
-    }
-        
 }
 
 /* --INFINITO--*/
-@media (min-width: 1200px) {
-    .navBarDesktop__link {
-        font-size: 0.8em;
-    }
-}
+@media (min-width: 1200px) {}

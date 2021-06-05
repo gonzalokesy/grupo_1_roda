@@ -100,11 +100,17 @@
           </ul>
         </nav>
       </header>
-
+    
     <main class="main">
-      <button class="buttonBack"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</button>
+
+        <!--Button back-->
+     
+
       <!--Mobile-->
-     <div class="productConteiner productConteiner--mobile">
+     <section class="productConteiner productConteiner--mobile">
+      <nav class="buttonBack">
+        <a class="buttonBack__link" href=""><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</a>
+      </nav>
         <section class="photoAndName">
             <h2 class="photoAndName__name">Lorem ipsum</h2>
             <figure class="photoAndName__photo">
@@ -134,18 +140,18 @@
         </div>
 
         <section class="priceAndShipping">
-            <div class="priceAndShipping__price">
+            <article class="priceAndShipping__price">
                 <p class="priceAndShipping__priceValue"> $ 30.000</p>
                 <a class="priceAndShipping__payMethod" href="">Ver medios de pago</a>
-            </div>
-            <div class="priceAndShipping__buttons">
+            </article>
+            <form class="priceAndShipping__buttons">
                 <button class="buttonAddCart">Añadir al carrito</button>
                 <button class="buttonAddFavorite"><i class="fas fa-star navBar__icon"></i></button>
-            </div>
-            <div class="priceAndShipping__shipping">
+            </form>
+            <article class="priceAndShipping__shipping">
                 <a class="priceAndShipping__shippingLink" href=""> Punto de envio <i class="priceAndShipping__shippinIicon fas fa-map-marker-alt"></i></a>
                 <a class="priceAndShipping__shippingLink" href="">Condiciones de envíos</a>
-            </div>
+            </article>
         </section>
 
         <section class="productDetaill">
@@ -157,54 +163,58 @@
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi numquam accusamus doloremque deleniti neque voluptatum sequi pariatur sunt tenetur, quae inventore optio aperiam, in iusto.
             </div>
         </section>
-     </div>
+
+    </section>
      <!--End Mobile-->
+
      <!--Desktop-->
-    <div class="productConteiner productConteiner--desktop">
-      <section class="product">
-        <div class="leftColumn">
-          <section class="photoAndColor">
-              <figure class="photoAndName__photo">
-                <img class="photoAndName__image" src="images/bicicleta.jpg" alt="">
-              </figure>
-              <div class="photoAndColor__listConteiner">
-                <div class="photoAndColor__list">
-                  <a class="photoAndColor__link" href=""><i class="fas fa-chevron-circle-left photoAndColor__listIcon"></i></a>
-                  <a class="photoAndColor__link" href=""> <img class="photoAndColor__listPhoto" src="images/bicicleta.jpg" alt=""></a>
-                  <a class="photoAndColor__link" href=""> <img class="photoAndColor__listPhoto" src="images/bicicleta.jpg" alt=""></a>
-                  <a class="photoAndColor__link" href=""> <img class="photoAndColor__listPhoto" src="images/bicicleta.jpg" alt=""></a>
-                  <a class="photoAndColor__link" href=""> <img class="photoAndColor__listPhoto" src="images/bicicleta.jpg" alt=""></a>
-                  <a class="photoAndColor__link" href=""> <img class="photoAndColor__listPhoto" src="images/bicicleta.jpg" alt=""></a>
-                  <a class="photoAndColor__link" href=""> <img class="photoAndColor__listPhoto" src="images/bicicleta.jpg" alt=""></a>
-                  <a class="photoAndColor__link" href=""><i class="fas fa-chevron-circle-right photoAndColor__listIcon"></i></a>
-                </div>
-              </div>
-              <div class="colorsButtonConteiner">
-                <div class="colorsButton colorsButton--desktop">
-                  <p class="colorsButton__title colorsButton__title--desktop"> Colores disponibles</p>
-                  <a class="colorsButton__button  href="><i class="far fa-circle"></i></a>
-                  <a class="colorsButton__button  href="><i class="far fa-circle"></i></a>
-                  <a class="colorsButton__button  href=""><i class="far fa-circle"></i></a>
-                  <a class="colorsButton__button  href=""><i class="far fa-circle"></i></a>
-                  <a class="colorsButton__button  href=""><i class="far fa-circle"></i></a> 
-                  <a class="colorsButton__button  href=""><i class="far fa-circle"></i></a>   
-                </div>
-              </div>
-          
-
-          </section>
-        </div>
-        <div class="rightColumn"></div>
+    <section class="productConteiner productConteiner--desktop">
+      <nav class="buttonBack">
+        <a class="buttonBack__link" href=""><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</a>
+      </nav>
+      <section class="leftColumn">
+        <figure class="photoAndName__photo">
+          <img class="photoAndName__image" src="images/bicicleta.jpg" alt="">
+      </figure>
       </section>
-    </div>
-    <!--End desktop-->
-    <button class="buttonBack buttonBack--end"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</button>
+
+      <section class="rightColumn">
+        <h2 class="productName">Lorem ipsum</h2>
+        <article class="productPriceMethod">
+          <p class="productPriceMethod__price">$ 1.000.000</p>
+          <a class="productPriceMethod__method" href="">Medios de pago</a>
+          <a class="productPriceMethod__shippingPoint" href=""> Punto de envio <i class="priceAndShipping__shippinIicon fas fa-map-marker-alt"></i></a>
+          <a class="productPriceMethod__shippingCondition" href="">Condiciones de envíos</a>
+          <form class="amount__form" action="">
+            <label class="amount__text amount__text--bold">Cantidad</label>
+            <select class="amount__select"  name="" id="">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label class="amount__text">x disponibles</label> 
+          </form>         
+        </article>
+        <form class="priceAndShipping__buttons priceAndShipping__buttons--desktop">
+          <button class="buttonAddCart buttonAddCart--desktop">Añadir al carrito</button>
+          <button class="buttonAddFavorite buttonAddFavorite--desktop"><i class="fas fa-star navBar__icon"></i></button>
+        </form>
+        <article class="productDetaill">
+          <div class="productDetaill__tabs">
+              <p class="productDetaill__description">Descripción</p>
+              <p class="productDetaill__file">Ficha técnica</p>
+          </div>
+          <div class="productDetaill__content">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi numquam accusamus doloremque deleniti neque voluptatum sequi pariatur sunt tenetur, quae inventore optio aperiam, in iusto.
+          </div>
+        </article>
+
+      </section>
+    </section>
+    <!--End desktop-->  
     
-
-    
-
-
-      
     </main>
 
     <footer class="footer">
@@ -250,6 +260,5 @@
         </div>
         <p class="copyright"> Creado por Andrea Eichenberger, Vicente Macchione y Gonzalo Kesy.</p>
       </footer>
-
 </body>
 </html>

@@ -38,20 +38,26 @@
     justify-content: space-between;
     color: #ece4b7;
     font-size: 12px;
+
 }
 
 .aboutUs {
-    width: 33%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
 }
 
 .aboutUs__socialMedia {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 33%;
 }
 
 .aboutUs__title {
-    margin: 10px 0;
+    margin: 10px 0 15px 0;
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -96,23 +102,21 @@
     font-weight: bold;
 }
 
-.newsLetter {
-    width: 100%;
-}
-
 .copyright {
     width: 100%;
     text-align: center;
     background-color: #5a1807;
     padding: 5px 0;
+    font-size: 0.8em;
 }
 
 .newsLetter {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin: 25px 0 20px 0;
 }
 
 .newsLetter__form {
@@ -123,11 +127,12 @@
     flex-wrap: wrap;
 }
 
-.newsLetter__label {
+.newsLetter__title {
     text-align: center;
     display: block;
     font-size: 1.5em;
     margin-bottom: 5px;
+    font-weight: 400;
 }
 
 .newsLetter__fieldset {
@@ -135,14 +140,21 @@
     display: flex;
     justify-content: center;
     border: none;
+    position: relative;
 }
 
 .newsLetter__input {
-    width: 100%;
-    position: relative;
+    width: 85%;
     padding: 5px 5px;
     border-radius: 5px;
     border-style: none;
+    background-color: #ece4b7;
+    color: #5a1807;
+    outline: none;
+}
+
+.newsLetter__input::placeholder {
+    color: #5a1807;
 }
 
 .newsLetter__button {
@@ -150,14 +162,11 @@
     align-self: center;
     border-radius: 5px;
     border-style: none;
-    right: 24%;
+    right: 12%;
     color: #5a1807;
     font-size: 1.5em;
+    background-color: #ece4b7;
 }
-
-
-
-
 
 /*
 0 - 576 MOBILE
@@ -169,4 +178,34 @@
 
 
 /* ---------Media queries ---------*/
+
+@media (min-width: 577px) {
+    .newsLetter__form {
+        max-width: 576px;
+    }
+}
+
+@media (min-width: 993px) {
+    .copyright {
+        font-size: 1em;
+    }
+
+    .aboutUs__ul {
+        max-width: 144px;
+    }
+
+    .history__link:hover {
+        text-decoration: underline;
+    }
+
+    .contact__link:hover {
+        text-decoration: underline;
+    }
+
+    .newsLetter__icon:hover {
+        color: #4c956c;
+    }
+}
+
+
  

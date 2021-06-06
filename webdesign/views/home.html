@@ -19,9 +19,7 @@
       <nav class="navBar">
         <ul class="navBar__ul navBar__ul--left">
           <li class="navBar__liLeft">
-            <a class="navBar__link" href="#">
-              <i class="fas fa-bars navBar__icon"></i>
-            </a>
+            <a class="navBar__link" href="#"><i class="fas fa-bars navBar__icon navBar__icon--burguerMenu"></i></a>
           </li>
           <li class="navBar__liLeft">
             <a class="navBar__link" href="#">
@@ -69,7 +67,7 @@
           </li>
           <li class="navBarDesktop__liLeft">
             <a class="navBarDesktop__link" href="#">
-              <p class="navBarDesktop__p">Rodá</p>
+              <p class="navBarDesktop__p navBarDesktop__p--roda">Rodá</p>
             </a>
           </li>
         </ul>
@@ -98,8 +96,34 @@
           </li>
         </ul>
       </nav>
-    </header>
 
+      <!--Dropdown-->
+      <ul class="dropdown">
+        <li class="dropdown__li">
+          <a class="dropdown__a" href="#">Bicicletas</a>
+        </li>
+        <li class="dropdown__li">
+          <a class="dropdown__a" href="#">Accesorios</a>
+        </li>
+        <li class="dropdown__li"></li>
+        <li class="dropdown__li">
+          <a class="dropdown__a" href="/login"><b>Ingresa</b> a tu cuenta</a>
+        </li>
+        <li class="dropdown__li">
+          <a class="dropdown__a" href="/register"><b>Crea</b> tu cuenta</a>
+        </li>
+        <li class="dropdown__li"></li>
+        <li class="dropdown__li">
+          <a class="dropdown__a" href="#">¡Encontranos en nuestras redes!</a>
+        </li>
+        <li class="dropdown__li">
+          <a class="iconDrop" href="#"><i class="fab fa-facebook"></i></a>
+          <a class="iconDrop" href="#"><i class="fab fa-instagram"></i></a>
+          <a class="iconDrop" href="#"><i class="fab fa-twitter-square"></i></a>
+        </li>
+      </ul>
+    </header>
+    
     <main class="mainHome">
       <section class="sectionHome">
         <a class="sectionHome__a" href="#">¡Conocelas!</a>
@@ -153,8 +177,8 @@
       </section>
 
       <footer class="footer">
-        <div class="aboutUs">
-          <div class="aboutUs__socialMedia">
+        <section class="aboutUs">
+          <article class="aboutUs__socialMedia">
             <p class="aboutUs__title">Seguinos</p>
             <ul class="aboutUs__ul">
               <li class="aboutUs__li">
@@ -173,34 +197,30 @@
                 </a>
               </li>
             </ul>
-          </div>
-        </div>
-        <div class="history">
-          <a class="history__link" href="#">Sobre Rodá</a>
-        </div>
-
-        <div class="contact">
-          <a class="contact__link" href="#">Contactanos</a>
-        </div>
-
-        <div class="newsLetter">
+          </article>
+        
+        <article class="history">
+            <a class="history__link" href="#">Sobre Rodá</a>
+        </article>
+  
+        <article class="contact">
+            <a class="contact__link" href="#">Contactanos</a>
+        </article>
+        </section>
+  
+        <section class="newsLetter">
+          <h2 class="newsLetter__title"> Recibir novedades </h2>
           <form class="newsLetter__form" action="#">
-            <label class="newsLetter__label"> Recibir novedades </label>
             <fieldset class="newsLetter__fieldset">
-              <input
-                class="newsLetter__input"
-                type="email"
-                placeholder="Ingresá tu email"
-              />
-              <button class="newsLetter__button" type="submit">
-                <i class="fas fa-envelope newsLetter__icon"></i>
-              </button>
+              <input class="newsLetter__input" type="email" placeholder="Ingresá tu email">
+              <button class="newsLetter__button" type="submit"> <i class="fas fa-envelope newsLetter__icon"></i> </button>
             </fieldset>
           </form>
-        </div>
-        <p class="copyright">
-          Creado por Andrea Eichenberger, Vicente Macchione y Gonzalo Kesy.
-        </p>
+        </section>
+  
+        <section class="copyright">
+          <p class="copyright__p"> Creado por Andrea Eichenberger, Vicente Macchione y Gonzalo Kesy.</p>
+        </section>
       </footer>
     </main>
   </body>

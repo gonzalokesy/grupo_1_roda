@@ -63,7 +63,14 @@
   width: 100%;
   font-size: 1em;
   align-self: center;
+  transition: all 0.3s;
 }
+
+.navBar__icon:active {
+  color: #4c956c;
+}
+
+
 
 .navBar__ul--right {
   justify-content: flex-end;
@@ -210,6 +217,18 @@
 
   .navBarDesktop__ul--right {
     justify-content: space-around;
+  }
+
+  .navBarDesktop__p:hover {
+    text-decoration: underline;
+  }
+
+  .navBarDesktop__p--roda:hover {
+    text-decoration: underline #4c956c;
+  }
+
+  .navBarDesktop__icon:hover {
+    transform: scale(1.3);
   }
 
   .dropdown {

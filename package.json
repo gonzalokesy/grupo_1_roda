@@ -2,10 +2,10 @@
   "name": "webdesign",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "webdesign/app.js",
   "scripts": {
-    "test": "node app.js",
-    "start": "nodemon app.js -e css, html, js, mjs"
+    "test": "nodemon webdesign/app.js -e css, html, js, mjs",
+    "start": "node webdesign/app.js"
   },
   "keywords": [],
   "author": "",

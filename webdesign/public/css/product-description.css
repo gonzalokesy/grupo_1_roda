@@ -28,41 +28,48 @@
     background-color: #f4e8c1;
     font-family: 'Raleway', sans-serif;
     width: 100vw;
+    height: 100vh;
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
     width: 98%;
-    margin: auto;
-    margin-bottom: 20px;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .buttonBack {
-    margin: 10px 0 20px 0;
-    border-style: none;
-    background-color: #5a1807 ;
-    color: #ece4b7 ;
-    padding: 5px;
+    margin: 0;
+    width: 100%;
+}  
+
+.buttonBack__link{
+    width: 50px;
+    background-color: #5a1807;
+    padding: 3px;
     border-radius: 5px;
+    text-decoration: none;
+    color: #ece4b7 ;
 }
 
 .buttonBack__icon {
     margin-right: 10px;
 }
 
-.buttonBack--end {
-    display: block;
-    margin:auto;
-    margin-top: 30px;
-}
-
 .productConteiner {
     border: solid 0.3px #5a1807;
     padding: 13px;
+    border-radius: 5px;
 }
 
 .productConteiner--desktop {
-    display: none;;
+    display: none;
 }
 
 .photoAndName {
@@ -81,7 +88,6 @@
 .photoAndName__photo {
     width: 100%;
     margin: auto;
-    background-color: #eabe7c ;
     text-align: center;
 }
 
@@ -100,7 +106,6 @@
 }
 .colorsButton {
     text-align: center;
-    background-color: #eabe7c ;
     padding: 0 0 10px 0;
     margin-bottom: 20px;
 }
@@ -117,7 +122,7 @@
 .priceAndShipping__price {
     width: 30%;
     color: #5a1807;
-    background-color: #eabe7c ;
+    /*background-color: #eabe7c ;*/
 }
 
 .priceAndShipping__priceValue {
@@ -131,7 +136,7 @@
     padding: 0 0 10px 10px;
     color: #5a1807;
     font-size: 1.2em;
-    text-align: center;
+    text-align: left;
 }
 
 /* Caja de botones */
@@ -168,8 +173,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: #eabe7c;
+    align-items: flex-end;
+    /*background-color: #eabe7c;*/
 }
 
 .priceAndShipping__shippingLink {
@@ -187,6 +192,9 @@
 
 .productDetaill {
     width: 100%;
+    border: solid 1px #5a1807;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
 /* Pestañas */
@@ -199,6 +207,7 @@
     color: #5a1807;
     font-size: 1.2em;
     font-weight: 800;
+    border-radius: 5px;
 }
 
 .productDetaill__description {
@@ -206,8 +215,9 @@
     text-align: center;
     padding: 0;
     margin: 0;
-    border: solid 1px #5a1807;
     padding: 10px 0;
+    border-bottom: solid 1px #5a1807;
+    border-right:solid 1px #5a1807;
 }
 
 .productDetaill__file {
@@ -215,22 +225,19 @@
     text-align: center;
     padding: 0;
     margin: 0;
-    border: solid 1px #5a1807;
     padding: 10px 0;
     border-left: none;
+    border-bottom: solid 1px #5a1807;
 }
 
 /* Contenido pestañas */
 
 .productDetaill__content {
-    border: solid 1px #5a1807;
     border-top: none;
     padding: 10px;
     color: #5a1807;
     font-size: 1em;
 }
-
-
 
 /* --------- Media queries --------- */
 
@@ -244,70 +251,127 @@
 
 
 @media (min-width: 993px) {
+
     .productConteiner--mobile {
         display: none;
     }
 
     .productConteiner--desktop {
-        display: block;
-    }
-    
-    .leftColumn {
-        width: 65%;
         display: flex;
-        flex-direction: column;
-    }
-
-    .photoAndColor {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    .photoAndColor__listConteiner {
-        width:100%;
-        background-color: #eabe7c;
-        padding: 10px 0;
-        display: flex;
-        justify-content: center;
-    }
-    .photoAndColor__list {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
-
-    .photoAndColor__link {
-        width: 50%;
-        margin: 0;
-    }
-
-    .photoAndColor__listPhoto {
-        width: 100%;
-    }
-
-    .colorsButtonConteiner {
-        width: 100%;
-        margin: 20px 0 0 0;
-        padding: 10px 0;
-        background-color: #eabe7c;
-    }
-
-    .colorsButton--desktop{
-        display: flex;
-        align-items: center;
-        align-self:flex-start;
-        width: 50%;
+        flex-wrap: wrap;
         justify-content: space-between;
-        margin: 0;
         padding: 0;
-    }
-
-    .colorsButton__title--desktop {
-        padding: 0;
-        margin: 0;
+        border: none;
+        align-self: center;
     }
     
+    /*Seccion izquierda */
+    .leftColumn {
+        width: 50%;
+    }
+
+    /* Sección derecha */
+    .rightColumn {
+        width: 45%;
+        border: solid 1px #5a1807;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    /* Nombre del producto */
+    .productName {
+        font-size: 2.5em;
+        color: #5a1807;
+        margin-bottom: 20px;
+    }
+
+    /* Caja de precio y método de pago */
+    .productPriceMethod {
+        display: flex;
+        flex-direction: flex;
+        margin-bottom: 10px;
+        padding: 10px 5px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .productPriceMethod__price {
+        font-size: 2em;
+        color: #5a1807;
+        width: 40%;
+        margin-bottom: 10px;
+        order: 1;
+    }
+
+    .productPriceMethod__method {
+        font-size: 1.5em;
+        color: #5a1807;
+        width: 40%;
+        order: 3;
+    }
+
+    .productPriceMethod__shippingPoint {
+        font-size: 1.5em;
+        color: #5a1807;
+        padding-top: 3px;
+        width: 50%;
+        order: 2;
+    }
+
+    .productPriceMethod__shippingCondition {
+        font-size: 1.5em;
+        color: #5a1807;
+        width: 50%;
+        order: 4;
+    }
+
+    /* Caja de formulario */
+    .amount__form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+        margin: auto;
+        margin-top: 50px;
+        order: 5;
+    }
+
+    .amount__text {
+        width: fit-content;
+        font-size: 1.5em;
+        color: #5a1807;
+    }
+
+    .amount__text--bold {
+        font-weight: bold;
+    }
+
+    .amount__select {
+        font-size: 1.5em;
+        color: #5a1807;
+        background-color: #ece4b7;
+        border: solid 1px #5a1807;
+        border-radius: 5px; 
+        padding: 3px;
+    }
+
+    .priceAndShipping__buttons--desktop {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .buttonAddCart--desktop {
+        width: 80%;
+        margin: 0;
+    }
+
+    .buttonAddFavorite--desktop {
+        font-size: 1.5em;
+        padding: 10px 10px;
+        width: 15%;
+    }
+
 }

@@ -16,90 +16,114 @@
 </head>
 <body class="body">
 
-    <header class="header">
-        <nav class="navBar">
-          <ul class="navBar__ul navBar__ul--left">
-            <li class="navBar__liLeft">
-              <a class="navBar__link" href="#">
-                <i class="fas fa-bars navBar__icon"></i>
-              </a>
-            </li>
-            <li class="navBar__liLeft">
-              <a class="navBar__link" href="#">
-                <i class="fas fa-search navBar__icon"></i>
-              </a>
-            </li>
-          </ul>
-          <figure class="navBar__logo">
-            <img
-              class="navBar__imageLogo"
-              src="/images/Logo.png"
-              alt="Logo de Rodá"
-            />
-          </figure>
-          <ul class="navBar__ul navBar__ul--right">
-            <li class="navBar__liRight">
-              <a class="navBar__link" href="#">
-                <i class="fas fa-star navBar__icon"></i>
-              </a>
-            </li>
-            <li class="navBar__liRight">
-              <a class="navBar__link" href="#">
-                <i class="fas fa-user-circle navBar__icon"></i>
-              </a>
-            </li>
-            <li class="navBar__liRight">
-              <a class="navBar__link" href="#">
-                <i class="fas fa-shopping-cart navBar__icon"></i>
-              </a>
-            </li>
-          </ul>
-  
-          <!--Navbar desktop-->
-  
-          <ul class="navBarDesktop__ul navBarDesktop__ul--left">
-            <li class="navBarDesktop__liLeft">
-              <a class="navBarDesktop__link" href="#">
-                <p class="navBarDesktop__p">Bicicletas</p>
-              </a>
-            </li>
-            <li class="navBarDesktop__liLeft">
-              <a class="navBarDesktop__link" href="#">
-                <p class="navBarDesktop__p">Accesorios</p>
-              </a>
-            </li>
-            <li class="navBarDesktop__liLeft">
-              <a class="navBarDesktop__link" href="#">
-                <p class="navBarDesktop__p">Rodá</p>
-              </a>
-            </li>
-          </ul>
-          <figure class="navBarDesktop__logo">
-            <img
-              class="navBarDesktop__imageLogo"
-              src="/images/Logo.png"
-              alt="Logo de Rodá"
-            />
-          </figure>
-          <ul class="navBarDesktop__ul navBarDesktop__ul--right">
-            <li class="navBarDesktop__liRight">
-              <a class="navBarDesktop__link" href="#">
-                <p class="navBarDesktop__p">Favoritos</p>
-              </a>
-            </li>
-            <li class="navBarDesktop__liRight">
-              <a class="navBarDesktop__link" href="#">
-                <p class="navBarDesktop__p">Mi Rodá</p>
-              </a>
-            </li>
-            <li class="navBarDesktop__liRight">
-              <a class="navBarDesktop__link" href="#">
-                <i class="fas fa-shopping-cart navBarDesktop__icon"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+  <header class="header">
+    <nav class="navBar">
+      <ul class="navBar__ul navBar__ul--left">
+        <li class="navBar__liLeft">
+          <a class="navBar__link" href="#"><i class="fas fa-bars navBar__icon navBar__icon--burguerMenu"></i></a>
+        </li>
+        <li class="navBar__liLeft">
+          <a class="navBar__link" href="#">
+            <i class="fas fa-search navBar__icon"></i>
+          </a>
+        </li>
+      </ul>
+      <figure class="navBar__logo">
+        <img
+          class="navBar__imageLogo"
+          src="/images/Logo.png"
+          alt="Logo de Rodá"
+        />
+      </figure>
+      <ul class="navBar__ul navBar__ul--right">
+        <li class="navBar__liRight">
+          <a class="navBar__link" href="#">
+            <i class="fas fa-star navBar__icon"></i>
+          </a>
+        </li>
+        <li class="navBar__liRight">
+          <a class="navBar__link" href="/login">
+            <i class="fas fa-user-circle navBar__icon"></i>
+          </a>
+        </li>
+        <li class="navBar__liRight">
+          <a class="navBar__link" href="/cart">
+            <i class="fas fa-shopping-cart navBar__icon"></i>
+          </a>
+        </li>
+      </ul>
+
+      <!--Navbar desktop-->
+
+      <ul class="navBarDesktop__ul navBarDesktop__ul--left">
+        <li class="navBarDesktop__liLeft">
+          <a class="navBarDesktop__link" href="#">
+            <p class="navBarDesktop__p">Bicicletas</p>
+          </a>
+        </li>
+        <li class="navBarDesktop__liLeft">
+          <a class="navBarDesktop__link" href="#">
+            <p class="navBarDesktop__p">Accesorios</p>
+          </a>
+        </li>
+        <li class="navBarDesktop__liLeft">
+          <a class="navBarDesktop__link" href="#">
+            <p class="navBarDesktop__p navBarDesktop__p--roda">Rodá</p>
+          </a>
+        </li>
+      </ul>
+      <figure class="navBarDesktop__logo">
+        <img
+          class="navBarDesktop__imageLogo"
+          src="/images/Logo.png"
+          alt="Logo de Rodá"
+        />
+      </figure>
+      <ul class="navBarDesktop__ul navBarDesktop__ul--right">
+        <li class="navBarDesktop__liRight">
+          <a class="navBarDesktop__link" href="#">
+            <p class="navBarDesktop__p">Favoritos</p>
+          </a>
+        </li>
+        <li class="navBarDesktop__liRight">
+          <a class="navBarDesktop__link" href="#">
+            <p class="navBarDesktop__p">Mi Rodá</p>
+          </a>
+        </li>
+        <li class="navBarDesktop__liRight">
+          <a class="navBarDesktop__link" href="#">
+            <i class="fas fa-shopping-cart navBarDesktop__icon"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--Dropdown-->
+    <ul class="dropdown">
+      <li class="dropdown__li">
+        <a class="dropdown__a" href="#">Bicicletas</a>
+      </li>
+      <li class="dropdown__li">
+        <a class="dropdown__a" href="#">Accesorios</a>
+      </li>
+      <li class="dropdown__li"></li>
+      <li class="dropdown__li">
+        <a class="dropdown__a" href="/login"><b>Ingresa</b> a tu cuenta</a>
+      </li>
+      <li class="dropdown__li">
+        <a class="dropdown__a" href="/register"><b>Crea</b> tu cuenta</a>
+      </li>
+      <li class="dropdown__li"></li>
+      <li class="dropdown__li">
+        <a class="dropdown__a" href="#">¡Encontranos en nuestras redes!</a>
+      </li>
+      <li class="dropdown__li">
+        <a class="iconDrop" href="#"><i class="fab fa-facebook"></i></a>
+        <a class="iconDrop" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="iconDrop" href="#"><i class="fab fa-twitter-square"></i></a>
+      </li>
+    </ul>
+  </header>
     
     <main class="main">
 

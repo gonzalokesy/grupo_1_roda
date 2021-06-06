@@ -111,6 +111,7 @@
   width: 100%;
   visibility: hidden;
   padding-bottom: 10px;
+  display: none;
 }
 
 .dropdown__li {

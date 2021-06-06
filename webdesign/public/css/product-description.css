@@ -39,13 +39,12 @@
     display: flex;
     flex-direction: column;
     width: 98%;
-    height: 100%;
     margin: 0 auto;
     justify-content: center;
 }
 
 .buttonBack {
-    margin: 0;
+    margin: 20px 0;
     width: 100%;
 }  
 
@@ -115,7 +114,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 0 20px 0;
+    margin: auto;
+    margin-bottom: 20px;
+    align-self: center;
 }
 
 /* Caja de precios */
@@ -174,7 +175,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    /*background-color: #eabe7c;*/
 }
 
 .priceAndShipping__shippingLink {
@@ -248,6 +248,19 @@
 993 - 1199 DESKTOP
 1200 - INFINITO 
 */
+
+@media (min-width: 577px) {
+    .priceAndShipping {
+        max-width: 700PX;
+    }
+
+    .productDetaill {
+        max-width: 700px;
+        margin: auto;
+    }
+
+}
+
 
 
 @media (min-width: 993px) {

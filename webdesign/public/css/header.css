@@ -1,5 +1,5 @@
 /* Fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap");
 /*Estilos: 
     Extra-light 200
     Light 300
@@ -16,119 +16,129 @@
     crema ece4b7
 */
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.body{
-    margin: 0;    
-    background-color: #f4e8c1;
-    font-family: 'Raleway', sans-serif;
-    width: 100vw;
-    font-size: 12px;
+.body {
+  margin: 0;
+  background-color: #f4e8c1;
+  font-family: "Raleway", sans-serif;
+  width: 100vw;
+  font-size: 12px;
 }
 
 /*Header*/
-.header{    
-    width: 100%;        
+.header {
+  width: 100%;
 }
 
-.navBar{
-    background-color: #5a1807;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.navBar {
+  background-color: #5a1807;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.navBar__ul{
-    display: flex;
-    align-self: center;
-    width: 35%;
-    list-style: none;
-    font-size: 20px;
+.navBar__ul {
+  display: flex;
+  align-self: center;
+  width: 35%;
+  list-style: none;
+  font-size: 20px;
 }
 
-.navBar__ul--left{
-    justify-content: flex-start;  
+.navBar__ul--left {
+  justify-content: flex-start;
 }
 
-.navBar__liLeft{
-    margin-left: 20%;
+.navBar__liLeft {
+  margin-left: 20%;
 }
 
-
-.navBar__icon{
-    width: 100%;
-    font-size: 1em;
-    align-self: center;
+.navBar__icon {
+  width: 100%;
+  font-size: 1em;
+  align-self: center;
 }
 
-.navBar__ul--right{
-    justify-content: flex-end; 
+.navBar__ul--right {
+  justify-content: flex-end;
 }
 
-.navBar__liRight{
-    margin-right: 15%;
+.navBar__liRight {
+  margin-right: 15%;
 }
 
-.navBar__link{
-    display: flex;
-    color: #ece4b7;
-    text-decoration: none;
+.navBar__link {
+  display: flex;
+  color: #ece4b7;
+  text-decoration: none;
 }
 
-.navBar__logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
+.navBar__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
 }
 
-.navBar__imageLogo{
-    width: 70%;
+.navBar__imageLogo {
+  width: 70%;
 }
 
 .navBarDesktop__logo {
-    display: none;
+  display: none;
 }
 
 .navBarDesktop__ul {
-    display: none;
+  display: none;
 }
 
-/* Dropdown */ 
-.navBar__icon--burguerMenu{
-    transition: visibility; /* ?? cómo resolver que aparezca cuando se selecciona */ 
-}
-
+/* Dropdown */
 .dropdown {
-    background-color: #5a1807;
-    width: 100%;
-    visibility: visible;
-    padding-bottom: 10px;
+  background-color: #5a1807;
+  width: 100%;
+  visibility: hidden;
+  padding-bottom: 10px;
 }
 
 .dropdown__li {
-    list-style: none;
-    color: #ece4b7;
-    font-size: 1.5em;
-    padding: 15px 15px 5px;
+  list-style: none;
+  color: #ece4b7;
+  font-size: 1.5em;
+  padding: 15px 15px 5px;
 }
 .dropdown__li--miRoda {
-    font-weight: 600;
-    margin-top: 10px;
-    margin-bottom: 0px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .dropdown__a {
-    text-decoration: none;
+  text-decoration: none;
+  color: #ece4b7;
+}
+
+.iconDrop {
+  text-decoration: none;
+  color: #ece4b7;
+  margin-right: 25px;
+}
+
+.navBar__icon--burguerMenu {
     color: #ece4b7;
 }
 
-
+.navBar__icon--burguerMenu > .dropdown {
+  transition: visibility;
+}
+.navBar__icon--burguerMenu:active > .dropdown {
+  visibility: visible;
+}
 
 /*
 0 - 576 MOBILE
@@ -142,75 +152,74 @@
 /* ---------Media queries ---------*/
 /* --MOBILE XL--*/
 @media (min-width: 577px) {
-    .navBar__imageLogo{
-        width: 50%;
-    }
+  .navBar__imageLogo {
+    width: 50%;
+  }
 
-    .dropdown__li {
-        font-size: 2em;
-    }
+  .dropdown__li {
+    font-size: 2em;
+  }
 }
 
 /* --TABLET/NETBOOK--*/
 @media (min-width: 769px) {
-    .dropdown__li {
-        font-size: 2.5em;
-    }
+  .dropdown__li {
+    font-size: 2.5em;
+  }
 }
 
 /* --DESKTOP--*/
 @media (min-width: 993px) {
-    .navBar__ul {
-        display: none;
-    }
+  .navBar__ul {
+    display: none;
+  }
 
-    .navBar__logo {
-        display: none;
-    }
+  .navBar__logo {
+    display: none;
+  }
 
-    .navBarDesktop__logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 20%;
-    }
+  .navBarDesktop__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+  }
 
-    .navBarDesktop__imageLogo{
-        width: 50%;
-    }
+  .navBarDesktop__imageLogo {
+    width: 50%;
+  }
 
-    .navBarDesktop__ul{
-        display: flex;
-        align-self: center;
-        width: 35%;
-        list-style: none;
-        font-size: 20px;
-    }
+  .navBarDesktop__ul {
+    display: flex;
+    align-self: center;
+    width: 35%;
+    list-style: none;
+    font-size: 20px;
+  }
 
-    .navBarDesktop__link{
-        display: flex;
-        color: #ece4b7;
-        text-decoration: none;
-        font-size: 0.9em;
-    }
+  .navBarDesktop__link {
+    display: flex;
+    color: #ece4b7;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
 
-    .navBarDesktop__ul--left{
-        justify-content: space-around;  
-    }
+  .navBarDesktop__ul--left {
+    justify-content: space-around;
+  }
 
-    .navBarDesktop__ul--right{
-        
-        justify-content: space-around; 
-    }
+  .navBarDesktop__ul--right {
+    justify-content: space-around;
+  }
 
-    .dropdown {
-        visibility: hidden;
-    }
+  .dropdown {
+    visibility: hidden;
+  }
 }
 
 /* --INFINITO--*/
 @media (min-width: 1200px) {
-    .navBarDesktop__link {
-        font-size: 0.8em;
-    }
+  .navBarDesktop__link {
+    font-size: 0.8em;
+  }
 }

@@ -56,6 +56,7 @@ header {
   border-radius: 5px;
   padding: 5%;
   padding-bottom: 10%;
+  border: solid 1px #5a1807;
 }
 
 .form__fieldset {
@@ -78,12 +79,15 @@ header {
 }
 
 .fieldset__input {
+  background-color: #ece4b7;
   display: block;
   margin: auto;
   border: none;
   border-radius: 5px;
   width: 85%;
   padding: 1.5%;
+  border: solid 1px #5a1807;
+  outline: none;
 }
 .fieldset__input:focus {
   background-color: #ece4b7;
@@ -101,7 +105,7 @@ header {
 .form__button {
   font-size: 1.3em;
   display: block;
-  background-color: #5a1807;
+  background-color: #4c956c;
   color: #ece4b7;
   font-weight: 600;
   border: none;
@@ -110,7 +114,7 @@ header {
   margin: 15% auto 10%;
 }
 .form__button:active {
-  background-color: #4c956c;
+  background-color: #5a1807;
 }
 
 .form__p {
@@ -210,7 +214,7 @@ footer {
     transition: background-color 0.3s;
   }
   .form__button:hover {
-    background-color: #4c956c;
+    background-color: #5a1807;
   }
 }
 

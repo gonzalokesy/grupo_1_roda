@@ -39,23 +39,31 @@ header {
 .mainRegister {
     font-family: "Raleway", sans-serif;
     background-color: #ece4b7;
-    padding-bottom: 15%;
+    padding-bottom: 10%;
   }
   
   .mainRegister__h3 {
     color: #5a1807;
     text-align: center;
     font-size: 1.4em;
-    padding: 10% 5% 5%;
+    padding: 5% 5% 5% 5%;
   }
   
   .form {
     width: 80%;
     margin: auto;
     background-color: #eabe7c;
+    border: solid 1px #5a1807;
     border-radius: 5px;
     padding: 5%;
     padding-bottom: 10%;
+  }
+
+  .form__p{
+    text-align: center;
+    color: #5a1807;
+    font-weight:600;
+    padding-bottom: 20px;
   }
   
   .form__fieldset {
@@ -75,8 +83,11 @@ header {
   .fieldset__input {
     display: block;
     margin: auto;
+    background-color: #ece4b7;
     border: none;
+    border: solid 1px #5a1807;
     border-radius: 5px;
+    outline: none;
     width: 85%;
     padding: 1.5%;
   }
@@ -92,11 +103,13 @@ header {
 
 .fieldset__label--termCondition{
     margin-left: 1%;
-    align-self: center;
+    text-align:left;
+    color: #5a1807;
 }
 .fieldset__input--termCondition{
     align-self: center;
     font-size: 1.4em;
+    background-color: #ece4b7;
 }
   
   .form__a {
@@ -121,55 +134,26 @@ header {
   }
 
   .form__button:active {
-    background-color: #4c956c;
+    background-color: #5a1807;
   }
   
   /* --TABLET/NETBOOK--*/
 @media (min-width: 769px) {
+    .form{
+    max-width: 60%;
+    }
 }
 
 /* --DESKTOP--*/
 @media (min-width: 993px) {
   /* MAIN */
-  .mainRegister {
-    padding-bottom: 12%;
-  }
-
-  .mainRegister__h3 {
-    text-align: left;
-    padding: 30px;
-  }
-
-  .form {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: auto;
-    padding: 2%;
-    padding-bottom: 1%;
-  }
-
-  .form__fieldset {
-    width: 20% ;
-  }
-
-  .fieldset__label {
-     
-  }
-
-  .fieldset__input {
-
-  }
-
-  .form__fieldset--termCondition{
-      width: 100%;
-  }
+ 
 
   .form__button {    
     transition: background-color 0.3s;
   }
   .form__button:hover {
-    background-color: #4c956c;
+    background-color: #5a1807;
   }
 }
 

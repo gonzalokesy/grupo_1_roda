@@ -77,6 +77,7 @@
 }
 
 .totals__td{
+    color: #5a1807;
     width: 80%;
     padding: 20px 0px;
     border-bottom: solid 0.3px #5a1807;
@@ -102,6 +103,11 @@
     border-style: none;
     text-align: center;
 }
+
+.totals__link:active{
+    background-color: #5a1807;
+}
+
 
 /*
 0 - 576 MOBILE
@@ -143,6 +149,12 @@
     .totals{
         max-width: 30%;
         margin: 20px 0px;
+    }
+    .totals__link {    
+        transition: background-color 0.3s;
+     }
+    .totals__link:hover {
+        background-color: #5a1807;
     }
 }
 

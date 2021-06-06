@@ -114,7 +114,7 @@
         </fieldset>
         <fieldset class="form__fieldset">
             <label class="fieldset__label" for="identityDocument">DNI</label>
-            <input class="fieldset__input" type="number" name="identityDocument" id="identityDocument" required/>
+            <input class="fieldset__input" type="text" name="identityDocument" id="identityDocument" required/>
         </fieldset>
         <fieldset class="form__fieldset">
             <label class="fieldset__label" for="email">Email *</label>
@@ -129,11 +129,20 @@
             id="password" required minlength="8"
           />
         </fieldset>
+        <fieldset class="form__fieldset form__fieldset--forgetPass">
+          <label class="fieldset__label" for="password">Confirmar contraseña *</label>
+          <input
+            class="fieldset__input"
+            type="password"
+            name="password"
+            id="password" required minlength="8"
+          />
+        </fieldset>
         <fieldset class="form__fieldset form__fieldset--termCondition">
             <input class="fieldset__input--termCondition" type="checkbox" name="termCondition" id="termCondition" required/>
             <label class="fieldset__label--termCondition" for="termCondition">Acepto los Términos y Condiciones y autorizo el uso de mis datos de acuerdo a la Declaración de Privacidad *</label>
         </fieldset>
-        <button class="form__button" type="submit">Crear cuenta</button>
+        <button class="form__button" type="submit">Crear</button>
       </form>
     </main>
 

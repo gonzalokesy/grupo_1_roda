@@ -105,6 +105,7 @@ header {
     margin-left: 1%;
     text-align:left;
     color: #5a1807;
+    font-size: 0.8em;
 }
 .fieldset__input--termCondition{
     align-self: center;
@@ -124,7 +125,7 @@ header {
   .form__button {
     font-size: 1.3em;
     display: block;
-    background-color: #5a1807;
+    background-color: #4c956c;
     color: #ece4b7;
     font-weight: 600;
     border: none;

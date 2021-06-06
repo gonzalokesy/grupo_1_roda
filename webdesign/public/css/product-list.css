@@ -1,0 +1,101 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+/*Estilos: 
+    Extra-light 200
+    Light 300
+    Regular 400
+    Medium 500
+    Semi-bold 600
+    Bold 700
+*/
+
+/* Paleta de colores: 
+    marron oscuro 5a1807
+    verde agua 4c956c
+    marron claro eabe7c
+    crema ece4b7
+*/
+
+
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+.body{
+    margin: 0;    
+    background-color: #f4e8c1;
+    font-family: 'Raleway', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main {
+    display: flex;
+    width: 98%;
+    height: 100%;
+    flex-direction: column;
+    margin: auto;
+}
+
+/* Caja de nombre, botón volver y filtro */
+.nameSection {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+}
+
+.buttonBack {
+    position: absolute;
+}
+
+.buttonBack__link{
+    width: 50px;
+    background-color: #5a1807;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ece4b7;
+    order: 1;
+}
+
+.nameSection__name {
+    font-size: 2.3em;
+    color: #5a1807;
+    order: 2;
+    position: absolute;
+    left: 10%;
+}
+
+.filterMobile {
+    order: 3;
+    position: absolute;
+    right: 1%;
+    padding: 5px;
+    background-color: #5a1807;
+    border-radius: 5px;
+}
+
+.filterMobile__link {
+    color: #ece4b7;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.filterMobile__icon {
+    margin-left: 5px;
+}
+
+/* Barra de filtro */
+.filterSection {
+    display: none;
+}
+

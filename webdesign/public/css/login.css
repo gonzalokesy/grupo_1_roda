@@ -79,6 +79,7 @@ header {
 }
 
 .fieldset__input {
+  color: #5a1807;
   background-color: #ece4b7;
   display: block;
   margin: auto;
@@ -123,7 +124,7 @@ header {
 }
 
 .form__a--create {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 700;
 }
 
@@ -165,7 +166,7 @@ footer {
   }
 
   .form__a--create {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 }
 

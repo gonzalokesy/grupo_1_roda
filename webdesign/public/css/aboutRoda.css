@@ -29,3 +29,85 @@
   width: 100vw;
   font-size: 12px;
 }
+
+.header {
+    font-family: "Raleway";
+}
+
+.mainAbout {
+    width: 100%;
+    background-color: #ece4b7;
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sectionAbout {
+    width: 100%;
+    margin: 2% 7%;
+    text-align: center;
+    margin-bottom: 8%;
+    color: #5a1807;
+    font-size: 0.8em;
+}
+
+.sectionAbout__h1 {
+    font-size: 1.5em;
+}
+
+.sectionAbout__p {
+    margin: 7px;
+}
+
+.sectionAbout__p--bienvenidos {
+    font-weight: 600;
+    margin: 13px 7px 7px;
+}
+
+.figureAbout {
+    width: 100%;
+    align-self: flex-end;
+}
+
+.figureAbout__img{
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+.footer {
+    font-family: "Raleway", sans-serif;
+}
+
+/* ---------Media queries ---------*/
+/* --MOBILE XL--*/
+@media (min-width: 577px) {
+    .sectionAbout {
+        font-size: 1em;
+        margin: 10px auto 20px;
+        max-width: 70%;
+    }
+
+    .figureAbout {
+        margin: 10px auto 30px;
+        max-width: 50%;
+    }
+}
+
+/* --DESKTOP--*/
+@media (min-width: 993px) {
+    .sectionAbout {
+        font-size: 1.4em;
+        margin: 20px auto;
+        width: 50%;
+    }
+
+    .figureAbout {
+        width: 28%;
+        margin: 0px;
+    }
+}
+
+/* --INFINITO--*/
+@media (min-width: 1200px) {
+
+    }

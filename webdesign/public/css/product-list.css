@@ -54,6 +54,7 @@
 
 .buttonBack {
     position: absolute;
+    display: none;
 }
 
 .buttonBack__link{
@@ -71,13 +72,13 @@
     color: #5a1807;
     order: 2;
     position: absolute;
-    left: 10%;
+    left: 1%;
 }
 
 .filterMobile {
     order: 3;
     position: absolute;
-    right: 1%;
+    right: 2%;
     padding: 5px;
     background-color: #5a1807;
     border-radius: 5px;
@@ -90,7 +91,8 @@
 }
 
 .filterMobile__icon {
-    margin-left: 5px;
+    margin-left: 8px;
+    font-size: 0.8em;
 }
 
 /* Barra de filtro */
@@ -103,7 +105,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    justify-content: space-between;
+    justify-content:center;
     margin: 50px auto;
 }
 
@@ -115,6 +117,8 @@
     margin-bottom: 20px;
     border: solid 1px #5a1807;
     border-radius: 5px;
+    max-width: 246px;
+    margin-right: 20px;
 }
 
 .bike__imageBox {
@@ -135,6 +139,62 @@
 
 .bike__description--name {
     font-size: 2em;
+}
+
+
+/* --------- Media queries --------- */
+
+/*
+0 - 576 MOBILE
+577 - 768 MOBILE XL
+769 - 992 TABLET/NETBOOK
+993 - 1199 DESKTOP
+1200 - INFINITO 
+*/
+
+@media (min-width: 993px) {
+
+    .filterSection {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        border: solid 1px #5a1807 ;
+        background-color: #eabe7c;
+    }
+
+    .filterSection__item {
+        color: #5a1807;
+        font-size: 1.3em;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .filterSection__item:hover {
+        font-weight: 500;
+    }
+
+    .filterSection__icon {
+        margin-left: 6px;
+    }
+
+    .bike {
+        border: none;
+        transition: all 600ms;
+        margin-top: 50px;
+    }
+
+    .bike:hover {
+        border: solid 1px #5a1807;
+        background-color: #eabe7c;
+        transform: scale(1.03);
+    }
+
+    .filterMobile {
+        display: none;
+    }
+
+
 }
 
 

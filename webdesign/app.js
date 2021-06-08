@@ -37,14 +37,24 @@ app.get("/cartShipping", (req,res) => {
     res.sendFile(path.resolve(__dirname,"./views/cartShipping.html"))
 });
 
-//Creando ruta Detalle de Producto
-app.get("/product", (req,res) => {
-    res.sendFile(path.resolve(__dirname,"./views/product-description.html"))
+//Creando ruta Detalle de bicilcetas
+app.get("/product-descriptionBike", (req,res) => {
+    res.sendFile(path.resolve(__dirname,"./views/product-descriptionBike.html"))
 });
 
-//Creando ruta Lista de Productos
-app.get("/product-list", (req,res) => {
-    res.sendFile(path.resolve(__dirname,"./views/product-list.html"))
+//Creando ruta Detalle de accesorios
+app.get("/product-descriptionAccessories", (req,res) => {
+    res.sendFile(path.resolve(__dirname,"./views/product-descriptionAccessories.html"))
+});
+
+//Creando ruta Lista de bicilcetas
+app.get("/product-listBike", (req,res) => {
+    res.sendFile(path.resolve(__dirname,"./views/product-listBike.html"))
+});
+
+//Creando ruta Lista de bicilcetas
+app.get("/product-listAccessories", (req,res) => {
+    res.sendFile(path.resolve(__dirname,"./views/product-listAccessories.html"))
 });
 
 //Creando ruta Formulario de ingreso

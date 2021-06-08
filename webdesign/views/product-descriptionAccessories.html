@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tu carrito Rodá</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicicletas Rodá</title>
     <script
       src="https://kit.fontawesome.com/1161afb872.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/cartShipping.css" />
     <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/product-descriptionAccessories.css" />
     <link rel="stylesheet" href="/css/normalize.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body class="body">
-    
-    <header class="header">
+
+  <header class="header">
     <nav class="navBar">
       <ul class="navBar__ul navBar__ul--left">
         <li class="navBar__liLeft">
@@ -123,44 +124,118 @@
         <a class="iconDrop" href="#"><i class="fab fa-twitter-square"></i></a>
       </li>
     </ul>
-    </header>
-
+  </header>
+    
     <main class="main">
-    <section class="boxShippingDetail">
-      <section class="shippingDetail">
-        <article class="shippingDetail__article">
-              <p class="shippingDetail__p"><i class="fas fa-truck shippingDetail__icon"></i>Selecciona ubicación de entrega o retiro</p>   
-        </article>
-        <article class="shippingDetail__article">
-              <p class="shippingDetail__p"><i class="fas fa-credit-card shippingDetail__icon"></i>Selecciona metodo de pago</p>
-        </article>
+
+        <!--Button back-->
+     
+
+      <!--Mobile-->
+        <nav class="buttonBack">
+          <a class="buttonBack__link" href="/product-list"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</a>
+        </nav>
+        <section class="productConteiner productConteiner--mobile">
+        <section class="photoAndName">
+            <h2 class="photoAndName__name">Lorem ipsum</h2>
+            <figure class="photoAndName__photo">
+                <img class="photoAndName__image" src="images/bicicleta.jpg" alt="">
+            </figure>
+        </section>
+
+        <div class="colorsButton">
+            <p class="colorsButton__title"> Colores disponibles</p>
+            <a class="colorsButton__button  href="">
+                <i class="far fa-circle"></i> 
+            </a>
+            <a class="colorsButton__button  href=""> 
+                <i class="far fa-circle"></i> 
+            </a>
+            <a class="colorsButton__button  href="">
+                <i class="far fa-circle"></i> </a>
+            <a class="colorsButton__button  href=""> 
+                <i class="far fa-circle"></i> 
+            </a>
+            <a class="colorsButton__button  href=""> 
+                <i class="far fa-circle"></i> 
+            </a>
+            <a class="colorsButton__button  href="">
+                <i class="far fa-circle"></i>
+            </a>
+        </div>
+
+        <section class="priceAndShipping">
+            <article class="priceAndShipping__price">
+                <p class="priceAndShipping__priceValue"> $ 30.000</p>
+                <a class="priceAndShipping__payMethod" href="">Ver medios de pago</a>
+            </article>
+            <form class="priceAndShipping__buttons">
+                <button class="buttonAddCart">Añadir al carrito</button>
+                <button class="buttonAddFavorite"><i class="fas fa-star navBar__icon"></i></button>
+            </form>
+            <article class="priceAndShipping__shipping">
+                <a class="priceAndShipping__shippingLink" href=""> Punto de envio <i class="priceAndShipping__shippinIicon fas fa-map-marker-alt"></i></a>
+                <a class="priceAndShipping__shippingLink" href="">Condiciones de envíos</a>
+            </article>
+        </section>
+
+        <section class="productDetaill">
+            <div class="productDetaill__tabs">
+                <p class="productDetaill__description">Descripción</p>
+                <p class="productDetaill__file">Ficha técnica</p>
+            </div>
+            <div class="productDetaill__content">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi numquam accusamus doloremque deleniti neque voluptatum sequi pariatur sunt tenetur, quae inventore optio aperiam, in iusto.
+            </div>
+        </section>
+
+    </section>
+     <!--End Mobile-->
+
+     <!--Desktop-->
+    <section class="productConteiner productConteiner--desktop">
+      <section class="leftColumn">
+        <figure class="photoAndName__photo">
+          <img class="photoAndName__image" src="images/bicicleta.jpg" alt="">
+      </figure>
       </section>
 
-      <section class="totals">
-        <h3 class="totals__title">Totales</h3>
-        <table class="totals__table">
-          <tbody class="totals__tbody">
-            <tr class="totals__tr">
-                <td class="totals__td">Subtotal</td>
-                <td class="totals__td">$$</td>
-            </tr>
-            <tr class="totals__tr">
-                <td class="totals__td">Envio</td>
-                <td class="totals__td">Gratis</td>
-            </tr>
-            <tr class="totals__tr">
-                <td class="totals__td">Pagas</td>
-                <td class="totals__td">$$</td>
-            </tr>
-          </tbody>
-        </table>
-        <nav class="totals__nav">                
-            <a class="totals__link" href="/">
-                Finalizar compra
-            </a>
-          </nav>            
+      <section class="rightColumn">
+        <h2 class="productName">Lorem ipsum</h2>
+        <article class="productPriceMethod">
+          <p class="productPriceMethod__price">$ 1.000.000</p>
+          <a class="productPriceMethod__method" href="">Medios de pago</a>
+          <a class="productPriceMethod__shippingPoint" href=""> Punto de envio <i class="priceAndShipping__shippinIicon fas fa-map-marker-alt"></i></a>
+          <a class="productPriceMethod__shippingCondition" href="">Condiciones de envíos</a>
+          <form class="amount__form" action="">
+            <label class="amount__text amount__text--bold">Cantidad</label>
+            <select class="amount__select"  name="" id="">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label class="amount__text">x disponibles</label> 
+          </form>         
+        </article>
+        <form class="priceAndShipping__buttons priceAndShipping__buttons--desktop">
+          <button class="buttonAddCart buttonAddCart--desktop">Añadir al carrito</button>
+          <button class="buttonAddFavorite buttonAddFavorite--desktop"><i class="fas fa-star navBar__icon"></i></button>
+        </form>
+        <article class="productDetaill">
+          <div class="productDetaill__tabs">
+              <p class="productDetaill__description">Descripción</p>
+              <p class="productDetaill__file">Ficha técnica</p>
+          </div>
+          <div class="productDetaill__content">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi numquam accusamus doloremque deleniti neque voluptatum sequi pariatur sunt tenetur, quae inventore optio aperiam, in iusto.
+          </div>
+        </article>
+
       </section>
     </section>
+    <!--End desktop-->  
     </main>
 
     <footer class="footer">
@@ -209,7 +284,6 @@
         <p class="copyright__p"> Creado por Andrea Eichenberger, Vicente Macchione y Gonzalo Kesy.</p>
       </section>
     </footer>
-
-    
+   
 </body>
 </html>

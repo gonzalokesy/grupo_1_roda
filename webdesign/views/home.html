@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Bicicletas Rodá</title>
+    <title>Rodá</title>
     <script
       src="https://kit.fontawesome.com/1161afb872.js"
       crossorigin="anonymous"
@@ -19,7 +19,9 @@
       <nav class="navBar">
         <ul class="navBar__ul navBar__ul--left">
           <li class="navBar__liLeft">
-            <a class="navBar__link" href="#"><i class="fas fa-bars navBar__icon navBar__icon--burguerMenu"></i></a>
+            <a class="navBar__link" href="#"
+              ><i class="fas fa-bars navBar__icon navBar__icon--burguerMenu"></i
+            ></a>
           </li>
           <li class="navBar__liLeft">
             <a class="navBar__link" href="#">
@@ -41,12 +43,12 @@
             </a>
           </li>
           <li class="navBar__liRight">
-            <a class="navBar__link" href="#">
+            <a class="navBar__link" href="/login">
               <i class="fas fa-user-circle navBar__icon"></i>
             </a>
           </li>
           <li class="navBar__liRight">
-            <a class="navBar__link" href="#">
+            <a class="navBar__link" href="/cart">
               <i class="fas fa-shopping-cart navBar__icon"></i>
             </a>
           </li>
@@ -66,7 +68,7 @@
             </a>
           </li>
           <li class="navBarDesktop__liLeft">
-            <a class="navBarDesktop__link" href="#">
+            <a class="navBarDesktop__link" href="/aboutRoda">
               <p class="navBarDesktop__p navBarDesktop__p--roda">Rodá</p>
             </a>
           </li>
@@ -85,12 +87,12 @@
             </a>
           </li>
           <li class="navBarDesktop__liRight">
-            <a class="navBarDesktop__link" href="#">
+            <a class="navBarDesktop__link" href="/login">
               <p class="navBarDesktop__p">Mi Rodá</p>
             </a>
           </li>
           <li class="navBarDesktop__liRight">
-            <a class="navBarDesktop__link" href="#">
+            <a class="navBarDesktop__link" href="/cart">
               <i class="fas fa-shopping-cart navBarDesktop__icon"></i>
             </a>
           </li>
@@ -123,7 +125,7 @@
         </li>
       </ul>
     </header>
-    
+
     <main class="mainHome">
       <section class="sectionHome">
         <a class="sectionHome__a" href="#">¡Conocelas!</a>
@@ -175,8 +177,6 @@
           />
         </figure>
       </section>
-
-      
     </main>
 
     <footer class="footer">
@@ -201,28 +201,36 @@
             </li>
           </ul>
         </article>
-      
-      <article class="history">
-          <a class="history__link" href="#">Sobre Rodá</a>
-      </article>
 
-      <article class="contact">
+        <article class="history">
+          <a class="history__link" href="/aboutRoda">Sobre Rodá</a>
+        </article>
+
+        <article class="contact">
           <a class="contact__link" href="#">Contactanos</a>
-      </article>
+        </article>
       </section>
 
       <section class="newsLetter">
-        <h2 class="newsLetter__title"> Recibir novedades </h2>
+        <h2 class="newsLetter__title">Recibir novedades</h2>
         <form class="newsLetter__form" action="#">
           <fieldset class="newsLetter__fieldset">
-            <input class="newsLetter__input" type="email" placeholder="Ingresá tu email">
-            <button class="newsLetter__button" type="submit"> <i class="fas fa-envelope newsLetter__icon"></i> </button>
+            <input
+              class="newsLetter__input"
+              type="email"
+              placeholder="Ingresá tu email"
+            />
+            <button class="newsLetter__button" type="submit">
+              <i class="fas fa-envelope newsLetter__icon"></i>
+            </button>
           </fieldset>
         </form>
       </section>
 
       <section class="copyright">
-        <p class="copyright__p"> Creado por Andrea Eichenberger, Vicente Macchione y Gonzalo Kesy.</p>
+        <p class="copyright__p">
+          Creado por Andrea Eichenberger, Vicente Macchione y Gonzalo Kesy.
+        </p>
       </section>
     </footer>
   </body>

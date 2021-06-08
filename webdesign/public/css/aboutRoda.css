@@ -20,18 +20,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-.body {
-  margin: 0;
-  background-color: #f4e8c1;
   font-family: "Raleway", sans-serif;
-  width: 100vw;
-  font-size: 12px;
-}
-
-.header {
-    font-family: "Raleway";
 }
 
 .mainAbout {
@@ -74,10 +63,6 @@
     margin-bottom: -4px;
 }
 
-.footer {
-    font-family: "Raleway", sans-serif;
-}
-
 /* ---------Media queries ---------*/
 /* --MOBILE XL--*/
 @media (min-width: 577px) {
@@ -106,8 +91,3 @@
         margin: 0px;
     }
 }
-
-/* --INFINITO--*/
-@media (min-width: 1200px) {
-
-    }

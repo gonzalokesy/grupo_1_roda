@@ -1,0 +1,419 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+/*Estilos: 
+    Extra-light 200
+    Light 300
+    Regular 400
+    Medium 500
+    Semi-bold 600
+    Bold 700
+*/
+
+/* Paleta de colores: 
+    marron oscuro 5a1807
+    verde agua 4c956c
+    marron claro eabe7c
+    crema ece4b7
+*/
+
+
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+.body{
+    margin: 0;    
+    background-color: #f4e8c1;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    height: 100vh;
+    font-size: 12px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    margin: auto;
+    justify-content: center;
+}
+
+.buttonBack {
+    margin: 20px 0;
+    width: 100%;
+}  
+
+.buttonBack__link{
+    width: 50px;
+    background-color: #5a1807;
+    padding: 3px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ece4b7 ;
+}
+
+.buttonBack__icon {
+    margin-right: 10px;
+}
+
+.productConteiner {
+    border: solid 0.3px #5a1807;
+    padding: 13px;
+    border-radius: 5px;
+}
+
+.productConteiner--desktop {
+    display: none;
+}
+
+.photoAndName {
+    width: 100%;
+}
+
+.photoAndName__name {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #5a1807;
+    padding: 0 0 0 10px;
+}
+
+/* Caja de imagen */
+.photoAndName__photo {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Imagen */
+.photoAndName__image {
+    padding-top: 23px;
+    padding-bottom: 10px;
+    width: 70%;
+}
+
+/* Caja de selección de color */
+.colorsButton__title{
+    font-size: 1.2em;
+    color: #5a1807;
+    margin-bottom: 5px;
+}
+.colorsButton {
+    text-align: center;
+    padding: 0 0 10px 0;
+    margin-bottom: 20px;
+}
+
+/* Caja de precios, envios y botones */
+.priceAndShipping {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+/* Caja de precios */
+.priceAndShipping__price {
+    width: 30%;
+    color: #5a1807;
+    /*background-color: #eabe7c ;*/
+}
+
+.priceAndShipping__priceValue {
+    font-size: 2em;
+    font-weight: 700;
+    padding: 5px 0 10px 10px;
+}
+
+.priceAndShipping__payMethod {
+    display: block;
+    padding: 0 0 10px 10px;
+    color: #5a1807;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+/* Caja de botones */
+.priceAndShipping__buttons {
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonAddCart {
+    width: 100%;
+    padding: 10px 0;
+    color: #f4e8c1;
+    font-weight: 600;
+    background-color: #4c956c;
+    border-style: none;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.buttonAddCart:active {
+    background-color: #5a1807;
+}
+
+.buttonAddFavorite {
+    padding: 5px;
+    color: #f4e8c1;
+    background-color: #4c956c;
+    border-style: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.buttonAddFavorite:active {
+    background-color: #5a1807;
+}
+
+/* Caja de envíos */
+.priceAndShipping__shipping {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.priceAndShipping__shippingLink {
+    color: #5a1807;
+    font-size: 1.1em;
+    padding: 0 0 10px 0;
+    text-align: center;
+}
+
+.priceAndShipping__shippingIcon {
+    margin-left: 5px;
+}
+
+/* Caja de descripción y ficha técnica */ 
+
+.productDetaill {
+    width: 100%;
+    border: solid 1px #5a1807;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Pestañas */
+.productDetaill__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #eabe7c;
+    color: #5a1807;
+    font-size: 1.2em;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.productDetaill__description {
+    width: 50%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: solid 1px #5a1807;
+    border-right:solid 1px #5a1807;
+}
+
+.productDetaill__file {
+    width: 50%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding: 10px 0;
+    border-left: none;
+    border-bottom: solid 1px #5a1807;
+}
+
+/* Contenido pestañas */
+
+.productDetaill__content {
+    border-top: none;
+    padding: 10px;
+    color: #5a1807;
+    font-size: 1em;
+}
+
+/* --------- Media queries --------- */
+
+/*
+0 - 576 MOBILE
+577 - 768 MOBILE XL
+769 - 992 TABLET/NETBOOK
+993 - 1199 DESKTOP
+1200 - INFINITO 
+*/
+
+@media (min-width: 577px) {
+    .priceAndShipping {
+        max-width: 700px;
+    }
+
+    .productDetaill {
+        max-width: 700px;
+        margin: auto;
+    }
+
+}
+
+
+@media (min-width: 993px) {
+
+    .main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 98%;
+    }
+
+    .productConteiner--mobile {
+        display: none;
+    }
+
+    .productConteiner--desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0;
+        border: none;
+        align-self: center;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    
+    /*Seccion izquierda */
+    .leftColumn {
+        width: 50%;
+    }
+
+    .photoAndName__photo {
+        width: 40%;
+    }
+
+    /* Sección derecha */
+    .rightColumn {
+        width: 40%;
+        border: solid 1px #5a1807;
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 475px;
+    }
+
+    /* Nombre del producto */
+    .productName {
+        font-size: 2.5em;
+        color: #5a1807;
+        margin-bottom: 20px;
+    }
+
+    /* Caja de precio y método de pago */
+    .productPriceMethod {
+        display: flex;
+        flex-direction: flex;
+        margin-bottom: 10px;
+        padding: 10px 5px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .productPriceMethod__price {
+        font-size: 2em;
+        color: #5a1807;
+        width: 40%;
+        margin-bottom: 10px;
+        order: 1;
+    }
+
+    .productPriceMethod__method {
+        font-size: 1.5em;
+        color: #5a1807;
+        width: 40%;
+        order: 3;
+    }
+
+    .productPriceMethod__shippingPoint {
+        font-size: 1.5em;
+        color: #5a1807;
+        padding-top: 3px;
+        width: 50%;
+        order: 2;
+    }
+
+    .productPriceMethod__shippingCondition {
+        font-size: 1.5em;
+        color: #5a1807;
+        width: 50%;
+        order: 4;
+    }
+
+    /* Caja de formulario */
+    .amount__form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+        margin: auto;
+        margin-top: 50px;
+        order: 5;
+    }
+
+    .amount__text {
+        width: fit-content;
+        font-size: 1.5em;
+        color: #5a1807;
+    }
+
+    .amount__text--bold {
+        font-weight: bold;
+    }
+
+    .amount__select {
+        font-size: 1.5em;
+        color: #5a1807;
+        background-color: #ece4b7;
+        border: solid 1px #5a1807;
+        border-radius: 5px; 
+        padding: 3px;
+    }
+
+    .priceAndShipping__buttons--desktop {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .buttonAddCart--desktop {
+        width: 80%;
+        margin: 0;
+        transition: 0.5s;
+    }
+
+    .buttonAddCart--desktop:hover {
+        background-color: #5a1807;
+    }
+
+    .buttonAddFavorite--desktop {
+        font-size: 1.5em;
+        padding: 10px 10px;
+        width: 15%;
+        transition: 0.5s;
+    }
+
+    .buttonAddFavorite--desktop:hover {
+        background-color: #5a1807;
+    }
+
+}

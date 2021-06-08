@@ -1,0 +1,210 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+/*Estilos: 
+    Extra-light 200
+    Light 300
+    Regular 400
+    Medium 500
+    Semi-bold 600
+    Bold 700
+*/
+
+/* Paleta de colores: 
+    marron oscuro 5a1807
+    verde agua 4c956c
+    marron claro eabe7c
+    crema ece4b7
+*/
+
+
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+.body{
+    margin: 0;    
+    background-color: #f4e8c1;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    height: 100vh;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: auto;
+}
+
+/* Caja de nombre, botón volver y filtro */
+.nameSection {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+.buttonBack {
+    position: absolute;
+    display: none;
+}
+
+.buttonBack__link{
+    width: 50px;
+    background-color: #5a1807;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ece4b7;
+    order: 1;
+}
+
+.nameSection__name {
+    font-size: 2.3em;
+    color: #5a1807;
+    order: 2;
+    position: absolute;
+    left: 1%;
+}
+
+.filterMobile {
+    order: 3;
+    position: absolute;
+    right: 2%;
+    padding: 5px;
+    background-color: #5a1807;
+    border-radius: 5px;
+}
+
+.filterMobile__link {
+    color: #ece4b7;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.filterMobile__icon {
+    margin-left: 8px;
+    font-size: 0.8em;
+}
+
+/* Barra de filtro */
+.filterSection {
+    display: none;
+}
+
+/* Sección de productos */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content:center;
+    margin: 50px auto;
+}
+
+/* Articulo */
+.bike {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: solid 1px #5a1807;
+    border-radius: 5px;
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.bike__link {
+    text-decoration: none;
+}
+
+.bike__imageBox {
+    width: 100%;
+}
+
+.bike__photo {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.bike__description {
+    color: #5a1807;
+    text-align: center;
+    line-height: 2em;
+    font-size: 1.5em;
+}
+
+.bike__description--name {
+    font-size: 2em;
+}
+
+
+/* --------- Media queries --------- */
+
+/*
+0 - 576 MOBILE
+577 - 768 MOBILE XL
+769 - 992 TABLET/NETBOOK
+993 - 1199 DESKTOP
+1200 - INFINITO 
+*/
+
+@media (min-width: 993px) {
+
+    .filterSection {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        border: solid 1px #5a1807 ;
+        background-color: #eabe7c;
+        border-radius: 5px;
+    }
+
+    .filterSection__item {
+        color: #5a1807;
+        font-size: 1.3em;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .filterSection__item:hover {
+        font-weight: 500;
+    }
+
+    .filterSection__icon {
+        margin-left: 6px;
+    }
+
+    .bike {
+        border: none;
+        transition: all 600ms;
+        margin-top: 50px;
+        max-width: 246px;
+        width: 45%;
+    }
+
+    .bike:hover {
+        border: solid 1px #5a1807;
+        background-color: #eabe7c;
+        transform: scale(1.03);
+    }
+
+    .filterMobile {
+        display: none;
+    }
+
+
+}
+
+
+
+
+

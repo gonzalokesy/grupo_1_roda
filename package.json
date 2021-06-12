@@ -2,15 +2,16 @@
   "name": "webdesign",
   "version": "1.0.0",
   "description": "",
-  "main": "webdesign/app.js",
+  "main": "webdesign/src/app.js",
   "scripts": {
-    "test": "nodemon webdesign/app.js -e css, html, js, mjs",
-    "start": "node webdesign/app.js"
+    "test": "nodemon webdesign/src/app.js -e css, html, js, mjs, ejs",
+    "start": "node webdesign/src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   },
   "devDependencies": {

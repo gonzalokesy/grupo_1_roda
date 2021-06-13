@@ -9,7 +9,10 @@ const productsController = {
         return res.render("products/product-listBike");
     },
     listAccessories: (req, res) => {
-        return res.render("products/product-listAccessories");
+        return res.render("products/product-listAccessories");   
+    },
+    createModified: (req, res) => {
+        return res.render("products/productCreateModified");
     },
 };
 

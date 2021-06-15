@@ -2,14 +2,61 @@
 <html lang="en">
 <head>
     <title>Bicicletas Rodá</title>
-    <link rel="stylesheet" href="/css/product-listBike.css" />
     <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/productCreateModified.css" />
 </head>
 <body class="body">
   
     <%- include('../partials/header') %>
 
-    <!--Aca va el MAIN-->
+    <main class="main">
+        <form class="formProduct" action="" method="">
+            <fieldset class="formProduct__fieldset">
+                <label class="formProduct__label" for="">Nombre del producto</label>
+                <input class="formProduct__input" type="text" name="" id="">
+            </fieldset>
+            <fieldset class="formProduct__fieldset">
+                <label class="formProduct__label" for="">Descripción</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </fieldset>
+            <fieldset class="formProduct__fieldset">
+                <label class="formProduct__label" for="">Imagen</label>
+                <input class="formProduct__input" type="file" name="" id="">
+            </fieldset>
+            <fieldset class="formProduct__fieldset">
+                <label class="formProduct__label" for="">Categoria</label>
+                <select class="formProduct__select" name="" id="">
+                    <option value="">Bicicleta</option>
+                    <option value="">Accesorio</option>
+                </select>
+            </fieldset>
+            <fieldset class="formProduct__fieldset">
+                <label class="formProduct__label" for="">Colores</label>
+                <fieldset class="formProduct__fieldset formProduct__fieldset--checkbox">
+                    <input class="formProduct__input formProduct__input--checkbox" type="checkbox" name="color" id="color1">
+                    <label for="">Color 1</label>
+                </fieldset>
+                <fieldset class="formProduct__fieldset formProduct__fieldset--checkbox">
+                    <input class="formProduct__input formProduct__input--checkbox" type="checkbox" name="color" id="color2">
+                    <label for="">Color 2</label>
+                </fieldset>
+                <fieldset class="formProduct__fieldset formProduct__fieldset--checkbox">
+                    <input class="formProduct__input formProduct__input--checkbox" type="checkbox" name="color" id="color3">
+                    <label for="">Color 3</label>
+                </fieldset>
+                <fieldset class="formProduct__fieldset formProduct__fieldset--checkbox">
+                    <input class="formProduct__input formProduct__input--checkbox" type="checkbox" name="color" id="color4">
+                    <label for="">Color 4</label>
+                </fieldset>
+            </fieldset>
+            <fieldset class="formProduct__fieldset">
+                    <label class="formProduct__label" for="">Precio</label>
+                    <input class="formProduct__input" type="number" name="" id="" min="0">
+             </fieldset>
+             <button class="formProduct__button" type="submit">Agregar</button>
+             <button class="formProduct__button" type="reset">Borrar</button>
+        </form>
+    </main>
 
     <%- include('../partials/footer') %>
       

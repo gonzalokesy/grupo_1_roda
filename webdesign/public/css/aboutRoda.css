@@ -71,6 +71,10 @@
 
 /* --DESKTOP--*/
 @media (min-width: 993px) {
+    .mainAbout {
+        height: 88%;
+    }
+
     .sectionAbout {
         font-size: 1.4em;
         margin: 20px auto;
@@ -78,7 +82,7 @@
     }
 
     .figureAbout {
-        width: 28%;
+        width: 27%;
         margin: 0px;
     }
 }

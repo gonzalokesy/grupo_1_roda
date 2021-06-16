@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="/css/productCreateModified.css" />
 </head>
 <body class="body">
-  
     <%- include('../partials/header') %>
 
     <main class="main">
+        <h2 class="main__title">Creación de producto</h2>
         <form class="formProduct" action="" method="">
             <fieldset class="formProduct__fieldset">
                 <label class="formProduct__label" for="">Nombre del producto</label>
@@ -17,7 +17,7 @@
             </fieldset>
             <fieldset class="formProduct__fieldset">
                 <label class="formProduct__label" for="">Descripción</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea class="formProduct__textarea" name="" id="" cols="30" rows="10"></textarea>
             </fieldset>
             <fieldset class="formProduct__fieldset">
                 <label class="formProduct__label" for="">Imagen</label>
@@ -26,8 +26,8 @@
             <fieldset class="formProduct__fieldset">
                 <label class="formProduct__label" for="">Categoria</label>
                 <select class="formProduct__select" name="" id="">
-                    <option value="">Bicicleta</option>
-                    <option value="">Accesorio</option>
+                    <option class="formProduct__option" value="">Bicicleta</option>
+                    <option class="formProduct__option" value="">Accesorio</option>
                 </select>
             </fieldset>
             <fieldset class="formProduct__fieldset">
@@ -49,16 +49,14 @@
                     <label for="">Color 4</label>
                 </fieldset>
             </fieldset>
-            <fieldset class="formProduct__fieldset">
-                    <label class="formProduct__label" for="">Precio</label>
-                    <input class="formProduct__input" type="number" name="" id="" min="0">
-             </fieldset>
-             <button class="formProduct__button" type="submit">Agregar</button>
-             <button class="formProduct__button" type="reset">Borrar</button>
+            <fieldset class="formProduct__fieldset formProduct__fieldset--price">
+                    <label class="formProduct__label formProduct__label--price" for="">Precio</label>
+                    <input class="formProduct__input formProduct__input--price" type="number" name="" id="" min="0">
+            </fieldset>
+            <button class="formProduct__button" type="submit">Agregar</button>
         </form>
     </main>
 
     <%- include('../partials/footer') %>
-      
 </body>
 </html>

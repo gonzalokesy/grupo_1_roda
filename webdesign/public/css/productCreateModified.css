@@ -14,9 +14,15 @@
     crema ece4b7
 */
 
+.main__title {
+  color: #5a1807;
+  text-align: center;
+  padding: 30px 0 20px;
+}
+
 .formProduct {
     width: 80%;
-    margin: auto;
+    margin: 0px auto 50px;
     background-color: #eabe7c;
     border-radius: 5px;
     padding: 5%;
@@ -32,6 +38,7 @@
   .formProduct__fieldset--checkbox {
       margin: 0;
       align-self: center;
+      margin: auto;
   }
 
   .formProduct__label {
@@ -56,6 +63,39 @@
     outline: none;
   }
 
+.formProduct__textarea {
+  display: block;
+  margin: auto;
+  min-width: 150px;
+  max-width: 150px;
+  min-height: 50px;
+  max-height: 50px;
+  background-color: #ece4b7;
+  color: #5a1807;
+  outline: none;
+  border: solid 1px #5a1807;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.formProduct__select {
+  display: block;
+  margin: auto;
+  background-color: #ece4b7;
+  border: solid 1px #5a1807;
+  border-radius: 5px;
+  outline: none;
+  color: #5a1807;
+  width: 70%;
+}
+
+.formProduct__option {
+  background-color: #ece4b7;
+}
+.formProduct__option:active {
+  color: #5a1807;
+}
+
   .formProduct__input--checkbox {
       display: inline;
       width: fit-content;
@@ -68,6 +108,25 @@
   .fieldset__input:focus {
     background-color: #ece4b7;
   }
+
+.formProduct__fieldset--price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+}
+
+.formProduct__label--price {
+  width: fit-content;
+  margin: -1px 7px 0 0;
+  vertical-align: middle;
+}
+
+.formProduct__input--price {
+  width: 30%;
+  margin: 0;
+}
 
   .formProduct__button {
     font-size: 1.3em;
@@ -84,3 +143,14 @@
   .formProduct__button:active {
     background-color: #5a1807;
   }
+
+  /* ---------Media queries ---------*/
+/* --MOBILE XL--*/
+@media (min-width: 577px) {
+}
+/* --TABLET/NETBOOK--*/
+@media (min-width: 769px) {
+}
+/* --DESKTOP--*/
+@media (min-width: 993px) {
+}

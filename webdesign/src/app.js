@@ -2,10 +2,16 @@
 const express = require("express");
 const app = express();
 
-//Requiriendo Path, ejs y carpeta estatica
+//Requiriendo Method-Override
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
+//Requiriendo Path y estableciendo carpeta estática
 const path = require("path");
 const publicPath = path.resolve(__dirname,"../public");
 app.use(express.static(publicPath));
+
+//Configurando View Engine
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "./views"));
 
@@ -14,7 +20,6 @@ app.set("port", process.env.PORT || 3030);
 
 app.listen(app.get("port"), () => 
 console.log("Server corriendo en el http://localhost:3030"));
-//Levantando server
 
 //Creando la ruta para mostrar el contenido en el navegador 
 const mainRoutes = require("./routes/mainRoutes");

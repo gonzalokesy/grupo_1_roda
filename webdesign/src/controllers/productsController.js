@@ -11,9 +11,18 @@ const productsController = {
     listAccessories: (req, res) => {
         return res.render("products/product-listAccessories");   
     },
-    createModified: (req, res) => {
-        return res.render("products/productCreateModified");
+    createFormRender: (req, res) => {
+        return res.render("products/create");
     },
+    createFormData: (req, res) => {
+        //Falta desarrollar para capturar la información con el req.body
+    },
+    editFormRender: (req, res) => {
+        return res.render("products/edit");
+    },
+    editFormData: (req, res) => {
+        //Falta desarrollar para capturar la información con el req.body
+    }
 };
 
 module.exports = productsController;

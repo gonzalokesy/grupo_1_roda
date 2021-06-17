@@ -6,6 +6,9 @@ router.get("/descriptionBike", productsController.descriptionBike);
 router.get("/descriptionAccessories", productsController.descriptionAccessories);
 router.get("/listBike", productsController.listBike);
 router.get("/listAccessories", productsController.listAccessories);
-router.get("/createModified", productsController.createModified);
+router.get("/create", productsController.createFormRender);
+router.post("/create", productsController.createFormData);
+router.get("/edit", productsController.editFormRender);
+router.put("/edit", productsController.editFormData);
 
 module.exports = router;

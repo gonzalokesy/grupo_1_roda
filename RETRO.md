@@ -17,3 +17,22 @@ Conforme escale el proyecto en complejidad estamos seguros que surgirán aspecto
 #### Keep doing:
 - Mantener el compromiso y responsabilidad hacia el proyecto y el equipo.
 - Continuar con comunicación fluida y buena onda entre compañeros.
+
+------------
+
+### Sprint :two: 
+
+#### Start doing:
+- Documentar las weekly que mantiene el grupo. 
+
+#### More of:
+- Profundizar los conceptos técnicos en los cuales encontramos dificultades.
+
+#### Keep doing:
+- Aplicar comentarios en el código para fomentar la organización y una buena estructura de código.
+- Tener flexibilidad para modificar lo existente y/o implementar nuevas ideas.
+- Mantener el compromiso y responsabilidad hacia el proyecto y el equipo.
+- Continuar con comunicación fluida y buena onda entre compañeros.
+
+#### Less of:
+- Evitar ocupar las reuniones grupales con resolución de problemas que podrían hacerse de manera individual. 

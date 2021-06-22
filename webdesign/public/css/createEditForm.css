@@ -66,16 +66,20 @@
 .formProduct__textarea {
   display: block;
   margin: auto;
-  min-width: 150px;
-  max-width: 150px;
-  min-height: 50px;
-  max-height: 50px;
+  min-width: 90%;
+  max-width: 282px;
+  max-height: 80px;
   background-color: #ece4b7;
   color: #5a1807;
   outline: none;
   border: solid 1px #5a1807;
   border-radius: 5px;
   padding: 3px;
+}
+
+.formProduct__fieldset--width {
+  width: 80%;
+  margin: auto;
 }
 
 .formProduct__select {
@@ -86,7 +90,7 @@
   border-radius: 5px;
   outline: none;
   color: #5a1807;
-  width: 70%;
+  width: fit-content;
 }
 
 .formProduct__option {
@@ -147,9 +151,18 @@
   /* ---------Media queries ---------*/
 /* --MOBILE XL--*/
 @media (min-width: 577px) {
+  .formProduct {
+    max-width: 500px;
+  }
+  .formProduct__input {
+    max-width: 285px;
+  }
 }
 /* --TABLET/NETBOOK--*/
 @media (min-width: 769px) {
+  .formProduct__select {
+    font-size: 1.3em;
+  }
 }
 /* --DESKTOP--*/
 @media (min-width: 993px) {

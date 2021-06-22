@@ -42,7 +42,7 @@
 
 .aboutUs__title {
     margin: 10px 0 15px 0;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
 }
 .aboutUs__ul {
@@ -55,7 +55,7 @@
 .aboutUs__link {
     text-decoration: none;
     color: #ece4b7;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .history {
@@ -68,7 +68,7 @@
     text-decoration: none;
     color: #ece4b7;
     margin-top: 10px;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -82,7 +82,7 @@
     text-decoration: none;
     color: #ece4b7;
     margin-top: 10px;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -174,14 +174,23 @@
         font-size: 1em;
     }
 
+    .aboutUs__title {
+        font-size: 1.5em;
+    }
     .aboutUs__ul {
         max-width: 144px;
     }
 
+    .history__link {
+        font-size: 1.5em;
+    }
     .history__link:hover {
         text-decoration: underline;
     }
 
+    .contact__link {
+        font-size: 1.5em;
+    }
     .contact__link:hover {
         text-decoration: underline;
     }
@@ -190,6 +199,3 @@
         color: #4c956c;
     }
 }
-
-
- 

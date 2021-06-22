@@ -180,6 +180,9 @@
     .aboutUs__ul {
         max-width: 144px;
     }
+    .aboutUs__link {
+        font-size: 1.5em;
+    }
 
     .history__link {
         font-size: 1.5em;

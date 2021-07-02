@@ -81,6 +81,11 @@
   width: 70%;
 }
 
+.navBar__linkHome {
+  display: flex;
+  justify-content: center;
+}
+
 .navBarDesktop__logo {
   display: none;
 }
@@ -177,8 +182,14 @@
     width: 20%;
   }
 
+  .navBarDesktop__linkHome {
+    display: flex;
+    justify-content: center;
+  }
+
   .navBarDesktop__imageLogo {
     width: 50%;
+    margin: auto;
   }
 
   .navBarDesktop__ul {

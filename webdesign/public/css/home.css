@@ -115,7 +115,7 @@
         width: 50%;
     }
     .sectionHome__a {
-        font-size: 1.1em;
+        font-size: 1.5em;
         }
     .sectionHome__a:hover {
         background-color: #4c956c;
@@ -125,6 +125,6 @@
 /* --INFINITO--*/
 @media (min-width: 1200px) {
     .sectionHome__a {
-        font-size: 1.5em;
+        font-size: 2em;
         }
     }

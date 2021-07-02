@@ -1,26 +1,29 @@
 const productsController = {
-    descriptionBike: (req, res) => {
-        return res.render("products/product-descriptionBike");
-    },
-    descriptionAccessories: (req, res) => {
-        return res.render("products/product-descriptionAccessories");
-    },
-    listBike: (req, res) => {
+    indexBikes: (req, res) => {
         return res.render("products/product-listBike");
     },
-    listAccessories: (req, res) => {
+    indexAccessories: (req, res) => {
         return res.render("products/product-listAccessories");   
     },
-    createFormRender: (req, res) => {
+    showBike: (req, res) => {
+        return res.render("products/product-descriptionBike");
+    },
+    showAccessory: (req, res) => {
+        return res.render("products/product-descriptionAccessories");
+    },
+    create: (req, res) => {
         return res.render("products/create");
     },
-    createFormData: (req, res) => {
+    save: (req, res) => {
         //Falta desarrollar para capturar la información con el req.body
     },
-    editFormRender: (req, res) => {
+    edit: (req, res) => {
         return res.render("products/edit");
     },
-    editFormData: (req, res) => {
+    update: (req, res) => {
+        //Falta desarrollar para capturar la información con el req.body
+    },
+    delete: (req, res) => {
         //Falta desarrollar para capturar la información con el req.body
     }
 };

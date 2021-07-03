@@ -18,9 +18,10 @@ const productsController = {
         return res.render("products/create");
     },
     save: (req, res) => {
-        return res.send({data:req.body, files: req.files})
-        //let result = bikeModel.new(req.body, req.files);
-        //return result == true ? res.redirect("/") : res.send("Error al cargar la informacion");
+        //return res.send({data:req.body, files: req.files})
+        let result = bikeModel.new(req.body, req.files);
+        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion");
+
     },
     edit: (req, res) => {
         return res.render("products/edit");

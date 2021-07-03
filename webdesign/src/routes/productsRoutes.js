@@ -12,10 +12,13 @@ const path = require("path");
 const diskStorage = multer.diskStorage( {
     destination: function (req, file, cb) {
             cb(null, path.resolve(__dirname,"../../public/uploads/products"));
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now()+ path.extname(file.originalname))
     }
 });
 
-const upload = multer({diskStorage});
+const upload = multer({storage:diskStorage});
 
 // Rutas a lista general de productos
 router.get("/indexBikes", productsController.indexBikes);
@@ -27,7 +30,7 @@ router.get("/showAccessory", productsController.showAccessory);
 
 // Rutas a Formulario de creación 
 router.get("/create", productsController.create);
-router.post("/save", [upload.any()], productsController.save);
+router.post("/save", [upload.any('gallery')], productsController.save);
 
 // Rutas a Formulario de edición 
 router.get("/edit/:id", productsController.edit);

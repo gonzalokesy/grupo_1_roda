@@ -1,3 +1,6 @@
+// Requerimos modelos
+const bikeModel = require('../models/bikeModel');
+
 const productsController = {
     indexBikes: (req, res) => {
         return res.render("products/product-listBike");
@@ -15,7 +18,9 @@ const productsController = {
         return res.render("products/create");
     },
     save: (req, res) => {
-        //Falta desarrollar para capturar la información con el req.body
+        return res.send({data:req.body, files: req.files})
+        //let result = bikeModel.new(req.body, req.files);
+        //return result == true ? res.redirect("/") : res.send("Error al cargar la informacion");
     },
     edit: (req, res) => {
         return res.render("products/edit");

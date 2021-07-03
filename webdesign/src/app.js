@@ -2,7 +2,8 @@
 const express = require("express");
 const app = express();
 
-//Requiriendo Method-Override
+//Requiriendo módulos para data
+app.use(express.urlencoded({extended:false}))
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 

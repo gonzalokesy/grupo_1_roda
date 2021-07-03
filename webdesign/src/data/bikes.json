@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "prueba creada por nos",
+    "description": "blabla",
+    "image": "blabla.jpg",
+    "price": 343
+  },
+  {
+    "id": 2,
+    "name": "Prueba1",
+    "description": "dd",
+    "price": "1"
+  },
+  {
+    "id": 3,
+    "name": "Prueba1",
+    "description": "aaa",
+    "price": "1"
+  },
+  {
+    "id": 4,
+    "name": "Prueba con JPEG",
+    "description": "qqq",
+    "price": "3"
+  },
+  {
+    "id": 5,
+    "name": "Prueba con PNG",
+    "description": "sss",
+    "price": "1"
+  },
+  {
+    "id": 6,
+    "name": "Prueba1d sin",
+    "description": "frt",
+    "gallery": [
+      null,
+      null
+    ],
+    "price": "5"
+  },
+  {
+    "id": 7,
+    "name": "rgr",
+    "description": "egr",
+    "gallery": [
+      null,
+      null
+    ],
+    "price": "2"
+  }
+]

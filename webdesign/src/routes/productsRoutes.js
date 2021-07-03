@@ -1,6 +1,21 @@
+// Requiriendo 
 const express = require("express");
 const router = express.Router();
+
+// Requiriendo controller
 const productsController = require("../controllers/productsController");
+
+const multer = require("multer");
+const path = require("path");
+
+// Multer
+const diskStorage = multer.diskStorage( {
+    destination: function (req, file, cb) {
+            cb(null, path.resolve(__dirname,"../../public/uploads/products"));
+    }
+});
+
+const upload = multer({diskStorage});
 
 // Rutas a lista general de productos
 router.get("/indexBikes", productsController.indexBikes);
@@ -12,7 +27,7 @@ router.get("/showAccessory", productsController.showAccessory);
 
 // Rutas a Formulario de creación 
 router.get("/create", productsController.create);
-router.post("/save", productsController.save);
+router.post("/save", [upload.any()], productsController.save);
 
 // Rutas a Formulario de edición 
 router.get("/edit/:id", productsController.edit);

@@ -1,26 +1,26 @@
 const path = require("path");
 const fs = require("fs");
 
-// Ubicación del archivo bikes.json en /data
-const directory = path.resolve(__dirname, "../data/bikes.json");
-
 const bikeModel = {
-    directory: path.resolve(__dirname, "../data/bikes.json"),
     all: function() {
-        const readFile = fs.readFileSync(directory, "utf-8");
+        const directoryBikes = path.resolve(__dirname, "../data/bikes.json");
+        const readFile = fs.readFileSync(directoryBikes, "utf-8");
         const convertFile = JSON.parse(readFile);
         return convertFile;
     },
-    new: function(data, file) {
+    new: function(data, files) {
+        const directoryBikes = path.resolve(__dirname, "../data/bikes.json");
         let bikes = this.all();
         let newBike = {
             id: bikes.length > 0 ? bikes[bikes.length - 1].id + 1 : 1,
             name: data.name,
             description: data.description,
-            image: file.filename,
+            gallery: files.map(file => file.filename),
             price: data.price,
-        }
-    }
+        };
+        bikes.push(newBike)
+        fs.writeFileSync(directoryBikes, JSON.stringify(bikes, null, 2));
+    },
 }
 
 module.exports = bikeModel;

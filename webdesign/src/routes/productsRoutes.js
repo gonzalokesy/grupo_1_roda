@@ -30,7 +30,7 @@ router.get("/showAccessory", productsController.showAccessory);
 
 // Rutas a Formulario de creación 
 router.get("/create", productsController.create);
-router.post("/save", [upload.any('gallery')], productsController.save);
+router.post("/save", [upload.any()], productsController.save);
 
 // Rutas a Formulario de edición 
 router.get("/edit/:id", productsController.edit);

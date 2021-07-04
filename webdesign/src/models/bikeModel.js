@@ -20,6 +20,7 @@ const bikeModel = {
         };
         bikes.push(newBike)
         fs.writeFileSync(directoryBikes, JSON.stringify(bikes, null, 2));
+        return true
     },
 }
 

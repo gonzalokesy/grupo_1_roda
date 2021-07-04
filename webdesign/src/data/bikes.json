@@ -105,5 +105,22 @@
       "gallery-1625346120567.jpg"
     ],
     "price": "2"
+  },
+  {
+    "id": 14,
+    "name": "prueba1",
+    "description": "prueba1",
+    "gallery": [
+      "gallery-1625401394460.jpg",
+      "gallery-1625401394464.png"
+    ],
+    "price": "4543"
+  },
+  {
+    "id": 15,
+    "name": "sadas",
+    "description": "asdsad",
+    "gallery": [],
+    "price": "45453"
   }
 ]

@@ -4,6 +4,7 @@ const app = express();
 
 //Requiriendo módulos para data
 app.use(express.urlencoded({extended:false}))
+app.use (express.json())
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
@@ -34,3 +35,4 @@ app.use("/products", productsRoutes);
 
 const usersRoutes = require("./routes/usersRoutes");
 app.use("/users", usersRoutes);
+

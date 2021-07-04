@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "asd",
+    "description": "asd",
+    "gallery": [],
+    "category": "accessory",
+    "price": "342"
+  },
+  {
+    "id": 2,
+    "name": "Hola ",
+    "description": "Hola ",
+    "gallery": [],
+    "category": "accessory",
+    "price": "4354"
+  }
+]

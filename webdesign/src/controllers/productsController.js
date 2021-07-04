@@ -1,5 +1,6 @@
 // Requerimos modelos
 const bikeModel = require('../models/bikeModel');
+const accessoryModel = require('../models/accessoryModel');
 
 const productsController = {
     indexBikes: (req, res) => {
@@ -18,10 +19,13 @@ const productsController = {
         return res.render("products/create");
     },
     save: (req, res) => {
-        //return res.send({data:req.body, files: req.files})
-        let result = bikeModel.new(req.body, req.files);
+        if (req.body.category == "bike") {
+            let result = bikeModel.new(req.body, req.files);
         return result == true ? res.redirect("/") : res.send("Error al cargar la informacion");
-
+        }else if (req.body.category == "accessory") {
+            let result = accessoryModel.new(req.body, req.files);
+        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion");
+        }
     },
     edit: (req, res) => {
         return res.render("products/edit");

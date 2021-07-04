@@ -16,6 +16,7 @@ const bikeModel = {
             name: data.name,
             description: data.description,
             gallery: files.map(file => file.filename),
+            category: data.category,
             price: data.price,
         };
         bikes.push(newBike)

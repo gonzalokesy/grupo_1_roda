@@ -122,5 +122,46 @@
     "description": "asdsad",
     "gallery": [],
     "price": "45453"
+  },
+  {
+    "id": 16,
+    "name": "sadasd",
+    "description": "asdasdsa",
+    "gallery": [],
+    "price": "342"
+  },
+  {
+    "id": 17,
+    "name": "asd",
+    "description": "asd",
+    "gallery": [],
+    "category": "accessory",
+    "price": "342"
+  },
+  {
+    "id": 18,
+    "name": "sad",
+    "description": "",
+    "gallery": [],
+    "category": "bike",
+    "price": ""
+  },
+  {
+    "id": 19,
+    "name": "asda",
+    "description": "dfsdf",
+    "gallery": [
+      "gallery-1625404029649.jpg"
+    ],
+    "category": "bike",
+    "price": "32"
+  },
+  {
+    "id": 20,
+    "name": "prueba ",
+    "description": "prueba ",
+    "gallery": [],
+    "category": "bike",
+    "price": "56"
   }
 ]

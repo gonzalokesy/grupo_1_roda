@@ -14,5 +14,23 @@
     "gallery": [],
     "category": "accessory",
     "price": "4354"
+  },
+  {
+    "id": 3,
+    "name": "prueba de directorio ",
+    "description": "sadasd",
+    "gallery": [
+      "gallery-1625449661156.jpg"
+    ],
+    "category": "accessory",
+    "price": "433"
+  },
+  {
+    "id": 4,
+    "name": "prueba 2",
+    "description": "dassdsaddsfgdh",
+    "gallery": [],
+    "category": "accessory",
+    "price": "33"
   }
 ]

@@ -163,5 +163,15 @@
     "gallery": [],
     "category": "bike",
     "price": "56"
+  },
+  {
+    "id": 21,
+    "name": "prueba de directorio ",
+    "description": "dasdasd",
+    "gallery": [
+      "gallery-1625449514651.jpg"
+    ],
+    "category": "bike",
+    "price": "23"
   }
 ]

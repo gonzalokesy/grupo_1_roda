@@ -12,7 +12,7 @@
 
         <main class="main">
             <h2 class="main__title">Edición de producto</h2>
-            <form class="formProduct" action="/update?_method=PUT" method="POST">
+            <form class="formProduct" action="/update/<%=bikes.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <fieldset class="formProduct__fieldset">
                     <label class="formProduct__label" for="">Nombre del producto</label>
                     <input class="formProduct__input" type="text" name="name" id="name"
@@ -26,7 +26,7 @@
                 <fieldset class="formProduct__fieldset">
                     <label class="formProduct__label" for="">Imagen</label>
                     <input class="formProduct__input" type="file" name="gallery" id="gallery"
-                        value="<%= bikes.gallery %>">
+                        value="<%= bikes.gallery %>" multiple>
                 </fieldset>
                 <fieldset class="formProduct__fieldset">
                     <label class="formProduct__label" for="">Categoria</label>

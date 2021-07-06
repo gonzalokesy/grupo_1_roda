@@ -17,11 +17,11 @@
 
       <!--Mobile-->
         <nav class="buttonBack">
-          <a class="buttonBack__link" href="/product-listBike"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</a>
+          <a class="buttonBack__link" href="/products/indexBikes"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</a>
         </nav>
         <section class="productConteiner productConteiner--mobile">
         <section class="photoAndName">
-            <h2 class="photoAndName__name">Lorem ipsum</h2>
+            <h2 class="photoAndName__name"></h2>
             <figure class="photoAndName__photo">
                 <img class="photoAndName__image" src="images/bicicleta.jpg" alt="">
             </figure>
@@ -50,7 +50,7 @@
 
         <section class="priceAndShipping">
             <article class="priceAndShipping__price">
-                <p class="priceAndShipping__priceValue"> $ 30.000</p>
+                <p class="priceAndShipping__priceValue"></p>
                 <a class="priceAndShipping__payMethod" href="">Ver medios de pago</a>
             </article>
             <form class="priceAndShipping__buttons">
@@ -69,7 +69,7 @@
                 <p class="productDetaill__file">Ficha técnica</p>
             </div>
             <div class="productDetaill__content">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi numquam accusamus doloremque deleniti neque voluptatum sequi pariatur sunt tenetur, quae inventore optio aperiam, in iusto.
+              
             </div>
         </section>
 
@@ -80,14 +80,14 @@
     <section class="productConteiner productConteiner--desktop">
       <section class="leftColumn">
         <figure class="photoAndName__photo">
-          <img class="photoAndName__image" src="images/bicicleta.jpg" alt="">
+          <img class="photoAndName__image" src="/uploads/products/<%= bikes.gallery  %>" alt="">
       </figure>
       </section>
 
       <section class="rightColumn">
-        <h2 class="productName">Lorem ipsum</h2>
+        <h2 class="productName"><%= bikes.name %></h2>
         <article class="productPriceMethod">
-          <p class="productPriceMethod__price">$ 1.000.000</p>
+          <p class="productPriceMethod__price">$ <%= bikes.price %></p>
           <a class="productPriceMethod__method" href="">Medios de pago</a>
           <a class="productPriceMethod__shippingPoint" href=""> Punto de envio <i class="priceAndShipping__shippinIicon fas fa-map-marker-alt"></i></a>
           <a class="productPriceMethod__shippingCondition" href="">Condiciones de envíos</a>
@@ -113,7 +113,7 @@
               <p class="productDetaill__file">Ficha técnica</p>
           </div>
           <div class="productDetaill__content">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi numquam accusamus doloremque deleniti neque voluptatum sequi pariatur sunt tenetur, quae inventore optio aperiam, in iusto.
+            <%= bikes.description %>
           </div>
         </article>
 

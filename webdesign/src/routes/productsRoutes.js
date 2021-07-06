@@ -25,8 +25,8 @@ router.get("/indexBikes", productsController.indexBikes);
 router.get("/indexAccessories", productsController.indexAccessories);
 
 // Rutas a descripción de cada producto
-router.get("/showBike", productsController.showBike);
-router.get("/showAccessory", productsController.showAccessory);
+router.get("/showBike/:id", productsController.showBike);
+router.get("/showAccessory/:id", productsController.showAccessory);
 
 // Rutas a Formulario de creación 
 router.get("/create", productsController.create);

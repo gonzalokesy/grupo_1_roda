@@ -30,7 +30,7 @@
 
           <% bikes.forEach (bike => {%>
           <article class="bike">
-            <a class="bike__link" href="/product-descriptionBike">
+            <a class="bike__link" href="/products/showBike/ <%= bike.id %>">
             <figure class="bike__imageBox">
               <img class="bike__photo" src="/uploads/products/<%= bike.gallery  %>" alt="">
             </figure>

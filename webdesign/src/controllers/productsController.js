@@ -10,10 +10,10 @@ const productsController = {
         return res.render("products/product-listAccessories", {accessories: accessoryModel.allAccessories()});
     },
     showBike: (req, res) => {
-        return res.render("products/product-descriptionBike");
+        return res.render("products/product-descriptionBike", {bikes: bikeModel.one(req.params.id)});
     },
     showAccessory: (req, res) => {
-        return res.render("products/product-descriptionAccessories");
+        return res.render("products/product-descriptionAccessories", {accessories: accessoryModel.one(req.params.id)});
     },
     create: (req, res) => {
         return res.render("products/create");

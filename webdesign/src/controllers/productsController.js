@@ -22,16 +22,22 @@ const productsController = {
         if (req.body.category == "bike") {
             let result = bikeModel.new(req.body, req.files);
         return result == true ? res.redirect("/") : res.send("Error al cargar la informacion");
-        }else if (req.body.category == "accessory") {
+        } else if (req.body.category == "accessory") {
             let result = accessoryModel.new(req.body, req.files);
         return result == true ? res.redirect("/") : res.send("Error al cargar la informacion");
         }
     },
     edit: (req, res) => {
-        return res.render("products/edit");
+        return res.render("products/edit"), {bikes: bikeModel.one(req.params.id)};
     },
     update: (req, res) => {
-        //Falta desarrollar para capturar la información con el req.body
+        if (req.body.category == "bike") {
+            let result = bikeModel.edit(req.body, req.files, req.params.id);
+        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion");
+        } else if (req.body.category == "accessory") {
+            let result = accessoryModel.edit(req.body, req.files, req.params.id);
+        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion");
+        }
     },
     delete: (req, res) => {
         //Falta desarrollar para capturar la información con el req.body

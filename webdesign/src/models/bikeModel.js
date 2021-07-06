@@ -4,16 +4,29 @@ const fs = require("fs");
 const bikeModel = {
     
     directoryBikes : path.resolve(__dirname, "../data/bikes.json"),
-
-    all: function() {
+    directoryAccessories : path.resolve(__dirname, "../data/accessories.json"),
+    allBikes: function() {
         const readFile = fs.readFileSync(this.directoryBikes, "utf-8");
         const convertFile = JSON.parse(readFile);
         return convertFile;
     },
+    allAccessories: function() {
+        const readFile = fs.readFileSync(this.directoryAccessories, "utf-8");
+        const convertFile = JSON.parse(readFile);
+        return convertFile;
+    },
+    one: function (id) {
+        let bikes = this.allBikes();
+        let idBike = bikes.find(bike => bike.id == id);
+        console.log(idBike)
+        //return idBike;
+    },
     new: function(data, files) {
-        let bikes = this.all();
+        let bikes = this.allBikes();
+        let accessories = this.allAccessories();
+        let totalLength = (bikes.length + accessories.length);
         let newBike = {
-            id: bikes.length > 0 ? bikes[bikes.length - 1].id + 1 : 1,
+            id: totalLength > 0 ? bikes.id = totalLength + 1 : 1,
             name: data.name,
             description: data.description,
             gallery: files.map(file => file.filename),
@@ -24,7 +37,7 @@ const bikeModel = {
         fs.writeFileSync(this.directoryBikes, JSON.stringify(bikes, null, 2));
         return true
     },
-    edit: function(data,file,id) {
+    edit: function(data, files, id) {
         let bikes = this.all();
         bikes.map (bikeModify => {
             if (bikeModify.id == id){

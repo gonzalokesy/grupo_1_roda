@@ -10,26 +10,28 @@
 
     <main class="main">
         <h2 class="main__title">Edición de producto</h2>
-        <form class="formProduct" action="/products/edit?_method=PUT" method="POST">
+        <form class="formProduct" action="/update/<%=bikes.id%>?_method=PUT" method="POST">
             <fieldset class="formProduct__fieldset">
                 <label class="formProduct__label" for="">Nombre del producto</label>
-                <input class="formProduct__input" type="text" name="" id="">
+                <input class="formProduct__input" type="text" name="name" id="name" value="<%= bikes.name %>">
             </fieldset>
             <fieldset class="formProduct__fieldset">
                 <label class="formProduct__label" for="">Descripción</label>
-                <textarea class="formProduct__textarea" name="" id="" cols="30" rows="10"></textarea>
+                <textarea class="formProduct__textarea" name="description" id="description" cols="30" rows="10" value="<%= bikes.description %>"></textarea>
             </fieldset>
             <fieldset class="formProduct__fieldset">
                 <label class="formProduct__label" for="">Imagen</label>
-                <input class="formProduct__input" type="file" name="" id="">
+                <input class="formProduct__input" type="file" name="gallery" id="gallery" value="<%= bikes.gallery %>">
             </fieldset>
             <fieldset class="formProduct__fieldset">
                 <label class="formProduct__label" for="">Categoria</label>
-                <select class="formProduct__select" name="" id="">
+                <select class="formProduct__select" name="category" id="category" value="<%= bikes.category %>">
                     <option class="formProduct__option" value="">Bicicleta</option>
                     <option class="formProduct__option" value="">Accesorio</option>
                 </select>
             </fieldset>
+
+            <!--
             <fieldset class= "formProduct__fieldset--box">
                 <label class="formProduct__label" for="">Colores</label>
                 <fieldset class="formProduct__fieldset formProduct__fieldset--checkbox">
@@ -49,9 +51,11 @@
                     <label class="formProduct__label--checkbox" for="">Color 4</label>
                 </fieldset>
             </fieldset>
+            -->
+
             <fieldset class="formProduct__fieldset formProduct__fieldset--price">
                 <label class="formProduct__label formProduct__label--price" for="">Precio</label>
-                <input class="formProduct__input formProduct__input--price" type="number" name="" id="" min="0">
+                <input class="formProduct__input formProduct__input--price" type="number" name="price" id="price" min="0" value="<% bikes.price %>">
         </fieldset>
             <button class="formProduct__button" type="submit">Editar</button>
         </form>

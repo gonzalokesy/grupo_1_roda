@@ -34,7 +34,7 @@ router.post("/save", [upload.any()], productsController.save);
 
 // Rutas a Formulario de edición 
 router.get("/edit/:id", productsController.edit);
-router.put("/update/:id", productsController.update);
+router.put("/update/:id", [upload.any()], productsController.update);
 
 // Ruta a Formulario de eliminación 
 router.delete("/delete/:id", productsController.delete);

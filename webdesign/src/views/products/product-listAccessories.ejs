@@ -28,17 +28,17 @@
               <a class="filterSection__item " href="">Ordenar por<i class="fas fa-angle-down filterSection__icon"></i></a>
             </nav>
 
-          <% for (i=0; i<=10; i++){%>
+          <% accessories.forEach (accessory => {%>
           <article class="bike">
             <a class="bike__link" href="/products/descriptionAccessories">
             <figure class="bike__imageBox">
-              <img class="bike__photo" src="/images/accesorio.jpg" alt="">
+              <img class="bike__photo" src="/uploads/products/<%= accessory.gallery  %> "" alt="">
             </figure>
-            <h2 class="bike__description bike__description--name">lorem ipsum</h2>
-            <p class="bike__description">$1.000.000</p>
+            <h2 class="bike__description bike__description--name"><%= accessory.name %></h2>
+            <p class="bike__description">$ <%= accessory.price %></p>
             </a>
           </article>          
-          <% } %>                                                               
+          <% }) %>                                                               
         </section>
       </main>
 

@@ -4,10 +4,10 @@ const accessoryModel = require("../models/accessoryModel");
 
 const productsController = {
     indexBikes: (req, res) => {
-        return res.render("products/product-listBike");
+        return res.render("products/product-listBike", {bikes: bikeModel.allBikes()});
     },
     indexAccessories: (req, res) => {
-        return res.render("products/product-listAccessories");
+        return res.render("products/product-listAccessories", {accessories: accessoryModel.allAccessories()});
     },
     showBike: (req, res) => {
         return res.render("products/product-descriptionBike");

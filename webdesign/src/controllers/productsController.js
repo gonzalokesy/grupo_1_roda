@@ -51,7 +51,8 @@ const productsController = {
         }
     },
     delete: (req, res) => {
-        //Falta desarrollar para capturar la información con el req.body
+        let eliminatedBike = bikeModel.delete (req.params.id);
+        return eliminatedBike == true ? res.redirect ("/") : res.send ("Error al cargar la información")
     },
 };
 

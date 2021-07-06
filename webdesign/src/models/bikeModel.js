@@ -51,6 +51,15 @@ const bikeModel = {
         fs.writeFileSync(this.directoryBikes, JSON.stringify (bikes, null, 2));
         return true;
     },
-}
+    delete: function (id) {
+        const directoryBikes = this.directoryBikes;
+        let bikes = this.allBikes;
+        let eliminatedBike = this.one(id);
+        fs.unlinkSync (path.resolvev(__dirname, "../../public/uploads/products", eliminatedBike.gallery))
+        bikes = bikes.filter ( bike => bike.id != eliminatedBike.id);
+        fs.writeFileSync (directoryBikes, JSON.stringify (bikes,null,2));
+        return true; 
+    }
+};
 
 module.exports = bikeModel;

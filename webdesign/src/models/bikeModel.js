@@ -18,8 +18,7 @@ const bikeModel = {
     one: function (id) {
         let bikes = this.allBikes();
         let idBike = bikes.find(bike => bike.id == id);
-        console.log(idBike)
-        //return idBike;
+        return idBike;
     },
     new: function(data, files) {
         let bikes = this.allBikes();
@@ -38,7 +37,7 @@ const bikeModel = {
         return true
     },
     edit: function(data, files, id) {
-        let bikes = this.all();
+        let bikes = this.allBikes();
         bikes.map (bikeModify => {
             if (bikeModify.id == id){
             bikeModify.name = data.name,

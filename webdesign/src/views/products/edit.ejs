@@ -17,7 +17,7 @@
             </fieldset>
             <fieldset class="formProduct__fieldset">
                 <label class="formProduct__label" for="">Descripción</label>
-                <textarea class="formProduct__textarea" name="description" id="description" cols="30" rows="10" value="<%= bikes.description %>"></textarea>
+                <textarea class="formProduct__textarea" name="description" id="description" cols="30" rows="10" ><%= bikes.description %></textarea>
             </fieldset>
             <fieldset class="formProduct__fieldset">
                 <label class="formProduct__label" for="">Imagen</label>
@@ -55,7 +55,7 @@
 
             <fieldset class="formProduct__fieldset formProduct__fieldset--price">
                 <label class="formProduct__label formProduct__label--price" for="">Precio</label>
-                <input class="formProduct__input formProduct__input--price" type="number" name="price" id="price" min="0" value="<% bikes.price %>">
+                <input class="formProduct__input formProduct__input--price" type="number" name="price" id="price" min="0" value="<%= bikes.price %>">
         </fieldset>
             <button class="formProduct__button" type="submit">Editar</button>
         </form>

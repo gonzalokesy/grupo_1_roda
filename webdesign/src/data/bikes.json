@@ -13,5 +13,15 @@
     "gallery": [],
     "category": "bike",
     "price": "1"
+  },
+  {
+    "id": 5,
+    "name": "Producto de Gonza",
+    "description": "Este es un producto de Gonza",
+    "gallery": [
+      "gallery-1625539597005.jpg"
+    ],
+    "category": "bike",
+    "price": "22"
   }
 ]

@@ -15,6 +15,11 @@ const accessoryModel = {
         const convertFile = JSON.parse(readFile);
         return convertFile;
     },
+    one: function (id) {
+        let accessories = this.allAccessories();
+        let idAccessory = accessories.find(accessory => accessory.id == id);
+        return idAccessory;
+    },
     new: function(data, files) {
         let accessories = this.allAccessories();
         let bikes = this.allBikes();

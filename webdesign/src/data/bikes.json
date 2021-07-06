@@ -3,7 +3,8 @@
     "id": 1,
     "name": "prueba creada por nos",
     "description": "blabla",
-    "image": "blabla.jpg",
+    "gallery": [],
+    "category": "bike",
     "price": 343
   },
   {

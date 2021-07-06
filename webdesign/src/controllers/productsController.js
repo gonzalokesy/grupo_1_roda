@@ -28,7 +28,7 @@ const productsController = {
         }
     },
     edit: (req, res) => {
-        return res.render("products/edit", {bikes: bikeModel.one(req.params.id)});
+        return res.render("products/edit", {bikes:bikeModel.one(req.params.id), accessories:accessoryModel.one(req.params.id)});
     },
     update: (req, res) => {
         if (req.body.category == "bike") {

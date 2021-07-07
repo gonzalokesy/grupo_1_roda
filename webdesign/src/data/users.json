@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "email": "gonzalo.kesy@gmail.com",
+        "password": "hola1234",
+        "admin": true
+    },
+    {
+        "id": 2,
+        "email": "vicente.macchione1@gmail.com",
+        "password": "hola1234",
+        "admin": true
+    },
+    {
+        "id": 1,
+        "email": "andreaeichenberger.ae@gmail.com",
+        "password": "hola1234",
+        "admin": false
+    }
+]

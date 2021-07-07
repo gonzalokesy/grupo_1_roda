@@ -101,6 +101,9 @@
         </fieldset>
         <button class="formProduct__button" type="submit">Editar</button>
       </form>
+      <form action="/products/delete/<%=product.id%>?_method=DELETE" method="POST">
+        <button class="formProduct__button" type="submit">Eliminar</button>
+      </form>
     </main>
 <% } else { %>
  <h1>Lo siento! No se encontró el producto</h1>

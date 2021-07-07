@@ -4,7 +4,7 @@
   "description": "",
   "main": "webdesign/src/app.js",
   "scripts": {
-    "test": "nodemon webdesign/src/app.js -e css, html, js, mjs, ejs",
+    "test": "nodemon webdesign/src/app.js -e css,html,js,mjs,ejs",
     "start": "node webdesign/src/app.js"
   },
   "keywords": [],

@@ -40,20 +40,21 @@ const productsController = {
         //return res.send({body:req.body, files:req.files, id:req.params.id})
         if (req.body.category == "bike") {
             let result = bikeModel.edit(req.body, req.files, req.params.id);
-            return result == true
-                ? res.redirect("/")
-                : res.send("Error al cargar la informacion");
+            return result == true ? res.redirect("/"): res.send("Error al cargar la informacion");
         } else if (req.body.category == "accessory") {
             let result = accessoryModel.edit(req.body, req.files, req.params.id);
-            return result == true
-                ? res.redirect("/")
-                : res.send("Error al cargar la informacion");
+            return result == true ? res.redirect("/") : res.send("Error al cargar la informacion");
         }
     },
     delete: (req, res) => {
-        let eliminatedBike = bikeModel.delete(req.params.id);
-        return eliminatedBike == true ? res.redirect ("/") : res.send ("Error al cargar la información")
-    },
-};
+        if (bikeModel.one (req.params.id)) {
+            bikeModel.delete (req.params.id)
+            return res.redirect ("/")
+        }else{
+            accessoryModel.delete (req.params.id)
+            return res.redirect ("/")
+        }
+    }
+}
 
 module.exports = productsController;

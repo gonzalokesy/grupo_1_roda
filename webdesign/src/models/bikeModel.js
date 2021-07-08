@@ -55,7 +55,7 @@ const bikeModel = {
         const directoryBikes = this.directoryBikes;
         let bikes = this.allBikes();
         let eliminatedBike = this.one(id);
-        fs.unlinkSync(path.resolve(__dirname, "../../public/uploads/products", eliminatedBike.gallery));
+        eliminatedBike.gallery.forEach(image => fs.unlinkSync(path.resolve(__dirname,"../../public/uploads/products", image)));
         bikes = bikes.filter(bike => bike.id != eliminatedBike.id);
         fs.writeFileSync(directoryBikes, JSON.stringify(bikes,null,2));
         return true; 

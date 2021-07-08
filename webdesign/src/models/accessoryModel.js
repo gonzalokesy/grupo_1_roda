@@ -37,7 +37,7 @@ const accessoryModel = {
         return true
     },
     edit: function(data, files, id) {
-        let accessories = this.all();
+        let accessories = this.allAccessories();
         accessories.map (accessoryModify => {
             if (accessoryModify.id == id){
             accessoryModify.name = data.name,
@@ -51,6 +51,15 @@ const accessoryModel = {
         fs.writeFileSync(this.directoryAccessories, JSON.stringify (accessories, null, 2));
         return true;
     },
+    delete: function (id) {
+        const directoryAccessories = this.directoryAccessories;
+        let accessories = this.allAccessories();
+        let eliminatedAccessory = this.one(id);
+        eliminatedAccessory.gallery.forEach(image => fs.unlinkSync(path.resolve(__dirname,"../../public/uploads/products", image)));
+        accessories = accessories.filter(accessory => accessory.id != eliminatedAccessory.id);
+        fs.writeFileSync(directoryAccessories, JSON.stringify(accessories,null,2));
+        return true; 
+    }
 }
 
 module.exports = accessoryModel;

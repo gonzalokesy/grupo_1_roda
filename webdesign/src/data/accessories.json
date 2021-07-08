@@ -1,18 +1,12 @@
 [
   {
     "id": 2,
-    "name": "asd",
-    "description": "asd",
-    "gallery": [],
+    "name": "Accesorio 1",
+    "description": "Esta es la descripción del Accesorio 1",
+    "gallery": [
+      "gallery-1625701973653.jpg"
+    ],
     "category": "accessory",
-    "price": "342"
-  },
-  {
-    "id": 4,
-    "name": "ryrtyr",
-    "description": "rghrhuytu",
-    "gallery": [],
-    "category": "accessory",
-    "price": "2"
+    "price": "5000"
   }
 ]

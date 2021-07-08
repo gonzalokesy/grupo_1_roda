@@ -1,12 +1,2 @@
 [
-  {
-    "id": 2,
-    "name": "Accesorio 1",
-    "description": "Esta es la descripción del Accesorio 1",
-    "gallery": [
-      "gallery-1625701973653.jpg"
-    ],
-    "category": "accessory",
-    "price": "5000"
-  }
 ]

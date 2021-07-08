@@ -1,12 +1,2 @@
 [
-  {
-    "id": 1,
-    "name": "Bicicleta 1",
-    "description": "Esta es la descripción de la Bicicleta 1",
-    "gallery": [
-      "gallery-1625701880876.jpg"
-    ],
-    "category": "bike",
-    "price": "50000"
-  }
 ]

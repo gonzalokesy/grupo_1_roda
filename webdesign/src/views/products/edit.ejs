@@ -1,71 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Editar producto</title>
-    <%- include('../partials/head') %>
+
+<head>
+  <title>Editar producto</title>
+  <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/createEditForm.css" />
-  </head>
+</head>
 
-  <body class="body">
-    <%- include('../partials/header') %>
-<% if (product) { %>
- 
-    <main class="main">
-      <h2 class="main__title">Edición de producto</h2>
-      <form
-        class="formProduct"
-        action="/products/update/<%=product.id%>?_method=PUT"
-        method="POST"
-        enctype="multipart/form-data"
-      >
-        <fieldset class="formProduct__fieldset">
-          <label class="formProduct__label" for="">Nombre del producto</label>
-          <input
-            class="formProduct__input"
-            type="text"
-            name="name"
-            id="name"
-            value="<%= product.name %>"
-          />
-        </fieldset>
-        <fieldset class="formProduct__fieldset">
-          <label class="formProduct__label" for="">Descripción</label>
-          <textarea
-            class="formProduct__textarea"
-            name="description"
-            id="description"
-            cols="30"
-            rows="10"
-          >
-<%= product.description %></textarea
-          >
-        </fieldset>
-        <fieldset class="formProduct__fieldset">
-          <label class="formProduct__label" for="">Imagen</label>
-          <input
-            class="formProduct__input"
-            type="file"
-            name="gallery"
-            id="gallery"
-            value="<%= product.gallery %>"
-            multiple
-          />
-        </fieldset>
-        <fieldset class="formProduct__fieldset">
-          <label class="formProduct__label" for="">Categoria</label>
-          <select
-            class="formProduct__select"
-            name="category"
-            id="category"
-            value="<%= product.category  %> "
-          >
-          <option class="formProduct__option" value="bike">Bicicleta</option>
-          <option class="formProduct__option" value="accessory">Accesorio</option>
-          
-          </select>
-        </fieldset>
+<body class="body">
+  <%- include('../partials/header') %>
+    <% if (product) { %>
 
-        <!--
+      <main class="main">
+        <h2 class="main__title">Edición de producto</h2>
+        <form class="formProduct" action="/products/update/<%=product.id%>?_method=PUT" method="POST"
+          enctype="multipart/form-data">
+          <fieldset class="formProduct__fieldset">
+            <label class="formProduct__label" for="">Nombre del producto</label>
+            <input class="formProduct__input" type="text" name="name" id="name" value="<%= product.name %>" />
+          </fieldset>
+          <fieldset class="formProduct__fieldset">
+            <label class="formProduct__label" for="">Descripción</label>
+            <textarea class="formProduct__textarea" name="description" id="description" cols="30" rows="10">
+<%= product.description %></textarea>
+          </fieldset>
+          <fieldset class="formProduct__fieldset">
+            <label class="formProduct__label" for="">Imagen</label>
+            <input class="formProduct__input" type="file" name="gallery" id="gallery" value="<%= product.gallery %>"
+              multiple />
+          </fieldset>
+          <fieldset class="formProduct__fieldset">
+            <label class="formProduct__label" for="">Categoria</label>
+            <select class="formProduct__select" name="category" id="category">
+              <% if (product.category == "bike") { %>
+                <option class="formProduct__option" value="bike" selected>Bicicleta</option>
+                <option class="formProduct__option" value="accessory">Accesorio</option>
+              <% } else { %>
+              <option class="formProduct__option" value="bike">Bicicleta</option>
+              <option class="formProduct__option" value="accessory" selected>Accesorio</option>
+              <% } %>
+            </select>
+          </fieldset>
+
+          <!--
             <fieldset class= "formProduct__fieldset--box">
                 <label class="formProduct__label" for="">Colores</label>
                 <fieldset class="formProduct__fieldset formProduct__fieldset--checkbox">
@@ -87,28 +64,21 @@
             </fieldset>
             -->
 
-        <fieldset class="formProduct__fieldset formProduct__fieldset--price">
-          <label class="formProduct__label formProduct__label--price" for=""
-            >Precio</label
-          >
-          <input
-            class="formProduct__input formProduct__input--price"
-            type="number"
-            name="price"
-            id="price"
-            min="0"
-            value="<%= product.price %>"
-          />
-        </fieldset>
-        <button class="formProduct__button" type="submit">Editar</button>
-      </form>
-      <form action="/products/delete/<%=product.id%>?_method=DELETE" method="POST">
-        <button class="formProduct__button" type="submit">Eliminar</button>
-      </form>
-    </main>
-<% } else { %>
- <h1>Lo siento! No se encontró el producto</h1>
-    <% } %>
-    <%- include('../partials/footer') %>
-  </body>
+          <fieldset class="formProduct__fieldset formProduct__fieldset--price">
+            <label class="formProduct__label formProduct__label--price" for="">Precio</label>
+            <input class="formProduct__input formProduct__input--price" type="number" name="price" id="price" min="0"
+              value="<%= product.price %>" />
+          </fieldset>
+          <button class="formProduct__button" type="submit">Editar</button>
+        </form>
+        <form action="/products/delete/<%=product.id%>?_method=DELETE" method="POST">
+          <button class="formProduct__button" type="submit">Eliminar</button>
+        </form>
+      </main>
+      <% } else { %>
+        <h1>Lo siento! No se encontró el producto</h1>
+        <% } %>
+          <%- include('../partials/footer') %>
+</body>
+
 </html>

@@ -1,2 +1,82 @@
 [
+  {
+    "id": 9,
+    "name": "Accesorio 1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625762294167.jpg"
+    ],
+    "category": "accessory",
+    "price": "200"
+  },
+  {
+    "id": 10,
+    "name": "Accesorio 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625762334793.jpg"
+    ],
+    "category": "accessory",
+    "price": "500"
+  },
+  {
+    "id": 11,
+    "name": "Accesorio 3",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625762372240.jpg"
+    ],
+    "category": "accessory",
+    "price": "600"
+  },
+  {
+    "id": 12,
+    "name": "Accesorio 4",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625762449036.jpg"
+    ],
+    "category": "accessory",
+    "price": "200"
+  },
+  {
+    "id": 13,
+    "name": "Accesorio 5",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625762469584.jpg"
+    ],
+    "category": "accessory",
+    "price": "500"
+  },
+  {
+    "id": 14,
+    "name": "Accesorio 6",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625762524396.jpg"
+    ],
+    "category": "accessory",
+    "price": "600"
+  },
+  {
+    "id": 15,
+    "name": "Accesorio 7",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625762655167.jpg"
+    ],
+    "category": "accessory",
+    "price": "200"
+  },
+  {
+    "id": 16,
+    "name": "Accesorio 8",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625762699571.jpg"
+    ],
+    "category": "accessory",
+    "price": "300"
+  }
 ]

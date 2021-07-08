@@ -1,2 +1,82 @@
 [
+  {
+    "id": 1,
+    "name": "Bicicleta 1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625761759733.jpg"
+    ],
+    "category": "bike",
+    "price": "50000"
+  },
+  {
+    "id": 2,
+    "name": "Bicicleta 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625761820052.jpg"
+    ],
+    "category": "bike",
+    "price": "60000"
+  },
+  {
+    "id": 3,
+    "name": "Bicicleta 3",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625761858935.jpg"
+    ],
+    "category": "bike",
+    "price": "40000"
+  },
+  {
+    "id": 4,
+    "name": "Bicicleta 4",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625762027315.jpg"
+    ],
+    "category": "bike",
+    "price": "50000"
+  },
+  {
+    "id": 5,
+    "name": "Bicicleta 5",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625762088105.jpg"
+    ],
+    "category": "bike",
+    "price": "67000"
+  },
+  {
+    "id": 6,
+    "name": "Bicicleta 6",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625762132898.jpg"
+    ],
+    "category": "bike",
+    "price": "53000"
+  },
+  {
+    "id": 7,
+    "name": "Bicicleta 7",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625762168786.jpg"
+    ],
+    "category": "bike",
+    "price": "64000"
+  },
+  {
+    "id": 8,
+    "name": "Bicicleta 8",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "gallery": [
+      "gallery-1625762225470.jpg"
+    ],
+    "category": "bike",
+    "price": "62000"
+  }
 ]

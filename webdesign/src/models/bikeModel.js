@@ -23,9 +23,10 @@ const bikeModel = {
     new: function(data, files) {
         let bikes = this.allBikes();
         let accessories = this.allAccessories();
-        let totalLength = (bikes.length + accessories.length);
+        let arrayProduct = bikes.concat(accessories); //concateno los array para luego buscar el maximo
+        let max = Math.max.apply(null,arrayProduct.map((bike) => bike.id))//utilizo Math.max.apply para encontrar el maximo del array de "id" que generamos con el map().
         let newBike = {
-            id: totalLength > 0 ? bikes.id = totalLength + 1 : 1,
+            id: (max != 0) ? max + 1 : 1, //aca usamos mismo razonamiento como veniamos trabajando
             name: data.name,
             description: data.description,
             gallery: files.map(file => file.filename),

@@ -1,0 +1,267 @@
+/*Font weight: 
+    Extra-light 200
+    Light 300
+    Regular 400
+    Medium 500
+    Semi-bold 600
+    Bold 700
+*/
+
+/* Colors palete: 
+    marron oscuro #5a1807
+    marron intermedio #792e1b
+    marron claro #eabe7c
+    verde agua #4c956c
+    verde fuerte #396e50
+    crema #ece4b7
+*/
+
+.mainForms {
+  background-color: #ece4b7;
+  padding: 10% 0 20%;
+}
+
+.form {
+  display: flexbox;
+  width: 80%;
+  margin: 0 auto 0;
+  background-color: #4c956c;
+  border-radius: 10px;
+  padding: 2% 5% 10%;
+}
+
+.form__h3 {
+  text-align: center;
+  font-size: 1.3em;
+  padding: 10% 5% 5%;
+  font-weight: 700;
+  color: #ece4b7;
+  text-shadow: 1px 2px #792e1b;
+}
+
+.form__fieldset {
+  justify-content: center;
+  border: none;
+  margin: 8% 10% 10%;
+}
+
+.form__fieldset--forgetPass {
+  margin-bottom: 0;
+  padding-bottom: 2%;
+}
+
+.fieldset__label {
+  font-size: 1.4em;
+  display: block;
+  width: 80%;
+  margin-bottom: 7%;
+  color: #ece4b7;
+  text-align: start;
+}
+
+.fieldset__input {
+  font-size: 1.3em;
+  color: #ece4b7;
+  background-color: #4c956c;
+  display: block;
+  border: none;
+  width: 100%;
+  border-bottom: solid 1px #ece4b7;
+  outline: none;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #ece4b7;
+}
+
+.fieldset__input:focus {
+  background-color: #4c956c;
+}
+
+.form__button {
+  font-size: 1em;
+  display: block;
+  background-color: #792e1b;
+  color: #ece4b7;
+  font-weight: 600;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 15% auto 10%;
+}
+.form__button:active {
+  color: #5a1807;
+  background-color: #ece4b7;
+}
+.form__button--register {
+  margin: 0px auto;
+}
+
+/* Carga de archivos */
+.fieldset__input[type="file"] {
+  border: none;
+}
+.fieldset__input[type="file"]::-webkit-file-upload-button {
+  border-radius: 5px;
+  border-style: none;
+  background-color: #396e50;
+}
+
+/* Links */
+.form__a {
+  display: block;
+  text-align: start;
+  color: #ece4b7;
+  margin-top: 3%;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-left: 13%;
+}
+
+/* Términos y condiciones */
+.form__fieldset--termCondition {
+  display: flex;
+  flex-wrap: wrap;
+}
+.fieldset__input--termCondition {
+  width: 10%;
+}
+.fieldset__label--termCondition {
+  width: 90%;
+  font-size: 0.8em;
+}
+
+.form__p {
+  color: #ece4b7;
+  text-align: center;
+}
+
+.form__a--create {
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+  margin-left: 0;
+}
+
+/* ---------Media queries ---------*/
+/* --MOBILE XL--*/
+@media (min-width: 577px) {
+  /* MAIN */
+  .form__h3 {
+    font-size: 1.8em;
+  }
+
+  .form {
+    width: 70%;
+  }
+
+  .fieldset__label {
+    font-size: 1.6em;
+  }
+
+  .fieldset__input {
+    width: 100%;
+  }
+
+  .form__a {
+    font-size: 1em;
+  }
+
+  .form__button {
+    font-size: 1.5em;
+  }
+
+  .form__p {
+    font-size: 1.2em;
+  }
+
+  .form__a--create {
+    font-size: 1.3em;
+  }
+  /* Términos y condiciones */
+  .form__fieldset--termCondition {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .fieldset__input--termCondition {
+    width: 10%;
+  }
+  .fieldset__label--termCondition {
+    width: 90%;
+    font-size: 0.9em;
+  }
+}
+
+/* --TABLET/NETBOOK--*/
+@media (min-width: 769px) {
+  .form {
+    width: 60%;
+  }
+}
+
+/* --DESKTOP--*/
+@media (min-width: 993px) {
+  /* MAIN */
+  .mainForms {
+    padding: 6% 0 11%;
+  }
+
+  .form {
+    width: 40%;
+    margin: auto;
+    padding: 2% 0 7%;
+  }
+
+  .form__h3 {
+    font-size: 2em;
+    margin-bottom: 0;
+  }
+
+  .form__fieldset {
+    margin: 5% auto;
+    width: 65%;
+  }
+
+  .form__fieldset--forgetPass {
+    padding-bottom: 0%;
+    margin-bottom: 3%;
+  }
+
+  .fieldset__label {
+    margin-bottom: 1%;
+  }
+
+  .fieldset__input {
+    padding: 1.5%;
+  }
+
+  .form__a {
+    font-size: 1.2em;
+    margin-left: 19%;
+  }
+
+  .form__p {
+    font-size: 1.3em;
+  }
+
+  .form__a--create {
+    font-size: 1.5em;
+    margin-left: 0;
+  }
+
+  .form__button {
+    margin: 12% auto 7%;
+    transition: background-color 0.3s;
+  }
+  .form__button:hover {
+    color: #792e1b;
+    background-color: #ece4b7;
+  }
+
+  .fieldset__label--termCondition {
+    font-size: 1.1em;
+  }
+
+  .form__button--register {
+    margin: 0px auto;
+  }
+}

@@ -16,26 +16,5 @@
     "email": "andreaeichenberger.ae@gmail.com",
     "password": "hola1234",
     "admin": false
-  },
-  {
-    "id": 4,
-    "email": "vicente.macchione1@gmail.com",
-    "avatar": "avatar-1626529839182.jpg",
-    "password": [
-      "vicente12",
-      "vicente12"
-    ]
-  },
-  {
-    "id": 5,
-    "email": "andrayvicente@dh.com",
-    "avatar": "avatar-1626530125938.jpg",
-    "password": "$2a$10$m2ZSsLHKRu2UvO7gqMMPFO3mLpd5Ad0U/KSMAI.IV0hKeI.xC9W.6"
-  },
-  {
-    "id": 6,
-    "email": "andrea@digitalhouse.com",
-    "avatar": "avatar-1626530805507.PNG",
-    "password": "$2a$10$7VkXfH0/flBpSYMOA2QvF.no.eiQuJuSL0w0xGayL71r7GJLkGTd."
   }
 ]

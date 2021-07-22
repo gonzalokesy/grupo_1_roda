@@ -2,34 +2,32 @@
 <html lang="en">
   <head>
     <title>Ingresá a Rodá</title>
-    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/usersForms.css" />
     <%- include('../partials/head') %>
   </head>
   <body class= "body">
 
     <%- include('../partials/header') %>
 
-    <main class="mainLogin">
-      <h3 class="mainLogin__h3">Ingresa a tu cuenta</h3>
+    <main class="mainForms">
       <form class="form" action="#">
+        <h3 class="form__h3">Ingresa a tu cuenta</h3>
         <fieldset class="form__fieldset">
-          <label class="fieldset__label" for="email">Email *</label>
+          <label class="fieldset__label" for="email">Email</label>
           <input
             class="fieldset__input"
             type="email"
             name="email"
             id="email"
-            required
           />
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--forgetPass">
-          <label class="fieldset__label" for="password">Contraseña *</label>
+          <label class="fieldset__label" for="password">Contraseña</label>
           <input
             class="fieldset__input"
             type="password"
             name="password"
             id="password"
-            required
           />
         </fieldset>
         <a class="form__a" href="#">¿Olvidaste tu contraseña?</a>

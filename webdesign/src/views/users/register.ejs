@@ -2,19 +2,18 @@
 <html lang="en">
   <head>
     <title>Registrate en Rodá</title>
-    <link rel="stylesheet" href="/css/register.css" />
+    <link rel="stylesheet" href="/css/usersForms.css" />
     <%- include('../partials/head') %>
   </head>
-  <body>
+  <body class= "body">
   
     <%- include('../partials/header') %>
 
-    <main class="mainRegister">      
-      <h3 class="mainRegister__h3">Crea tu cuenta</h3>
+    <main class="mainForms">
       <form class="form" action="/users/save" method="POST" enctype="multipart/form-data">
-        <p class="form__p">Completa tus datos</p>
+        <h3 class="form__h3">Crea tu cuenta</h3>
         <fieldset class="form__fieldset">
-            <label class="fieldset__label" for="email">Email *</label>
+            <label class="fieldset__label" for="email">Email</label>
             <input class="fieldset__input" type="email" name="email" id="email"/>
             <!--Enviamos el mensaje al usuario-->
             <% if (locals.errors && errors.email) { %>
@@ -22,15 +21,7 @@
             <% } %>
         </fieldset>
         <fieldset class="form__fieldset">
-          <label class="" for="">Imagen</label>
-          <input class="" type="file" name="avatar" id="image">
-          <!--Enviamos el mensaje al usuario-->
-          <% if (locals.errors && errors.avatar) { %>
-            <%= errors.avatar.msg %>
-        <% } %>
-      </fieldset>
-        <fieldset class="form__fieldset form__fieldset--forgetPass">
-          <label class="fieldset__label" for="password">Contraseña *</label>
+          <label class="fieldset__label" for="password">Contraseña</label>
           <input
             class="fieldset__input"
             type="password"
@@ -42,8 +33,8 @@
             <%= errors.password.msg %>
         <% } %>
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--forgetPass">
-          <label class="fieldset__label" for="passwordConfirm">Confirmar contraseña *</label>
+        <fieldset class="form__fieldset">
+          <label class="fieldset__label" for="passwordConfirm">Confirmar contraseña</label>
           <input
             class="fieldset__input"
             type="password"
@@ -55,11 +46,19 @@
             <%= errors.passwordConfirm.msg %>
         <% } %>
         </fieldset>
+        <fieldset class="form__fieldset">
+          <label class="fieldset__label" for="">Imagen de perfil</label>
+          <input class="fieldset__input" type="file" name="avatar" id="image">
+          <!--Enviamos el mensaje al usuario-->
+          <% if (locals.errors && errors.avatar) { %>
+            <%= errors.avatar.msg %>
+        <% } %>
+      </fieldset>
         <fieldset class="form__fieldset form__fieldset--termCondition">
-            <input class="fieldset__input--termCondition" type="checkbox" name="termCondition" id="termCondition" required/>
-            <label class="fieldset__label--termCondition" for="termCondition">Acepto los Términos y Condiciones y autorizo el uso de mis datos de acuerdo a la Declaración de Privacidad *</label>
+            <input class="fieldset__input fieldset__input--termCondition" type="checkbox" name="termCondition" id="termCondition"/>
+            <label class="fieldset__label fieldset__label--termCondition" for="termCondition">Acepto los Términos y Condiciones y autorizo el uso de mis datos de acuerdo a la Declaración de Privacidad *</label>
         </fieldset>
-        <button class="form__button" type="submit">Crear</button>
+        <button class="form__button form__button--register" type="submit">Crear</button>
       </form>
     </main>
 

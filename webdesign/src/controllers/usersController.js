@@ -1,4 +1,4 @@
-const {check} = require('express-validator');
+const {validationResult} = require('express-validator');
 const userModel = require('../models/userModel');
 
 const usersController = {
@@ -9,10 +9,13 @@ const usersController = {
         return res.render("users/register");
     },
     save: (req,res) => {
-        const errors = check(req);
-          userModel.create(req.body,req.file);
-          return res.redirect("/users/login");
-        
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.render("users/register",{ errors: errors.mapped(),title:"Join",old:req.body });
+          }else{
+            userModel.create(req.body,req.file);
+            return res.redirect("/users/login");
+          }
     }
 }
 

@@ -7,6 +7,7 @@ const usersController = require("../controllers/usersController");
 
 const multer = require("multer");
 const path = require("path");
+const validationRegister = require('../middlewares/validRegister')
 
 // Multer
 const diskStorage = multer.diskStorage( {
@@ -26,7 +27,7 @@ router.get("/login", usersController.login);
 
 // Rutas a Formulario de creacion de usuario
 router.get("/register", usersController.register);
-router.post("/save", [upload.single('avatar')], usersController.save);
+router.post("/save", [upload.single('avatar')],validationRegister, usersController.save);
 
 
 

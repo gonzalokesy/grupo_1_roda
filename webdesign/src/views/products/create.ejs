@@ -3,49 +3,49 @@
 <head>
     <title>Crear producto</title>
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/createEditForm.css" />
+    <link rel="stylesheet" href="/css/productsForms.css" />
 </head>
 <body class="body">
     <%- include('../partials/header') %>
 
-    <main class="main">
-        <h2 class="main__title">Creación de producto</h2>
-        <form class="formProduct" action="/products/save" method="POST" enctype="multipart/form-data">
-            <fieldset class="formProduct__fieldset">
-                <label class="formProduct__label" for="">Nombre del producto</label>
-                <input class="formProduct__input" type="text" name="name" id="name">
+    <main class="mainForms">
+        <form class="form" action="/products/save" method="POST" enctype="multipart/form-data">
+            <h3 class="form__h3">Creación de producto</h3>
+            <fieldset class="form__fieldset">
+                <label class=fieldset__label for="name">Nombre del producto</label>
+                <input class="fieldset__input" type="text" name="name" id="name">
             </fieldset>
-            <fieldset class="formProduct__fieldset">
-                <label class="formProduct__label" for="">Descripción</label>
-                <textarea class="formProduct__textarea" name="description" id="description" cols="30" rows="10"></textarea>
+            <fieldset class="form__fieldset">
+                <label class=fieldset__label for="description">Descripción</label>
+                <textarea class="fieldset__textarea" name="description" id="description" cols="30" rows="10"></textarea>
             </fieldset>
-            <fieldset class="formProduct__fieldset formProduct__fieldset--width">
-                <label class="formProduct__label formProduct__label--width" for="">Imagen</label>
-                <input class="formProduct__input formProduct__input--width" type="file" name="gallery" id="image" multiple>
+            <fieldset class="form__fieldset">
+                <label class="fieldset__label" for="image">Imagen</label>
+                <input class="fieldset__input" type="file" name="gallery" id="image" multiple>
             </fieldset>
 
-            <fieldset class="formProduct__fieldset">
-                <label class="formProduct__label" for="">Categoria</label>
-                <select class="formProduct__select" name="category" id="category">
-                    <option class="formProduct__option" value="bike">Bicicleta</option>
-                    <option class="formProduct__option" value="accessory">Accesorio</option>
+            <fieldset class="form__fieldset">
+                <label class=fieldset__label for="">Categoría</label>
+                <select class="fieldset__select" name="category" id="category">
+                    <option class="select__option" value="bike">Bicicleta</option>
+                    <option class="select__option" value="accessory">Accesorio</option>
                 </select>
             </fieldset>
 
             <!--
-            <fieldset class= "formProduct__fieldset--box">
-                <label class="formProduct__label" for="">Colores</label>
+            <fieldset class= "form__fieldset--box">
+                <label class=fieldset__label for="">Colores</label>
                 <fieldset class="formProduct__fieldset formProduct__fieldset--checkbox">
-                    <input class="formProduct__input formProduct__input--checkbox" type="checkbox" name="color" id="color1">
+                    <input class="fieldset__input fieldset__input--checkbox" type="checkbox" name="color" id="color1">
                     <label class="formProduct__label--checkbox" for="">Color 1</label>
                 </fieldset>
             -->
 
-            <fieldset class="formProduct__fieldset formProduct__fieldset--price">
-                    <label class="formProduct__label formProduct__label--price" for="">Precio</label>
-                    <input class="formProduct__input formProduct__input--price" type="number" name="price" id="price" min="0">
+            <fieldset class="form__fieldset">
+                    <label class="fieldset__label" for="price">Precio</label>
+                    <input class="fieldset__input fieldset__input--price" type="number" name="price" id="price" min="0">
             </fieldset>
-            <button class="formProduct__button" type="submit">Agregar</button>
+            <button class="form__button" type="submit">Agregar</button>
         </form>
     </main>
 

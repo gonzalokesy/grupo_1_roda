@@ -60,7 +60,7 @@
 }
 
 .fieldset__input {
-  font-size: 1.3em;
+  font-size: 1em;
   color: #ece4b7;
   background-color: #4c956c;
   display: block;
@@ -138,6 +138,12 @@
   color: #ece4b7;
   text-align: center;
 }
+.form__p--error {
+  font-weight: 600;
+  margin-top: 2%;
+  color: #264935;
+  text-align: start;
+}
 
 .form__a--create {
   font-size: 1em;
@@ -163,6 +169,7 @@
   }
 
   .fieldset__input {
+    font-size: 1.3em;
     width: 100%;
   }
 

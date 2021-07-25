@@ -14,10 +14,10 @@
         <h3 class="form__h3">Crea tu cuenta</h3>
         <fieldset class="form__fieldset">
             <label class="fieldset__label" for="email">Email</label>
-            <input class="fieldset__input" type="email" name="email" id="email"/>
+            <input class="fieldset__input" type="email" name="email" id="email" value="<%= locals.old && old.email %>"/>
             <!--Enviamos el mensaje al usuario-->
             <% if (locals.errors && errors.email) { %>
-                <%= errors.email.msg %>
+              <p class="form__p form__p--error"><%= errors.email.msg %></p>
             <% } %>
         </fieldset>
         <fieldset class="form__fieldset">
@@ -30,7 +30,7 @@
           />
           <!--Enviamos el mensaje al usuario-->
           <% if (locals.errors && errors.password) { %>
-            <%= errors.password.msg %>
+            <p class="form__p form__p--error"><%= errors.password.msg %></p>
         <% } %>
         </fieldset>
         <fieldset class="form__fieldset">
@@ -43,7 +43,7 @@
           />
           <!--Enviamos el mensaje al usuario-->
           <% if (locals.errors && errors.passwordConfirm) { %>
-            <%= errors.passwordConfirm.msg %>
+            <p class="form__p form__p--error"><%= errors.passwordConfirm.msg %></p>
         <% } %>
         </fieldset>
         <fieldset class="form__fieldset">
@@ -51,7 +51,7 @@
           <input class="fieldset__input" type="file" name="avatar" id="image">
           <!--Enviamos el mensaje al usuario-->
           <% if (locals.errors && errors.avatar) { %>
-            <%= errors.avatar.msg %>
+            <p class="form__p form__p--error"><%= errors.avatar.msg %></p>
         <% } %>
       </fieldset>
         <fieldset class="form__fieldset form__fieldset--termCondition">

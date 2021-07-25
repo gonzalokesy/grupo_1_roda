@@ -5,6 +5,21 @@ const usersController = {
     login: (req, res) => {
         return res.render("users/login");
     },
+    processLogin: (req, res) => {
+        let userToLogin = userModel.findByEmail (req.body.email); // Utiliza el método del modelo. En caso de que exista, continua al IF de valdiacion de contraseña. 
+        if (userToLogin) {
+            return res.send (userToLogin)
+        }else{
+            res.render("users/login", {
+                errors: {
+                    email: {
+                        msg: "Credenciales inválidas"
+                    }
+                }
+            })
+        }
+       return res.send (userToLogin);
+    },
     register: (req, res) => {
         return res.render("users/register");
     },

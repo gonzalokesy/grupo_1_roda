@@ -21,8 +21,10 @@ const diskStorage = multer.diskStorage( {
 
 const upload = multer({storage:diskStorage});
 
-//Rutas
+//Rutas de login y proceso de login
 router.get("/login", usersController.login);
+router.post("/access", usersController.processLogin); //Ruta que procesa el login del usuario.
+
 
 
 // Rutas a Formulario de creacion de usuario

@@ -10,7 +10,7 @@
     <%- include('../partials/header') %>
 
     <main class="mainForms">
-      <form class="form" action="#">
+      <form class="form" action="/users/access" method="POST">
         <h3 class="form__h3">Ingresa a tu cuenta</h3>
         <fieldset class="form__fieldset">
           <label class="fieldset__label" for="email">Email</label>
@@ -20,6 +20,9 @@
             name="email"
             id="email"
           />
+          <% if (locals.errors && errors.email) { %>
+           <div><%= errors.email.msg %> </div>
+          <% } %>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--forgetPass">
           <label class="fieldset__label" for="password">Contraseña</label>

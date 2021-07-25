@@ -39,7 +39,7 @@
         </ul>
 
         <!--Navbar desktop-->
-
+        <% if (locals.isLogged) { %> 
         <ul class="navBarDesktop__ul navBarDesktop__ul--left">
           <li class="navBarDesktop__liLeft">
             <a class="navBarDesktop__link" href="/products/indexBikes">
@@ -75,7 +75,7 @@
             </a>
           </li>
           <li class="navBarDesktop__liRight">
-            <a class="navBarDesktop__link" href="/users/login">
+            <a class="navBarDesktop__link" href="/users/profile">
               <p class="navBarDesktop__p">Mi Rodá</p>
             </a>
           </li>
@@ -86,6 +86,48 @@
           </li>
         </ul>
       </nav>
+      <% } else {%> 
+        <ul class="navBarDesktop__ul navBarDesktop__ul--left">
+          <li class="navBarDesktop__liLeft">
+            <a class="navBarDesktop__link" href="/products/indexBikes">
+              <p class="navBarDesktop__p">Bicicletas</p>
+            </a>
+          </li>
+          <li class="navBarDesktop__liLeft">
+            <a class="navBarDesktop__link" href="/products/indexAccessories">
+              <p class="navBarDesktop__p">Accesorios</p>
+            </a>
+          </li>
+          <li class="navBarDesktop__liLeft">
+            <a class="navBarDesktop__link" href="/about">
+              <p class="navBarDesktop__p navBarDesktop__p--roda">Rodá</p>
+            </a>
+          </li>
+        </ul>
+
+        <figure class="navBarDesktop__logo">
+          <a class="navBarDesktop__linkHome" href="/">
+          <img
+            class="navBarDesktop__imageLogo"
+            src="/images/Logo.png"
+            alt="Logo de Rodá"
+          />
+        </a>
+        </figure>
+
+        <ul class="navBarDesktop__ul navBarDesktop__ul--right">
+          <li class="navBarDesktop__liRight">
+            <a class="navBarDesktop__link" href="/users/login">
+              <p class="navBarDesktop__p">Ingresá</p>
+            </a>
+          </li>
+          <li class="navBarDesktop__liRight">
+            <a class="navBarDesktop__link" href="/users/register">
+              <p class="navBarDesktop__p">Registrate</p>
+            </a>
+        </ul>
+      </nav>
+      <% } %> 
 
       <!--Dropdown-->
       <ul class="dropdown">

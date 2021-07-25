@@ -1,14 +1,20 @@
 const {validationResult} = require('express-validator');
 const userModel = require('../models/userModel');
+const bcrypt = require("bcryptjs");
 
 const usersController = {
     login: (req, res) => {
         return res.render("users/login");
     },
     processLogin: (req, res) => {
-        let userToLogin = userModel.findByEmail (req.body.email); // Utiliza el método del modelo. En caso de que exista, continua al IF de valdiacion de contraseña. 
+        let userToLogin = userModel.findByEmail (req.body.email);
         if (userToLogin) {
-            return res.send (userToLogin)
+            let verifypassword = bcrypt.compareSync (req.body.password, userToLogin.password);
+            if (verifypassword) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                return res.redirect ('/users/profile');
+            }
         }else{
             res.render("users/login", {
                 errors: {
@@ -18,7 +24,15 @@ const usersController = {
                 }
             })
         }
-       return res.send (userToLogin);
+    },
+    profile: (req,res) => {
+        return res.render("users/profile", {
+        user : req.session.userLogged
+        });
+    },
+    logout : (req, res) => {
+        req.session.destroy();
+        return res.redirect('/');
     },
     register: (req, res) => {
         return res.render("users/register");

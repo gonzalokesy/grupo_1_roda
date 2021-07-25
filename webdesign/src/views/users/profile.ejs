@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Perfil de usuario</title>
+    <link rel="stylesheet" href="/css/profile.css" />
+    <%- include('../partials/head') %>
+  </head>
+  <body class= "body">
+
+    <%- include('../partials/header') %>
+
+    <main class="mainForms">
+
+      <section class="profileEmail">
+      Bienvenido <%= user.email %>   
+      </section>
+      
+    <figure class = "profilePhoto">
+      <img src="/uploads/avatars/<%= user.avatars %> " alt="Foto de Perfil">
+    </figure>
+
+    <form class="form" action="/users/logout" method="POST">
+      <button type="submit">Logout</button>
+    </form>
+     
+    </main>
+
+    <%- include('../partials/footer') %>
+
+  </body>
+</html>

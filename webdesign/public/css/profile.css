@@ -1,0 +1,34 @@
+/*Font weight: 
+    Extra-light 200
+    Light 300
+    Regular 400
+    Medium 500
+    Semi-bold 600
+    Bold 700
+*/
+
+/* Color palette: 
+    marron oscuro #5a1807
+    marron intermedio #792e1b
+    marron claro #eabe7c
+    verde agua #4c956c
+    verde fuerte #396e50
+    crema #ece4b7
+*/
+
+.mainForms {
+  background-color: #ece4b7;
+}
+
+/* ---------Media queries ---------*/
+/* --MOBILE XL--*/
+@media (min-width: 577px) {
+}
+
+/* --TABLET/NETBOOK--*/
+@media (min-width: 769px) {
+}
+
+/* --DESKTOP--*/
+@media (min-width: 993px) {
+}

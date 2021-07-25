@@ -1,20 +1,38 @@
 [
   {
     "id": 1,
-    "email": "gonzalo.kesy@gmail.com",
-    "password": "hola1234",
-    "admin": true
+    "email": "jeff.bezos@roda.com.ar",
+    "avatar": "avatar-1627177096321.jpg",
+    "password": "$2a$10$fuFtfuACzWEIssrHGuISRO97Tmj4ze/CL9dHTdLsdfaGVaJLwlvyi"
   },
   {
     "id": 2,
-    "email": "vicente.macchione1@gmail.com",
-    "password": "hola1234",
-    "admin": true
+    "email": "warren.buffet@roda.com.ar",
+    "avatar": "avatar-1627177179720.jpg",
+    "password": "$2a$10$waa5Ka6vGKWJR3Kw2DARm.m3mqiBrYvyCAiQmEjYTn8hPuib/mevy"
   },
   {
     "id": 3,
-    "email": "andreaeichenberger.ae@gmail.com",
-    "password": "hola1234",
-    "admin": false
+    "email": "steve.jobs@roda.com.ar",
+    "avatar": "avatar-1627177232947.jpg",
+    "password": "$2a$10$yqBSgTAXUkNE/FfxEGy1jOthAC/w9hS1oM14UqXSjrI7x9QwTNQnG"
+  },
+  {
+    "id": 4,
+    "email": "gonzalo.kesy@gmail.com",
+    "avatar": "avatar-1627177397180.jpg",
+    "password": "$2a$10$C1ZjifK6f7sf5SG4a3rtlum4zM/6iZDARO5raFz.G/Z/ofrJ.02ni"
+  },
+  {
+    "id": 5,
+    "email": "andrea.eichenberger@gmail.com",
+    "avatar": "avatar-1627177490780.jpg",
+    "password": "$2a$10$suJ14zmRcMfXXEk7yjAQ2OK4T8gg8egtKJ2gGrgeekkuRzE9da2dK"
+  },
+  {
+    "id": 6,
+    "email": "vicente.macchione@gmail.com",
+    "avatar": "avatar-1627177623662.jpg",
+    "password": "$2a$10$.WYxwyQqUishb1VQi6hHs.NEu7CY.vm7gDj8vAW6IVPg.eqnv8ewy"
   }
 ]

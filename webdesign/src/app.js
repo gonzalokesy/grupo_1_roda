@@ -2,6 +2,14 @@
 const express = require("express");
 const app = express();
 
+//Express Session 
+const session = require("express-session");
+app.use (session({
+    secret: 'Roda',
+    resave: false,
+    saveUninitialized: false,
+}));
+
 //Requiriendo módulos para data
 app.use(express.urlencoded({extended:false}))
 app.use (express.json())

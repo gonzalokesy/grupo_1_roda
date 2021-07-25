@@ -32,6 +32,9 @@
             name="password"
             id="password"
           />
+          <% if (locals.errors && errors.password) { %>
+            <div><%= errors.password.msg %> </div>
+           <% } %>
         </fieldset>
         <label for="">
           <input type="checkbox" name = "rememberUser"> Recordar mi usuario

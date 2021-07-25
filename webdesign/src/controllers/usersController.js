@@ -19,12 +19,20 @@ const usersController = {
                 }
 
                 return res.redirect ('/users/profile');
+
             }
+            res.render("users/login", {
+                errors: {
+                    email: {
+                        msg: "Usuario o contraseña incorrectos"
+                    }
+                }
+            })
         }else{
             res.render("users/login", {
                 errors: {
                     email: {
-                        msg: "Credenciales inválidas"
+                        msg: "Usuario o contraseña incorrectos"
                     }
                 }
             })

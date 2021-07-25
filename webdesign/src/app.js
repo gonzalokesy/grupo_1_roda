@@ -14,10 +14,6 @@ app.use (session({
 const cookies = require ('cookie-parser')
 app.use (cookies())
 
-// Middleware de aplicación 
-const aplicationUserMiddleware = require ('/middlewares/aplicationUserMiddleware')
-app.use(aplicationUserMiddleware); // No se ejecuta ya que no recibe parámetros. 
-
 //Requiriendo módulos para data
 app.use(express.urlencoded({extended:false}))
 app.use (express.json())
@@ -28,6 +24,11 @@ app.use(methodOverride('_method'));
 const path = require("path");
 const publicPath = path.resolve(__dirname,"../public");
 app.use(express.static(publicPath));
+
+// Middleware de aplicación 
+const aplicationUserMiddleware = require('./middlewares/aplicationUserMiddleware')
+app.use(aplicationUserMiddleware); // No se ejecuta ya que no recibe parámetros. 
+
 
 //Configurando View Engine
 app.set("view engine", "ejs");

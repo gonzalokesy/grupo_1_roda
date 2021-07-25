@@ -10,6 +10,14 @@ app.use (session({
     saveUninitialized: false,
 }));
 
+// Cookies
+const cookies = require ('cookie-parser')
+app.use (cookies())
+
+// Middleware de aplicación 
+const aplicationUserMiddleware = require ('/middlewares/aplicationUserMiddleware')
+app.use(aplicationUserMiddleware); // No se ejecuta ya que no recibe parámetros. 
+
 //Requiriendo módulos para data
 app.use(express.urlencoded({extended:false}))
 app.use (express.json())

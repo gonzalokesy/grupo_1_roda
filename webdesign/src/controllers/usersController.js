@@ -1,4 +1,4 @@
-const {validationResult} = require('express-validator');
+const {validationResult, cookie} = require('express-validator');
 const userModel = require('../models/userModel');
 const bcrypt = require("bcryptjs");
 
@@ -13,6 +13,11 @@ const usersController = {
             if (verifypassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
+
+                if (req.body.rememberUser) {
+                    res.cookie ('userEmail', req.body.email, {maxAge: (1000 * 60)}) //seteando la cookie que se utilziará para mantener el session. 
+                }
+
                 return res.redirect ('/users/profile');
             }
         }else{
@@ -31,6 +36,7 @@ const usersController = {
         });
     },
     logout : (req, res) => {
+        res.clearCookie ('userEmail');
         req.session.destroy();
         return res.redirect('/');
     },

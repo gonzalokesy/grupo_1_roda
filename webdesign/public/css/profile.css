@@ -15,14 +15,57 @@
     verde fuerte #396e50
     crema #ece4b7
 */
+.mainProfile {
+  height: 80%;
+}
 
-.mainForms {
-  background-color: #ece4b7;
+.welcome {
+  width: 100%;
+  margin: 7% auto 5%;  
+  text-align: center;
+  color: #5a1807;
+  font-size: 1em;
+}
+
+.profilePhoto {
+  width: 30%;
+  margin: auto;
+}
+
+.profilePhoto__picture {
+  width: 100%;
+}
+.form {
+  margin: 5% auto 10%;
+}
+
+.form__button {
+  font-size: 0.8em;
+  display: block;
+  background-color: #792e1b;
+  color: #ece4b7;
+  font-weight: 600;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5% auto;
+}
+.form__button:active {
+  color: #ece4b7;
+  background-color: #4c956c;
 }
 
 /* ---------Media queries ---------*/
 /* --MOBILE XL--*/
 @media (min-width: 577px) {
+  .welcome {
+    width: 100%;
+    font-size: 2em;
+  }
+  
+  .form__button {
+    font-size: 1.5em;
+  }
 }
 
 /* --TABLET/NETBOOK--*/
@@ -31,4 +74,19 @@
 
 /* --DESKTOP--*/
 @media (min-width: 993px) {
+  .welcome {
+    font-size: 2em;
+  }
+  
+  .profilePhoto {
+    width: 20%;
+  }
+  
+  .form__button {
+    font-size: 1.5em;
+  }
+  .form__button:hover {
+    color: #ece4b7;
+    background-color: #4c956c;
+  }
 }

@@ -9,20 +9,20 @@
 
     <%- include('../partials/header') %>
 
-    <main class="mainForms">
+    <main class="mainProfile">
 
-      <section class="profileEmail">
-      Bienvenido <%= user.email %>   
-      </section>
+      <h3 class="welcome">
+      ¡Bienvenido/a <br>
+      <%= user.email %>!   
+      </h3>
       
     <figure class = "profilePhoto">
-      <img src="/uploads/avatars/<%= user.avatar %> " alt="Foto de Perfil">
+      <img class = "profilePhoto__picture" src="/uploads/avatars/<%= user.avatar %> " alt="Foto de Perfil">
     </figure>
 
     <form class="form" action="/users/logout" method="POST">
-      <button type="submit">Logout</button>
+      <button class="form__button" type="submit">Cerrar sesión</button>
     </form>
-     
     </main>
 
     <%- include('../partials/footer') %>

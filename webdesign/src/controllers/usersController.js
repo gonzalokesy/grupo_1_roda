@@ -14,7 +14,7 @@ const usersController = {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
                     if (req.body.rememberUser) {
-                    res.cookie ('userEmail', req.body.email, {maxAge: (1000 * 60)}) //seteando la cookie que se utilziará para mantener el session. 
+                    res.cookie ('userEmail', req.body.email, {maxAge: (10000000 * 60)}) //seteando la cookie que se utilziará para mantener el session. 
                     }
                 return res.redirect ('/users/profile');
             }

@@ -5,10 +5,10 @@ const router = express.Router();
 // Requiriendo controller
 const productsController = require("../controllers/productsController");
 
+// Multer
 const multer = require("multer");
 const path = require("path");
 
-// Multer
 const diskStorage = multer.diskStorage( {
     destination: function (req, file, cb) {
             cb(null, path.resolve(__dirname,"../../public/uploads/products"));

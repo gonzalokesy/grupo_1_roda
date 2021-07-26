@@ -5,6 +5,9 @@ const router = express.Router();
 // Requiriendo controller
 const productsController = require("../controllers/productsController");
 
+// Requiriendo middlewares
+const adminAccess = require("../middlewares/adminAccess")
+
 // Multer
 const multer = require("multer");
 const path = require("path");
@@ -29,11 +32,11 @@ router.get("/showBike/:id", productsController.showBike);
 router.get("/showAccessory/:id", productsController.showAccessory);
 
 // Rutas a Formulario de creación 
-router.get("/create", productsController.create);
+router.get("/create", adminAccess, productsController.create);
 router.post("/save", [upload.any()], productsController.save);
 
 // Rutas a Formulario de edición 
-router.get("/edit/:id", productsController.edit);
+router.get("/edit/:id", adminAccess, productsController.edit);
 router.put("/update/:id", [upload.any()], productsController.update);
 
 // Ruta a Formulario de eliminación 

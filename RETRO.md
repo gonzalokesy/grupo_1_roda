@@ -51,3 +51,22 @@ Conforme escale el proyecto en complejidad estamos seguros que surgirán aspecto
 - Mantener el compromiso y responsabilidad hacia el proyecto y el equipo.
 - Continuar con comunicación fluida y buena onda entre compañeros.
 - Evitar ocupar las reuniones grupales con resolución de problemas que podrían hacerse de manera individual. 
+
+------------
+
+### Sprint :four: 
+
+#### Start doing:
+- División flexible de tareas, que permite el avance de manera indivual en el proyecto respetando los lineamientos     grupales.
+- Nutrirse de los razonamientos y resoluciones adoptadas por los demás miembros del grupo tomando los conceptos que   mejor contribuyan al avance del proyecto, priorizando preferencias grupales ante preferencias personales.  
+
+#### Keep doing:
+- Profundizar los conceptos técnicos en los cuales encontramos dificultades.
+- Aplicar comentarios en el código para fomentar la organización y una buena estructura de código.
+- Tener flexibilidad para modificar lo existente y/o implementar nuevas ideas.
+- Mantener el compromiso y responsabilidad hacia el proyecto y el equipo.
+- Continuar con comunicación fluida y buena onda entre compañeros.
+- Evitar ocupar las reuniones grupales con resolución de problemas que podrían hacerse de manera individual. 
+
+#### Less of: 
+- Documentar las weekly que mantiene el grupo. Creemos que no aportó valor por la dimensión del proyecto y por la fluidez de nuestra comunicación, ya que la misma se mantiene independientemnte de las reuniones. 

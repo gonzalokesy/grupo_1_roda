@@ -78,3 +78,10 @@ VALUES (2, 2, 2);
 
 INSERT INTO products_colors (id, product_id, color_id)
 VALUES (3, 3, 3);
+
+
+INSERT INTO shoppingCart (id, user_id, product_id, quantity, totalPrice, active, date)
+VALUES (1, 6, 1, 1, 50000, 1, 2021-09-23);
+
+INSERT INTO detailCart (id, shoppingCart_id, quantity, actualPrice)
+VALUES (1, 1, 1, 50000);

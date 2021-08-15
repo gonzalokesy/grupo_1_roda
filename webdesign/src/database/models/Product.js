@@ -31,7 +31,8 @@ module.exports = function (sequelize, dataTypes) {
 
     let config = {
         tableName: "products",
-        timestamps: false
+        timestamps: false,
+        underscored: true
     };
     
 

@@ -23,7 +23,8 @@ module.exports = function (sequelize, dataTypes) {
 
     let config = {
         tableName: "detailcart",
-        timestamps: false
+        timestamps: false,
+        underscored: true
     };
     
 

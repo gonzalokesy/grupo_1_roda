@@ -16,7 +16,8 @@ module.exports = function (sequelize, dataTypes) {
 
     let config = {
         tableName: "images",
-        timestamps: false
+        timestamps: false,
+        underscored: true
     };
     
 

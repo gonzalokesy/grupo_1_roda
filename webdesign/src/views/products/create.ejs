@@ -27,19 +27,25 @@
             <fieldset class="form__fieldset">
                 <label class=fieldset__label for="">Categoría</label>
                 <select class="fieldset__select" name="category" id="category">
-                    <option class="select__option" value="bike">Bicicleta</option>
-                    <option class="select__option" value="accessory">Accesorio</option>
+                    <% for (let i = 0; i < categories.length; i++) { %> 
+                    <option class="select__option" value="<%=categories[i].id%>"><%=categories[i].name%></option>
+                   <% } %> 
                 </select>
             </fieldset>
 
-            <!--
-            <fieldset class= "form__fieldset--box">
-                <label class=fieldset__label for="">Colores</label>
-                <fieldset class="formProduct__fieldset formProduct__fieldset--checkbox">
-                    <input class="fieldset__input fieldset__input--checkbox" type="checkbox" name="color" id="color1">
-                    <label class="formProduct__label--checkbox" for="">Color 1</label>
-                </fieldset>
-            -->
+            <fieldset class="form__fieldset">
+                <label class=fieldset__label for="">Color</label>
+                <select class="fieldset__select" name="color" id="color">
+                    <% for (let j = 0; j < colors.length; j++) { %> 
+                    <option class="select__option" value="<%=colors[j].id%>"><%=colors[j].name%></option>
+                   <% } %> 
+                </select>
+            </fieldset>
+
+            <fieldset class="form__fieldset">
+                <label class=fieldset__label for="name">Cantidad</label>
+                <input class="fieldset__input" type="number" name="quantity" id="quantity">
+            </fieldset>
 
             <fieldset class="form__fieldset">
                     <label class="fieldset__label" for="price">Precio</label>

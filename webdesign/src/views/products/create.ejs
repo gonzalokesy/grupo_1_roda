@@ -35,7 +35,7 @@
 
             <fieldset class="form__fieldset">
                 <label class=fieldset__label for="">Color</label>
-                <select class="fieldset__select" name="color" id="color">
+                <select class="fieldset__select" name="color" id="color" multiple>
                     <% for (let j = 0; j < colors.length; j++) { %> 
                     <option class="select__option" value="<%=colors[j].id%>"><%=colors[j].name%></option>
                    <% } %> 

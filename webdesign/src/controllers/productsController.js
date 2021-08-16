@@ -12,14 +12,22 @@ const productsController = {
     },
 
     save: function (req,res)  {
+        let colorsArray = req.body.color;
         db.Product.create ({
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
             quantity: req.body.quantity,
             category_id: req.body.category,
-            colores: req.body.color
-        });//product_id
+            color_id: req.body.color
+        }).then (function (productColor) {
+            colorsArray.forEach(colors => {
+                db.Product_color.create({
+                product_id: productColor.id,
+                color_id: colors
+                });
+            });
+        })
         res.redirect ("/")
     },
 

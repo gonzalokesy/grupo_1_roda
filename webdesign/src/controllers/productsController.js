@@ -31,10 +31,27 @@ const productsController = {
         res.redirect ("/")
     },
 
-    edit: function (req,res) {
-        
-    }
-    
+    indexProducts: (req, res) => {
+        db.Product.findAll()
+        .then((products) => {
+            res.render("products/product-listBike", {bikes: products})
+        })
+    //RECORDAR UNIFICAR LAS VISTAS DE BICICLETAS Y ACCESORIOS A UNA SOLA (products-listBike y product-listAccessory)
+    },
+
+    showProduct: (req, res) => {
+        db.Product.findByPk(req.params.id)
+        .then((product) => {
+            res.render("products/product-descriptionBike", {bikes: product})
+        })
+    },
+
+    edit: (req, res) => {
+        db.Product.findByPk(req.params.id)
+        .then((product) => 
+        res.render("products/edit", {product: product}))
+    },
+
 }
 
 

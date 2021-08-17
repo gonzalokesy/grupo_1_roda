@@ -24,11 +24,11 @@ const diskStorage = multer.diskStorage( {
 const upload = multer({storage:diskStorage});
 
 // Rutas a lista general de productos
-//router.get("/indexBikes", productsController.indexBikes);
-//router.get("/indexAccessories", productsController.indexAccessories);
+router.get("/indexBikes", productsController.indexProducts);
+//router.get("/indexAccessories", productsController.indexAccessories); ESTO NO VA
 
 // Rutas a descripción de cada producto
-//router.get("/showBike/:id", productsController.showBike);
+router.get("/showBike/:id", productsController.showProduct);
 //router.get("/showAccessory/:id", productsController.showAccessory);
 
 // Rutas a Formulario de creación 
@@ -36,7 +36,7 @@ router.get("/create", productsController.create);
 router.post("/save", [upload.any()], productsController.save);
 
 // Rutas a Formulario de edición 
-//router.get("/edit/:id", adminAccess, productsController.edit);
+router.get("/edit/:id", /*adminAccess,*/ productsController.edit);
 //router.put("/update/:id", [upload.any()], productsController.update);
 
 // Ruta a Formulario de eliminación 

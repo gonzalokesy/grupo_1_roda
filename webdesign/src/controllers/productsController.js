@@ -31,10 +31,39 @@ const productsController = {
         res.redirect ("/")
     },
 
-    edit: function (req,res) {
-        
-    }
+    indexProducts: (req, res) => {
+        db.Product.findAll()
+        .then((products) => {
+            res.render("products/product-listBike", {bikes: products})
+        })
+    //RECORDAR UNIFICAR LAS VISTAS DE BICICLETAS Y ACCESORIOS A UNA SOLA (products-listBike y product-listAccessory)
+    },
+
+    showProduct: function(req, res){
+        db.Product.findByPk(req.params.id,{include:[{association:"colores"},{association:"categoria"}]})
+        .then((product) => {
+            res.render("products/product-descriptionBike", {bikes: product})
+        })
+    },
+
+    /*edit: (req, res) => {
+        db.Product.findByPk(req.params.id)
+        .then((product) => 
+        res.render("products/edit", {product: product}))
+    },
+    */
+    edit: function(req,res){
+        const productSelected =  db.Product.findByPk(req.params.id,
+            {include:[{association:"colores"}]})
+        const category = db.Category.findAll()
+        const colors = db.Color.findAll()
+        Promise.all([productSelected,category, colors])
+            .then(function([productSelected,categories, colors]){
+                return res.render ("products/edit", {productSelected:productSelected,categories:categories, colors:colors})
+            })
+    } 
     
+
 }
 
 

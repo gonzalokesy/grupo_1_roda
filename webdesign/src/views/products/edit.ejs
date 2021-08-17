@@ -9,39 +9,41 @@
 
 <body class="body">
   <%- include('../partials/header') %>
-    <% if (product) { %>
+    <% if (productSelected) { %>
 
       <main class="mainForms">
-        <form class="form" action="/products/update/<%=product.id%>?_method=PUT" method="POST"
+        <form class="form" action="/products/update/<%=productSelected.id%>?_method=PUT" method="POST"
           enctype="multipart/form-data">
           <h3 class="form__h3">Edición de producto</h3>
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="name">Nombre del producto</label>
-            <input class="fieldset__input" type="text" name="name" id="name" value="<%= product.name %>" />
+            <input class="fieldset__input" type="text" name="name" id="name" value="<%= productSelected.name %>" />
           </fieldset>
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="description">Descripción</label>
             <textarea class="fieldset__textarea" name="description" id="description" cols="30" rows="10">
-<%= product.description %></textarea>
+              <%= productSelected.description %></textarea>
           </fieldset>
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="image">Imagen</label>
-            <input class="fieldset__input" type="file" name="gallery" id="gallery" value="<%= product.gallery %>"
+            <input class="fieldset__input" type="file" name="gallery" id="gallery" value="<%= productSelected.gallery %>"
               multiple />
           </fieldset>
+
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="category">Categoria</label>
             <select class="fieldset__select" name="category" id="category">
-              <% if (product.category == "bike") { %>
-                <option class="select__option" value="bike" selected>Bicicleta</option>
-                <option class="select__option" value="accessory">Accesorio</option>
+              <% for (let i = 0; i < categories.length; i++) { %>
+              <% if (productSelected.category_id == categories[i].category_id) { %>
+                <option class="select__option" value="<%=categories[i].id%>" selected><%=categories[i].name%></option>
+                
               <% } else { %>
-              <option class="select__option" value="bike">Bicicleta</option>
-              <option class="select__option" value="accessory" selected>Accesorio</option>
+                <option class="select__option" value="<%=categories[i].id%>"><%=categories[i].name%></option>
               <% } %>
             </select>
           </fieldset>
-
+          
+          
           <!--
             <fieldset class= "form__fieldset--box">
                 <label class="fieldset__label" for="">Colores</label>
@@ -64,10 +66,29 @@
             </fieldset>
             -->
 
+            <fieldset class="form__fieldset">
+              <label class=fieldset__label for="">Color</label>
+              <select class="fieldset__select" name="color" id="color" multiple>
+                  <% for (let j = 0; j < colors.length; j++) { %>
+                    <%if(productSelected.color_id == colors[i].colors_id){%>
+                  <option class="select__option" value="<%=colors[j].id%>" selected><%=colors[j].name%></option>
+                 <% }else{%>
+                  <option class="select__option" value="<%=colors[j].id%>"><%=colors[j].name%></option>
+                 <% } %>                    
+              </select>
+            </fieldset>
+             
+          
+
+          <fieldset class="form__fieldset">
+              <label class=fieldset__label for="name">Cantidad</label>
+              <input class="fieldset__input" type="number" name="quantity" id="quantity" value="<%=productSelected.quantity%>">
+          </fieldset>
+
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="price">Precio</label>
             <input class="fieldset__input fieldset__input--price" type="number" name="price" id="price" min="0"
-              value="<%= product.price %>" />
+              value="<%= productSelected.price %>" />
           </fieldset>
           <button class="form__button" type="submit">Editar</button>
         </form>

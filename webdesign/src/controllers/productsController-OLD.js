@@ -2,6 +2,8 @@
 const bikeModel = require("../models/bikeModel");
 const accessoryModel = require("../models/accessoryModel");
 
+//Hola Vicente
+
 const productsController = {
     indexBikes: (req, res) => {
         return res.render("products/product-listBike", {

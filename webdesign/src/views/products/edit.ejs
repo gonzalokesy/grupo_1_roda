@@ -24,7 +24,7 @@
             <textarea class="fieldset__textarea" name="description" id="description" cols="30" rows="10">
               <%= search.description %></textarea>
           </fieldset>
-         <!-- <fieldset class="form__fieldset">
+        <!-- <fieldset class="form__fieldset">
             <label class="fieldset__label" for="image">Imagen</label>
             <input class="fieldset__input" type="file" name="gallery" id="gallery" value=""
               multiple />
@@ -42,12 +42,11 @@
               <% } %> 
             </select>
           </fieldset>
-          
-          
+
             <fieldset class="form__fieldset">
               <label class=fieldset__label for="">Color</label>
               <select class="fieldset__select" name="color" id="color"multiple >
-               <% color.forEach(colors => { %>
+              <% color.forEach(colors => { %>
                 <% if (colors.id == colorChoice.color_id) { %>
                   <option value="<%=colors.id%>"selected><%=colors.name%></option>
                 <% } else {%>
@@ -55,10 +54,7 @@
                   <% } %>
                   <% }) %> 
               </select>
-           
             </fieldset>
-             
-          
 
           <fieldset class="form__fieldset">
               <label class=fieldset__label for="name">Cantidad</label>

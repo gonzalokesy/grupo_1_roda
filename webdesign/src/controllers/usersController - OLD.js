@@ -1,16 +1,13 @@
-let db = require ("../database/models");
 const {validationResult, cookie} = require('express-validator');
+const userModel = require('../models/userModel');
 const bcrypt = require("bcryptjs");
 
 const usersController = {
-
     login: (req, res) => {
         return res.render("users/login");
     },
-
     processLogin: (req, res) => {
-        let userToLogin = []
-        
+        let userToLogin = userModel.findByEmail (req.body.email);
         if (userToLogin) {
             let verifypassword = bcrypt.compareSync (req.body.password, userToLogin.password);
             if (verifypassword) {
@@ -38,6 +35,16 @@ const usersController = {
             })
         }
     },
+    profile: (req,res) => {
+        return res.render("users/profile", {
+        user : req.session.userLogged
+        });
+    },
+    logout : (req, res) => {
+        res.clearCookie ('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
+    },
     register: (req, res) => {
         return res.render("users/register");
     },
@@ -46,15 +53,10 @@ const usersController = {
         if (!errors.isEmpty()) {
             res.render('users/register', { errors: errors.mapped(), old: req.body });
         } else {
-            db.User.create({
-                email: req.body.email,
-                password: req.body.password,
-                image: req.body.image
-            });
+            userModel.create(req.body,req.file);
             return res.redirect("/users/login");
         }
     }
-   
 }
 
 module.exports = usersController;

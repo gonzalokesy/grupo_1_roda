@@ -9,90 +9,70 @@
 
 <body class="body">
   <%- include('../partials/header') %>
-    <% if (productSelected) { %>
+    <% if (search) { %>
 
       <main class="mainForms">
-        <form class="form" action="/products/update/<%=productSelected.id%>?_method=PUT" method="POST"
+        <form class="form" action="/products/update/<%=search.id%>?_method=PUT" method="POST"
           enctype="multipart/form-data">
           <h3 class="form__h3">Edición de producto</h3>
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="name">Nombre del producto</label>
-            <input class="fieldset__input" type="text" name="name" id="name" value="<%= productSelected.name %>" />
+            <input class="fieldset__input" type="text" name="name" id="name" value="<%= search.name %>" />
           </fieldset>
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="description">Descripción</label>
             <textarea class="fieldset__textarea" name="description" id="description" cols="30" rows="10">
-              <%= productSelected.description %></textarea>
+              <%= search.description %></textarea>
           </fieldset>
-          <fieldset class="form__fieldset">
+         <!-- <fieldset class="form__fieldset">
             <label class="fieldset__label" for="image">Imagen</label>
-            <input class="fieldset__input" type="file" name="gallery" id="gallery" value="<%= productSelected.gallery %>"
+            <input class="fieldset__input" type="file" name="gallery" id="gallery" value=""
               multiple />
-          </fieldset>
+          </fieldset>-->
 
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="category">Categoria</label>
             <select class="fieldset__select" name="category" id="category">
-              <% for (let i = 0; i < categories.length; i++) { %>
-              <% if (productSelected.category_id == categories[i].category_id) { %>
-                <option class="select__option" value="<%=categories[i].id%>" selected><%=categories[i].name%></option>
-                
-              <% } else { %>
-                <option class="select__option" value="<%=categories[i].id%>"><%=categories[i].name%></option>
-              <% } %>
+              <% for (i = 0; i < category.length; i++) { %> 
+                <% if (category[i].id == search.category_id) { %> 
+              <option value="<%=category[i].id%> "selected><%=category[i].name%></option>
+              <% } else {%>
+                <option value="<%=category[i].id%>"><%=category[i].name%></option>
+                <% } %>
+              <% } %> 
             </select>
           </fieldset>
           
           
-          <!--
-            <fieldset class= "form__fieldset--box">
-                <label class="fieldset__label" for="">Colores</label>
-                <fieldset class="form__fieldset form__fieldset--checkbox">
-                    <input class="fieldset__input fieldset__input--checkbox" type="checkbox" name="color" id="color1">
-                    <label class="fieldset__label--checkbox" for="">Color 1</label>
-                </fieldset>
-                <fieldset class="form__fieldset form__fieldset--checkbox">
-                    <input class="fieldset__input fieldset__input--checkbox" type="checkbox" name="color" id="color2">
-                    <label class="fieldset__label--checkbox" for="">Color 2</label>
-                </fieldset>
-                <fieldset class="form__fieldset form__fieldset--checkbox">
-                    <input class="fieldset__input fieldset__input--checkbox" type="checkbox" name="color" id="color3">
-                    <label class="fieldset__label--checkbox" for="">Color 3</label>
-                </fieldset>
-                <fieldset class="form__fieldset form__fieldset--checkbox">
-                    <input class="fieldset__input fieldset__input--checkbox" type="checkbox" name="color" id="color4">
-                    <label class="fieldset__label--checkbox" for="">Color 4</label>
-                </fieldset>
-            </fieldset>
-            -->
-
             <fieldset class="form__fieldset">
               <label class=fieldset__label for="">Color</label>
-              <select class="fieldset__select" name="color" id="color" multiple>
-                  <% for (let j = 0; j < colors.length; j++) { %>
-                    <%if(productSelected.color_id == colors[i].colors_id){%>
-                  <option class="select__option" value="<%=colors[j].id%>" selected><%=colors[j].name%></option>
-                 <% }else{%>
-                  <option class="select__option" value="<%=colors[j].id%>"><%=colors[j].name%></option>
-                 <% } %>                    
+              <select class="fieldset__select" name="color" id="color"multiple >
+               <% color.forEach(colors => { %>
+                <% if (colors.id == colorChoice.color_id) { %>
+                  <option value="<%=colors.id%>"selected><%=colors.name%></option>
+                <% } else {%>
+                  <option value="<%=colors.id%>"><%=colors.name%></option>
+                  <% } %>
+                  <% }) %> 
               </select>
+           
             </fieldset>
              
           
 
           <fieldset class="form__fieldset">
               <label class=fieldset__label for="name">Cantidad</label>
-              <input class="fieldset__input" type="number" name="quantity" id="quantity" value="<%=productSelected.quantity%>">
+              <input class="fieldset__input" type="number" name="quantity" id="quantity" value="<%=search.quantity%>">
           </fieldset>
 
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="price">Precio</label>
             <input class="fieldset__input fieldset__input--price" type="number" name="price" id="price" min="0"
-              value="<%= productSelected.price %>" />
+              value="<%= search.price %>" />
           </fieldset>
           <button class="form__button" type="submit">Editar</button>
         </form>
-        <form action="/products/delete/<%=product.id%>?_method=DELETE" method="POST">
+        <form action="/products/delete/<%=search.id%>?_method=DELETE" method="POST">
           <button class="form__button form__button--delete" type="submit">Eliminar</button>
         </form>
       </main>

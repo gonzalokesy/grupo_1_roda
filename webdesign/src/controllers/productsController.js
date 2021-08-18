@@ -1,5 +1,4 @@
 let db = require ("../database/models");
-const Color = require("../database/models/Color");
 
 const productsController = {
     create: function (req,res) {
@@ -53,15 +52,23 @@ const productsController = {
     },
     */
     edit: function(req,res){
-        const productSelected =  db.Product.findByPk(req.params.id,
-            {include:[{association:"colores"}]})
+        const productSearch =  db.Product.findByPk(req.params.id,
+            {include:[{association:"categoria"},{association:"colores"}]})
         const category = db.Category.findAll()
         const colors = db.Color.findAll()
-        Promise.all([productSelected,category, colors])
-            .then(function([productSelected,categories, colors]){
-                return res.render ("products/edit", {productSelected:productSelected,categories:categories, colors:colors})
+        const colorSelected = db.Product_color.findOne({
+            where: 
+            {
+                product_id: req.params.id
+            },
+            limit: 4
+        });
+        Promise.all([productSearch,category, colors, colorSelected])
+            .then(function([search,category, color, colorChoice]){
+                return res.render ("products/edit", {search:search,category:category, color:color, colorChoice:colorChoice})
             })
-    } 
+    }
+     
     
 
 }

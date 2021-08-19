@@ -3,7 +3,7 @@
 <head>
     <%- include('../partials/head') %>
     <title>Bicicletas Rodá</title>
-    <link rel="stylesheet" href="/css/product-listBike.css" />
+    <link rel="stylesheet" href="/css/index.css" />
 </head>
 <body class="body">
   
@@ -11,7 +11,7 @@
 
     <main class="main">
         <section class="nameSection">
-          <h2 class="nameSection__name">BICICLETAS</h2>
+          <h2 class="nameSection__name">PRODUCTOS</h2>
           <nav class="buttonBack">
             <a class="buttonBack__link" href=""><i class="fas fa-undo-alt buttonBack__icon"></i></a>
           </nav>
@@ -28,18 +28,17 @@
               <a class="filterSection__item " href="">Ordenar por<i class="fas fa-angle-down filterSection__icon"></i></a>
             </nav>
 
-          <% bikes.forEach (bike => {%>
+          <% product.forEach (product => {%>
           <article class="bike">
-            <a class="bike__link" href="/products/showBike/ <%= bike.id %>">
+            <a class="bike__link" href="/products/show/ <%= product.id %>">
             <figure class="bike__imageBox">
-              <img class="bike__photo" src="/uploads/products/<%= bike.gallery  %>" alt="">
+              <img class="bike__photo" src="/uploads/products/<%= product.image  %>" alt="">
             </figure>
-            <h2 class="bike__description bike__description--name"><%= bike.name %></h2>
-            <p class="bike__description">$ <%= bike.price %></p>
+            <h2 class="bike__description bike__description--name"><%= product.name %></h2>
+            <p class="bike__description">$ <%= product.price %></p>
             </a>
           </article>          
           <% }) %>
-           
         </section>
     </main>
 

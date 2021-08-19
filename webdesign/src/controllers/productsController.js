@@ -30,18 +30,18 @@ const productsController = {
         res.redirect("/")
     },
 
-    indexProducts: (req, res) => {
+    index: (req, res) => {
         db.Product.findAll()
-            .then((products) => {
-                res.render("products/product-listBike", { bikes: products })
+            .then((product) => {
+                res.render("products/index", { product: product })
             })
-        //RECORDAR UNIFICAR LAS VISTAS DE BICICLETAS Y ACCESORIOS A UNA SOLA (products-listBike y product-listAccessory)
+        
     },
 
-    showProduct: function (req, res) {
+    show: function (req, res) {
         db.Product.findByPk(req.params.id, { include: [{ association: "colores" }, { association: "categoria" }] })
             .then((product) => {
-                res.render("products/product-descriptionBike", { bikes: product })
+                res.render("products/show", { product: product })
             })
     },
 

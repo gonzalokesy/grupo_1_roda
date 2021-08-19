@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Bicicletas Rodá</title>
-    <link rel="stylesheet" href="/css/product-descriptionBike.css" />
+    <link rel="stylesheet" href="/css/show.css" />
     <%- include('../partials/head') %>
 </head>
 
@@ -17,7 +17,7 @@
 
       <!--Mobile-->
         <nav class="buttonBack">
-          <a class="buttonBack__link" href="/products/indexBikes"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</a>
+          <a class="buttonBack__link" href="/products/index"><i class="fas fa-undo-alt buttonBack__icon"></i>Volver</a>
         </nav>
         <section class="productConteiner productConteiner--mobile">
         <section class="photoAndName">
@@ -74,20 +74,20 @@
         </section>
 
     </section>
-     <!--End Mobile-->
+    <!--End Mobile-->
 
-     <!--Desktop-->
+    <!--Desktop-->
     <section class="productConteiner productConteiner--desktop">
       <section class="leftColumn">
         <figure class="photoAndName__photo">
-          <img class="photoAndName__image" src="/uploads/products/<%= bikes.gallery  %>" alt="">
+          <img class="photoAndName__image" src="/uploads/products/<%= product.image  %>" alt="">
       </figure>
       </section>
 
       <section class="rightColumn">
-        <h2 class="productName"><%= bikes.name %></h2>
+        <h2 class="productName"><%= product.name %></h2>
         <article class="productPriceMethod">
-          <p class="productPriceMethod__price">$ <%= bikes.price %></p>
+          <p class="productPriceMethod__price">$ <%= product.price %></p>
           <a class="productPriceMethod__method" href="">Medios de pago</a>
           <a class="productPriceMethod__shippingPoint" href=""> Punto de envio <i class="priceAndShipping__shippinIicon fas fa-map-marker-alt"></i></a>
           <a class="productPriceMethod__shippingCondition" href="">Condiciones de envíos</a>
@@ -113,7 +113,7 @@
               <p class="productDetaill__file">Ficha técnica</p>
           </div>
           <div class="productDetaill__content">
-            <%= bikes.description %>
+            <%= product.description %>
           </div>
         </article>
 
@@ -123,6 +123,5 @@
     </main>
 
   <%- include('../partials/footer') %>
-   
 </body>
 </html>

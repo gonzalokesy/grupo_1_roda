@@ -21,7 +21,7 @@
             </fieldset>
             <fieldset class="form__fieldset">
                 <label class="fieldset__label" for="image">Imagen</label>
-                <input class="fieldset__input" type="file" name="gallery" id="image" multiple>
+                <input class="fieldset__input" type="file" name="image" id="image" multiple>
             </fieldset>
 
             <fieldset class="form__fieldset">
@@ -29,7 +29,7 @@
                 <select class="fieldset__select" name="category" id="category">
                     <% for (let i = 0; i < categories.length; i++) { %> 
                     <option class="select__option" value="<%=categories[i].id%>"><%=categories[i].name%></option>
-                   <% } %> 
+                <% } %> 
                 </select>
             </fieldset>
 
@@ -38,7 +38,7 @@
                 <select class="fieldset__select" name="color" id="color" multiple>
                     <% for (let j = 0; j < colors.length; j++) { %> 
                     <option class="select__option" value="<%=colors[j].id%>"><%=colors[j].name%></option>
-                   <% } %> 
+                <% } %> 
                 </select>
             </fieldset>
 

@@ -15,10 +15,10 @@ const productsController = {
         db.Product.create({
             name: req.body.name,
             description: req.body.description,
-            price: req.body.price,
-            quantity: req.body.quantity,
+            image: req.body.image,
             category_id: req.body.category,
-            color_id: req.body.color
+            quantity: req.body.quantity,
+            price: req.body.price
         }).then(function (productColor) {
             colorsArray.forEach(colors => {
                 db.Product_color.create({
@@ -78,11 +78,10 @@ const productsController = {
         }).then(function (productColor) {
             colorsArray.forEach(color => {
                 db.Product_color.update({
-                    product_id: req.params.id,
                     color_id: color.id
                 }, {
-                    where:
-                        { product_id: req.params.id }
+                    where:{ 
+                        product_id: productColor.id }
                 })
             });
         })
@@ -99,7 +98,7 @@ const productsController = {
             colorsArray.forEach(colors => {
                 db.Product_color.destroy({
                     where: {
-                        product_id: req.params.id
+                        product_id: productColor.id
                     }
                 })
             });

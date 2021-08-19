@@ -14,19 +14,22 @@ module.exports = function (sequelize, dataTypes) {
       description: {
         type: dataTypes.TEXT
       },
-      price: {
-        type: dataTypes.DECIMAL.UNSIGNED,
-        allowNull: false
-
-      },
-      quantity: {
-        type: dataTypes.INTEGER.UNSIGNED,
-        // DEFAULT 1
+      image: {
+        type: dataTypes.STRING,
+        allowNull: true
       },
       category_id: {
         type: dataTypes.INTEGER.UNSIGNED,
         allowNull: false
-      } 
+      }, 
+      quantity: {
+        type: dataTypes.INTEGER.UNSIGNED,
+        // DEFAULT 1
+      },
+      price: {
+        type: dataTypes.DECIMAL.UNSIGNED,
+        allowNull: false
+      }
     };
 
     let config = {
@@ -46,13 +49,6 @@ module.exports = function (sequelize, dataTypes) {
         otherKey: "color_id",
         timestamps: false
       })
-      Product.belongsToMany(models.Image, {
-        as: "imagenes",
-        through: "products_images",
-        foreignKey: "product_id",
-        otherKey: "image_id",
-        timestamps: false
-      })
       Product.belongsTo(models.Category, {
         as: "categoria",
         foreignKey: "category_id"
@@ -62,6 +58,5 @@ module.exports = function (sequelize, dataTypes) {
         foreignKey: "product_id"
       })
     }
-
     return Product;
 }

@@ -40,34 +40,20 @@ INSERT INTO users (id, email, password, image)
 VALUES (6, 'vicente.macchione1@gmail.com', '$2a$10$.WYxwyQqUishb1VQi6hHs.NEu7CY.vm7gDj8vAW6IVPg.eqnv8ewy', 'avatar-1627177623662.jpg');
 
 
-INSERT INTO products (id, name, description, price, quantity, category_id)
-VALUES (1, 'Bicicleta 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', 50000, DEFAULT, 3);
+INSERT INTO products (id, name, description, image, category_id, quantity, price)
+VALUES (1, 'Bicicleta 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625761759733.jpg", 3, DEFAULT, 50000);
 
-INSERT INTO products (id, name, description, price, quantity, category_id)
-VALUES (2, 'Bicicleta 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', 60000, DEFAULT, 2);
+INSERT INTO products (id, name, description, image, category_id, quantity, price)
+VALUES (2, 'Bicicleta 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625761820052.jpg", 2, DEFAULT, 60000);
 
-INSERT INTO products (id, name, description, price, quantity, category_id)
-VALUES (3, 'Accesorio 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', 500, 2, 1);
+INSERT INTO products (id, name, description, image, category_id, quantity, price)
+VALUES (3, 'Accesorio 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625762294167.jpg", 1, 2, 500);
 
+INSERT INTO products (id, name, description, image, category_id, quantity, price)
+VALUES (4, 'Accesorio 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625762334793.jpg", 1, 7, 700);
 
-INSERT INTO images (id, filename)
-VALUES (1, 'gallery-1625761759733.jpg');
-
-INSERT INTO images (id, filename)
-VALUES (2, 'gallery-1625761820052.jpg');
-
-INSERT INTO images (id, filename)
-VALUES (3, 'gallery-1625762699571.jpg');
-
-
-INSERT INTO products_images (id, product_id, image_id)
-VALUES (1, 1, 1);
-
-INSERT INTO products_images (id, product_id, image_id)
-VALUES (2, 2, 2);
-
-INSERT INTO products_images (id, product_id, image_id)
-VALUES (3, 3, 3);
+INSERT INTO products (id, name, description, image, category_id, quantity, price)
+VALUES (5, 'Accesorio 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625762372240.jpg", 1, 5, 1000);
 
 
 INSERT INTO products_colors (id, product_id, color_id)
@@ -78,6 +64,12 @@ VALUES (2, 2, 2);
 
 INSERT INTO products_colors (id, product_id, color_id)
 VALUES (3, 3, 3);
+
+INSERT INTO products_colors (id, product_id, color_id)
+VALUES (4, 4, 1);
+
+INSERT INTO products_colors (id, product_id, color_id)
+VALUES (5, 5, 4);
 
 
 INSERT INTO shoppingCart (id, user_id, product_id, quantity, totalPrice, active, date)

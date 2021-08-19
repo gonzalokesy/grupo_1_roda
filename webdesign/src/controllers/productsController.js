@@ -65,6 +65,8 @@ const productsController = {
 
     update: function (req, res) {
         let colorsArray = req.body.color;
+        let colorsArrayNumber = colorsArray.map(function(num) {
+            num.parseInt});
         db.Product.update({
             name: req.body.name,
             description: req.body.description,
@@ -76,7 +78,7 @@ const productsController = {
                 id: req.params.id
             }
         }).then(function (productColor) {
-            colorsArray.forEach(color => {
+            colorsArrayNumber.forEach(color => {
                 db.Product_color.update({
                     color_id: color.id
                 }, {

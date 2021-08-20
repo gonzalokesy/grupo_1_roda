@@ -63,6 +63,30 @@ const productsController = {
             })
     },
 
+    update: async (req, res) => {
+        try {
+            const updateProduct = await db.Product.update({
+                name: req.body.name,
+                description: req.body.description,
+                //image: req.file.filename.image, 
+                category_id: req.body.category,
+                quantity: req.body.quantity,
+                price: req.body.price
+            }, {
+                where: {
+                    id: req.params.id
+                }});
+            const updateProductColor = await db.Product_color.setProduct_color([], {
+                where: {
+                    product_id: req.params.id
+                }});
+        } catch (error) {
+            return res.send(error);
+        }
+        res.redirect("/");
+    },
+
+    /*
     update: function (req, res) {
         let colorsArray = req.body.color;
         let colorsArrayNumber = colorsArray.map(function(num) {
@@ -89,7 +113,22 @@ const productsController = {
         })
         res.redirect("/")
     },
+    */
 
+    delete: async function (req, res) {
+        try {
+            const deleteProduct = await Product.destroy({
+                where: {
+                    id: req.params.id
+                }});
+            const deleteColors = await Product_color.setProduct_color()
+        } catch (error) {
+            return res.send(error);
+        }
+        res.redirect("/")
+    }
+
+    /*
     delete: function (req, res) {
         let colorsArray = req.body.color;
         db.Product.destroy({
@@ -107,6 +146,7 @@ const productsController = {
         })
         res.redirect("/");
     }
+    */
 }
 
 

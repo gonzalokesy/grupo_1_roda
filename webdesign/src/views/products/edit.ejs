@@ -46,11 +46,11 @@
             <fieldset class="form__fieldset">
               <label class=fieldset__label for="">Color</label>
               <select class="fieldset__select" name="color" id="color"multiple >
-              <% color.forEach(colors => { %>
-                <% if (colors.id == colorChoice.color_id) { %>
-                  <option value="<%=colors.id%>"selected><%=colors.name%></option>
+              <% colors.forEach(color => { %>
+                <% if (color.id == colorSelected.color_id) { %>
+                  <option value="<%=color.id%>"selected><%=color.name%></option>
                 <% } else {%>
-                  <option value="<%=colors.id%>"><%=colors.name%></option>
+                  <option value="<%=color.id%>"><%=color.name%></option>
                   <% } %>
                   <% }) %> 
               </select>

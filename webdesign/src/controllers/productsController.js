@@ -1,4 +1,4 @@
-let db = require("../database/models");
+let db = require("../database/models/index");
 
 const productsController = {
     create: function (req, res) {
@@ -15,7 +15,7 @@ const productsController = {
         db.Product.create({
             name: req.body.name,
             description: req.body.description,
-            image: req.body.image,
+            //image: req.body.image,
             category_id: req.body.category,
             quantity: req.body.quantity,
             price: req.body.price
@@ -50,7 +50,7 @@ const productsController = {
             { include: [{ association: "categoria" }, { association: "colores" }] })
         const category = db.Category.findAll()
         const colors = db.Color.findAll()
-        const colorSelected = db.Product_color.findOne({
+        const colorSelected = db.Product_color.findAll({
             where:
             {
                 product_id: req.params.id
@@ -58,12 +58,12 @@ const productsController = {
             limit: 4
         });
         Promise.all([productSearch, category, colors, colorSelected])
-            .then(function ([search, category, color, colorChoice]) {
-                return res.render("products/edit", { search: search, category: category, color: color, colorChoice: colorChoice })
+            .then(function ([search, category, colors, colorSelected]) {
+                return res.render("products/edit", { search: search, category: category, colors: colors, colorSelected: colorSelected })
             })
     },
 
-    update: async (req, res) => {
+    /*update: async (req, res) => {
         try {
             const updateProduct = await db.Product.update({
                 name: req.body.name,
@@ -76,14 +76,30 @@ const productsController = {
                 where: {
                     id: req.params.id
                 }});
-            const updateProductColor = await db.Product_color.setProduct_color([], {
-                where: {
-                    product_id: req.params.id
-                }});
+            const updateColor = await db.Product.setColor([req.body.color]);
+            res.send(updateColor)
         } catch (error) {
             return res.send(error);
         }
         res.redirect("/");
+    },*/
+
+    update: async (req, res) => {
+        try {
+            let colors = req.body.color
+            const product = await db.Product.findByPk(req.params.id)
+            const updated = await product.update({
+                name: req.body.name,
+                description: req.body.description,
+                //image: req.file.filename.image, 
+                category_id: req.body.category,
+                quantity: req.body.quantity,
+                price: req.body.price
+            })
+            const updateColor = await product.setColor(colors)
+        } catch (error) {
+            return res.send(error);
+        }
     },
 
     /*
@@ -117,11 +133,11 @@ const productsController = {
 
     delete: async function (req, res) {
         try {
-            const deleteProduct = await Product.destroy({
+            const deleteProduct = await db.Product.destroy({
                 where: {
                     id: req.params.id
                 }});
-            const deleteColors = await Product_color.setProduct_color()
+            const deleteColors = await db.Product.setColor()
         } catch (error) {
             return res.send(error);
         }

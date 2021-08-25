@@ -47,11 +47,9 @@
               <label class=fieldset__label for="">Color</label>
               <select class="fieldset__select" name="color" id="color"multiple >
               <% colors.forEach(color => { %>
-                <% if (color.id == colorSelected.color_id) { %>
-                  <option value="<%=color.id%>"selected><%=color.name%></option>
-                <% } else {%>
-                  <option value="<%=color.id%>"><%=color.name%></option>
-                  <% } %>
+                <% search.colors.forEach ( colorp => { %> 
+                  <option value="<%=color.id%>"<%= color.id == colorp.id ? "selected" : null %>><%=color.name%></option>
+                  <% }) %> 
                   <% }) %> 
               </select>
             </fieldset>

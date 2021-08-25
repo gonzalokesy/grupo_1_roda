@@ -33,11 +33,11 @@ router.get("/show/:id", productsController.show);
 
 // Rutas a Formulario de creación 
 router.get("/create", productsController.create);
-router.post("/save", [upload.any()], productsController.save);
+router.post("/save", [upload.single("image")], productsController.save);
 
 // Rutas a Formulario de edición 
 router.get("/edit/:id", /*adminAccess,*/ productsController.edit);
-router.put("/update/:id", [upload.any()], productsController.update);
+router.put("/update/:id", [upload.single()], productsController.update);
 
 // Ruta a Formulario de eliminación 
 router.delete("/delete/:id", productsController.delete);

@@ -14,10 +14,6 @@ module.exports = function (sequelize, dataTypes) {
       description: {
         type: dataTypes.TEXT
       },
-      image: {
-        type: dataTypes.STRING,
-        allowNull: true
-      },
       category_id: {
         type: dataTypes.INTEGER.UNSIGNED,
         allowNull: false
@@ -43,14 +39,14 @@ module.exports = function (sequelize, dataTypes) {
 
     Product.associate = function (models){
       Product.belongsToMany(models.Color, {
-        as: "colores",
+        as: "colors",
         through: "products_colors",
         foreignKey: "product_id",
         otherKey: "color_id",
         timestamps: false
       })
       Product.belongsTo(models.Category, {
-        as: "categoria",
+        as: "category",
         foreignKey: "category_id"
       })
       Product.hasMany(models.ShoppingCart, {

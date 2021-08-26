@@ -14,6 +14,10 @@ module.exports = function (sequelize, dataTypes) {
       description: {
         type: dataTypes.TEXT
       },
+      image: {
+        type: dataTypes.STRING,
+        allowNull: true
+      },
       category_id: {
         type: dataTypes.INTEGER.UNSIGNED,
         allowNull: false
@@ -50,7 +54,7 @@ module.exports = function (sequelize, dataTypes) {
         foreignKey: "category_id"
       })
       Product.hasMany(models.ShoppingCart, {
-        as: "carrito",
+        as: "cart",
         foreignKey: "product_id"
       })
     }

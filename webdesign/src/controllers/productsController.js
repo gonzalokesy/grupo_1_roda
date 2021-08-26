@@ -1,6 +1,22 @@
 let db = require("../database/models/index");
 
 const productsController = {
+
+    index: (req, res) => {
+        db.Product.findAll()
+            .then((product) => {
+                res.render("products/index", { product: product })
+            })
+        
+    },
+
+    show: function (req, res) {
+        db.Product.findByPk(req.params.id, { include: [{ association: "colores" }, { association: "categoria" }] })
+            .then((product) => {
+                res.render("products/show", { product: product })
+            })
+    },
+
     create: function (req, res) {
         const Categories = db.Category.findAll()
         const Colors = db.Color.findAll()
@@ -21,32 +37,13 @@ const productsController = {
             price: req.body.price
             })
     
-            const addColor = await product.setColors (req.body.color)
-            console.log (addColor)
-            res.send(addColor)
-           
-            
+            const addColor = await product.setColors (req.body.color);
+            //res.redirect("products/index");
         }
         catch (error) {
             return res.send (error)
         }
         
-    },
-
-
-    index: (req, res) => {
-        db.Product.findAll()
-            .then((product) => {
-                res.render("products/index", { product: product })
-            })
-        
-    },
-
-    show: function (req, res) {
-        db.Product.findByPk(req.params.id, { include: [{ association: "colores" }, { association: "categoria" }] })
-            .then((product) => {
-                res.render("products/show", { product: product })
-            })
     },
 
     edit: function (req, res) {
@@ -62,17 +59,23 @@ const productsController = {
 
     update: async (req, res) => {
         try {
-            let colors = req.body.color
-            const product = await db.Product.findByPk(req.params.id)
-            const updated = await product.update({
+            const updated = await db.Product.update({
                 name: req.body.name,
                 description: req.body.description,
                 //image: req.file.filename.image, 
                 category_id: req.body.category,
                 quantity: req.body.quantity,
                 price: req.body.price
+            }, {
+                where: {
+                    id: req.params.id
+                }
             })
-            const updateColor = await product.setColor(colors)
+            const updateColor = await db.Product.setColors(req.body.color, {
+                where: {
+                    product_id: req.params.id
+                }
+            })
         } catch (error) {
             return res.send(error);
         }

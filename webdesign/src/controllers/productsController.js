@@ -53,31 +53,27 @@ const productsController = {
         const colors = db.Color.findAll()
         Promise.all([productSearch, category, colors])
             .then(function ([search, category, colors]) {
-                return res.render("products/edit" ,{ search: search, category: category, colors: colors })
+                return res.render("products/edit",{search: search, category: category, totalColors: colors })
             })
     },
 
     update: async (req, res) => {
         try {
-            const updated = await db.Product.update({
+            const product = await db.Product.findByPk (req.params.id);
+            const updated = await product.update({
                 name: req.body.name,
                 description: req.body.description,
                 //image: req.file.filename.image, 
                 category_id: req.body.category,
                 quantity: req.body.quantity,
                 price: req.body.price
-            }, {
-                where: {
-                    id: req.params.id
-                }
-            })
-            const updateColor = await db.Product.setColors(req.body.color, {
-                where: {
-                    product_id: req.params.id
-                }
-            })
+            });
+        
+            const updateColor = await updated.setColors(req.body.color);
+            res.send (updateColor)
+            
         } catch (error) {
-            return res.send(error);
+            return res.send("Existe un error");
         }
     },
 

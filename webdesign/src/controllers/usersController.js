@@ -1,5 +1,5 @@
-let db = require ("../database/models");
-const {validationResult, cookie} = require('express-validator');
+let db = require("../database/models");
+const { validationResult, cookie } = require('express-validator');
 const bcrypt = require("bcryptjs");
 
 const usersController = {
@@ -10,16 +10,16 @@ const usersController = {
 
     processLogin: (req, res) => {
         let userToLogin = []
-        
+
         if (userToLogin) {
-            let verifypassword = bcrypt.compareSync (req.body.password, userToLogin.password);
+            let verifypassword = bcrypt.compareSync(req.body.password, userToLogin.password);
             if (verifypassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
-                    if (req.body.rememberUser) {
-                    res.cookie ('userEmail', req.body.email, {maxAge: (10000000 * 60)}) //seteando la cookie que se utilziará para mantener el session. 
-                    }
-                return res.redirect ('/users/profile');
+                if (req.body.rememberUser) {
+                    res.cookie('userEmail', req.body.email, { maxAge: (10000000 * 60) }) //seteando la cookie que se utilziará para mantener el session. 
+                }
+                return res.redirect('/users/profile');
             }
             res.render("users/login", {
                 errors: {
@@ -28,7 +28,7 @@ const usersController = {
                     }
                 }
             })
-        }else{
+        } else {
             res.render("users/login", {
                 errors: {
                     email: {
@@ -41,20 +41,25 @@ const usersController = {
     register: (req, res) => {
         return res.render("users/register");
     },
-    save: (req,res) => {
+    save: (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             res.render('users/register', { errors: errors.mapped(), old: req.body });
         } else {
-            db.User.create({
-                email: req.body.email,
-                password: req.body.password,
-                image: req.body.image
-            });
-            return res.redirect("/users/login");
+            try {
+                db.User.create({
+                    email: req.body.email,
+                    password: bcrypt.hashSync(req.body.password,10),
+                    image: req.file.filename
+                })
+            }
+            catch (error) {
+                return res.send(error)
+            }
+            res.redirect("/users/login");
         }
     }
-   
+
 }
 
 module.exports = usersController;

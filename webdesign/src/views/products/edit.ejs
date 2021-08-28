@@ -45,12 +45,10 @@
 
             <fieldset class="form__fieldset">
               <label class=fieldset__label for="">Color</label>
-              <select class="fieldset__select" name="color" id="color"multiple >
-              <% totalolors.forEach(color => { %>
-                <% search.colors.forEach ( colorp => { %> 
-                  <option value="<%=color.id%>"<%= color.id == colorp.id ? "selected" : null %>><%=color.name%></option>
-                  <% }) %> 
-                  <% }) %> 
+              <select class="fieldset__select" name="color" id="color"multiple > 
+              <% totalColors.forEach(color => { %>
+                  <option value="<%=color.id%>"<%= search.colors.map(colorProduct => colorProduct.id).includes(color.id) ? "selected" : null %>><%=color.name%></option>
+                  <% }) %>  
               </select>
             </fieldset>
 

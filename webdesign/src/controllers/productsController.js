@@ -28,22 +28,21 @@ const productsController = {
 
     save: async (req, res) => {
         try { 
-            console.log (req.files)
             const product = await db.Product.create ({
             name: req.body.name,
             description: req.body.description,
+            image: req.file.filename,
             category_id: req.body.category,
             quantity:req.body.quantity,
             price: req.body.price
             })
     
             const addColor = await product.setColors (req.body.color);
-            //res.redirect("products/index");
         }
         catch (error) {
             return res.send (error)
         }
-        
+        res.redirect("/")
     },
 
     edit: function (req, res) {
@@ -63,7 +62,7 @@ const productsController = {
             const updated = await product.update({
                 name: req.body.name,
                 description: req.body.description,
-                //image: req.file.filename.image, 
+                image: req.file.filename, 
                 category_id: req.body.category,
                 quantity: req.body.quantity,
                 price: req.body.price
@@ -77,17 +76,15 @@ const productsController = {
         }
     },
 
-    delete: async function (req, res) {
+    delete: async (req, res) => {
         try {
-            const deleteProduct = await db.Product.destroy({
-                where: {
-                    id: req.params.id
-                }});
-            const deleteColors = await db.Product.setColor()
+            const product = await db.Product.findByPk(req.params.id)
+            const deleteColors = await product.setColors([])
+            const deleted = await product.destroy()
         } catch (error) {
             return res.send(error);
         }
-        res.redirect("/")
+        res.redirect ("/")
     }
 }
 

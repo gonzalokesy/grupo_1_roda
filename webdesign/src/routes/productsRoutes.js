@@ -37,7 +37,7 @@ router.post("/save", [upload.single("image")], productsController.save);
 
 // Rutas a Formulario de edición 
 router.get("/edit/:id", /*adminAccess,*/ productsController.edit);
-router.put("/update/:id", [upload.single()], productsController.update);
+router.put("/update/:id", [upload.single("image")], productsController.update);
 
 // Ruta a Formulario de eliminación 
 router.delete("/delete/:id", productsController.delete);

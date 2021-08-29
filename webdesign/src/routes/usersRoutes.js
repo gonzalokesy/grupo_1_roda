@@ -29,8 +29,8 @@ router.get("/login", usersController.login);
 router.post("/access", usersController.processLogin);
 
 // Ruta perfil de usuario y logout
-//router.get("/profile", [loggedIdentifier], usersController.profile);
-//router.post("/logout", usersController.logout);
+router.get("/profile", usersController.profile);
+router.post("/logout", usersController.logout);
 
 
 

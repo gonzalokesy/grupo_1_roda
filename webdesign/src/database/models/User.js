@@ -27,16 +27,12 @@ module.exports = function (sequelize, dataTypes) {
     let config = {
         tableName: "users",
         timestamps: false,
+        underscored: true
     };
     
 
     let User = sequelize.define(alias, cols, config);
 
-    User.associate = function (models){
-      User.belongsTo(models.ShoppingCart, {
-        as: "elecciones",
-        foreignKey: "user_id"
-      })
-    }
+  
     return User;
 }

@@ -5,9 +5,16 @@ module.exports = [
     //Validación email
     body("email").notEmpty().withMessage('Debe agregar un email').bail()
         .isEmail().custom(email => {
-        let registered = userModel.findByEmail(email);
+        //let registered = userModel.findByEmail(email);
+        const registered = async function userRegister () {
+              await db.User.findOne({
+              where: {
+                  email: email
+              }
+            })
+          }
         if (registered) {
-          return Promise.reject('Esta dirección de email ya existe');
+          throw new Error('Esta dirección de email ya existe');
         }
         return true
       }),
@@ -31,4 +38,6 @@ module.exports = [
           }
           return true
       })
+        
+    
 ]

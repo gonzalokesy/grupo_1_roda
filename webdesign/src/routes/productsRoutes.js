@@ -7,6 +7,7 @@ const productsController = require("../controllers/productsController");
 
 // Requiriendo middlewares
 const adminAccess = require("../middlewares/adminAccess")
+const loggedIdentifier = require("../middlewares/loggedIdentifier")
 
 // Multer
 const multer = require("multer");
@@ -32,11 +33,11 @@ router.get("/show/:id", productsController.show);
 //router.get("/showAccessory/:id", productsController.showAccessory);
 
 // Rutas a Formulario de creación 
-router.get("/create", productsController.create);
+router.get("/create",[loggedIdentifier, adminAccess], productsController.create);
 router.post("/save", [upload.single("image")], productsController.save);
 
 // Rutas a Formulario de edición 
-router.get("/edit/:id", /*adminAccess,*/ productsController.edit);
+router.get("/edit/:id",[loggedIdentifier, adminAccess], productsController.edit);
 router.put("/update/:id", [upload.single("image")], productsController.update);
 
 // Ruta a Formulario de eliminación 

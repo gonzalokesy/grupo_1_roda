@@ -32,10 +32,6 @@ const userModel = {
         users.push(newUser);
         this.write(users);
     }
-
-
-
-
 }
 
 module.exports = userModel

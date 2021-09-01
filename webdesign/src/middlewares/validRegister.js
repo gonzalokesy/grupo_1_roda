@@ -1,5 +1,5 @@
 const { body } = require('express-validator');
-const userModel = require('../models/userModel')
+const db = require("../database/models/index");
 
 module.exports = [
     //Validación email

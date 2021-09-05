@@ -31,14 +31,13 @@ module.exports = [
     //Validación de selección de color
     body('color').notEmpty().withMessage('Debes seleccionar al menos un color'),
 
-    //Validación de selección de color
-    body('category').notEmpty().withMessage('Debes seleccionar al menos una categoría'),
-
     //Validación de cantidad
-    body('quantity').notEmpty().isInt().isFloat({ min: 1 })
-        .withMessage('Debes agregar la cantidad de productos'),
+    body('quantity').notEmpty().withMessage('Debes agregar la cantidad de productos').bail()
+    .isInt().isFloat({ min: 1 })
+        .withMessage('Sólo numeros enteros mayores a cero'),
 
     //Validación de precio
-    body('price').notEmpty().isFloat({ min: 1 })
-        .withMessage('Debes agregar el precio')
+    body('price').notEmpty().withMessage('Debes agregar el precio').bail()
+    .isFloat({ min: 1 })
+        .withMessage('Sólo números mayores a cero')
 ]

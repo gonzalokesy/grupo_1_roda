@@ -15,7 +15,7 @@
         <fieldset class="form__fieldset">
             <label class="fieldset__label" for="email">Email</label>
             <input class="fieldset__input" type="email" name="email" id="email" value="<%= locals.old && old.email %>"/>
-            <!--Enviamos el mensaje al usuario-->
+            <!--Enviamos el mensaje de error al usuario-->
             <% if (locals.errors && errors.email) { %>
               <p class="form__p form__p--error"><%= errors.email.msg %></p>
             <% } %>

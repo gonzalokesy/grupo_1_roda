@@ -18,49 +18,85 @@
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="name">Nombre del producto</label>
             <input class="fieldset__input" type="text" name="name" id="name" value="<%= search.name %>" />
+            <!--Enviamos el mensaje de error al usuario-->
+            <% if (locals.errors && errors.name) { %>
+              <p class="form__p form__p--error">
+                <%= errors.name.msg %>
+              </p>
+              <% } %>
           </fieldset>
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="description">Descripción</label>
             <textarea class="fieldset__textarea" name="description" id="description" cols="30" rows="10">
               <%= search.description %></textarea>
+            <% if (locals.errors && errors.description) { %>
+              <p class="form__p form__p--error">
+                <%= errors.description.msg %>
+              </p>
+              <% } %>
           </fieldset>
-        <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset">
             <label class="fieldset__label" for="image">Imagen</label>
-            <input class="fieldset__input" type="file" name="image" id="image" value=""
-              multiple />
+            <input class="fieldset__input" type="file" name="image" id="image" value="" multiple />
+            <% if (locals.errors && errors.image) { %>
+              <p class="form__p form__p--error">
+                <%= errors.image.msg %>
+              </p>
+              <% } %>
           </fieldset>
 
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="category">Categoria</label>
             <select class="fieldset__select" name="category" id="category">
-              <% for (i = 0; i < category.length; i++) { %> 
-                <% if (category[i].id == search.category_id) { %> 
-              <option value="<%=category[i].id%> "selected><%=category[i].name%></option>
-              <% } else {%>
-                <option value="<%=category[i].id%>"><%=category[i].name%></option>
-                <% } %>
-              <% } %> 
+              <% for (i=0; i < category.length; i++) { %>
+                <% if (category[i].id==search.category_id) { %>
+                  <option value="<%=category[i].id%> " selected>
+                    <%=category[i].name%>
+                  </option>
+                  <% } else {%>
+                    <option value="<%=category[i].id%>">
+                      <%=category[i].name%>
+                    </option>
+                    <% } %>
+                      <% } %>
             </select>
           </fieldset>
 
-            <fieldset class="form__fieldset">
-              <label class=fieldset__label for="">Color</label>
-              <select class="fieldset__select" name="color" id="color"multiple > 
-              <% totalColors.forEach(color => { %>
-                  <option value="<%=color.id%>"<%= search.colors.map(colorProduct => colorProduct.id).includes(color.id) ? "selected" : null %>><%=color.name%></option>
-                  <% }) %>  
-              </select>
-            </fieldset>
+          <fieldset class="form__fieldset">
+            <label class=fieldset__label for="">Color</label>
+            <select class="fieldset__select" name="color" id="color" multiple>
+              <% totalColors.forEach(color=> { %>
+                <option value="<%=color.id%>" <%=search.colors.map(colorProduct=> colorProduct.id).includes(color.id) ?
+                  "selected" : null %>><%=color.name%>
+                </option>
+                <% }) %>
+            </select>
+            <% if (locals.errors && errors.color) { %>
+              <p class="form__p form__p--error">
+                <%= errors.color.msg %>
+              </p>
+              <% } %>
+          </fieldset>
 
           <fieldset class="form__fieldset">
-              <label class=fieldset__label for="name">Cantidad</label>
-              <input class="fieldset__input" type="number" name="quantity" id="quantity" value="<%=search.quantity%>">
+            <label class=fieldset__label for="name">Cantidad</label>
+            <input class="fieldset__input" type="number" name="quantity" id="quantity" value="<%=search.quantity%>">
+            <% if (locals.errors && errors.quantity) { %>
+              <p class="form__p form__p--error">
+                <%= errors.quantity.msg %>
+              </p>
+              <% } %>
           </fieldset>
 
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="price">Precio</label>
             <input class="fieldset__input fieldset__input--price" type="number" name="price" id="price" min="0"
               value="<%= search.price %>" />
+            <% if (locals.errors && errors.price) { %>
+              <p class="form__p form__p--error">
+                <%= errors.price.msg %>
+              </p>
+              <% } %>
           </fieldset>
           <button class="form__button" type="submit">Editar</button>
         </form>
@@ -69,7 +105,7 @@
         </form>
       </main>
       <% } else { %>
-        <h1>  No encontramos el producto</h1>
+        <h1> No encontramos el producto</h1>
         <% } %>
           <%- include('../partials/footer') %>
 </body>

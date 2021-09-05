@@ -1,60 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Crear producto</title>
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/productsForms.css" />
+        <link rel="stylesheet" href="/css/productsForms.css" />
 </head>
+
 <body class="body">
     <%- include('../partials/header') %>
 
-    <main class="mainForms">
-        <form class="form" action="/products/save" method="POST" enctype="multipart/form-data">
-            <h3 class="form__h3">Creación de producto</h3>
-            <fieldset class="form__fieldset">
-                <label class=fieldset__label for="name">Nombre del producto</label>
-                <input class="fieldset__input" type="text" name="name" id="name">
-            </fieldset>
-            <fieldset class="form__fieldset">
-                <label class=fieldset__label for="description">Descripción</label>
-                <textarea class="fieldset__textarea" name="description" id="description" cols="30" rows="10"></textarea>
-            </fieldset>
-            <fieldset class="form__fieldset">
-                <label class="fieldset__label" for="image">Imagen</label>
-                <input class="fieldset__input" type="file" name="image" id="image">
-            </fieldset>
+        <main class="mainForms">
+            <form class="form" action="/products/save" method="POST" enctype="multipart/form-data">
+                <h3 class="form__h3">Creación de producto</h3>
+                <fieldset class="form__fieldset">
+                    <label class=fieldset__label for="name">Nombre del producto</label>
+                    <input class="fieldset__input" type="text" name="name" id="name"
+                        value="<%= locals.old && old.name %>">
+                    <!--Enviamos el mensaje de error al usuario-->
+                    <% if (locals.errors && errors.name) { %>
+                        <p class="form__p form__p--error">
+                            <%= errors.name.msg %>
+                        </p>
+                        <% } %>
+                </fieldset>
+                <fieldset class="form__fieldset">
+                    <label class=fieldset__label for="description">Descripción</label>
+                    <textarea class="fieldset__textarea" name="description" id="description" cols="30"
+                        rows="10"><%= locals.old && old.description %></textarea>
+                    <% if (locals.errors && errors.description) { %>
+                        <p class="form__p form__p--error">
+                            <%= errors.description.msg %>
+                        </p>
+                        <% } %>
+                </fieldset>
+                <fieldset class="form__fieldset">
+                    <label class="fieldset__label" for="image">Imagen</label>
+                    <input class="fieldset__input" type="file" name="image" id="image">
+                    <% if (locals.errors && errors.image) { %>
+                        <p class="form__p form__p--error">
+                            <%= errors.image.msg %>
+                        </p>
+                        <% } %>
+                </fieldset>
 
-            <fieldset class="form__fieldset">
-                <label class=fieldset__label for="">Categoría</label>
-                <select class="fieldset__select" name="category" id="category">
-                    <% for (let i = 0; i < categories.length; i++) { %> 
-                    <option class="select__option" value="<%=categories[i].id%>"><%=categories[i].name%></option>
-                <% } %> 
-                </select>
-            </fieldset>
+                <fieldset class="form__fieldset">
+                    <label class=fieldset__label for="">Categoría</label>
+                    <select class="fieldset__select" name="category" id="category">
+                        <% for (let i=0; i < categories.length; i++) { %>
+                            <option class="select__option" value="<%=categories[i].id%>">
+                                <%=categories[i].name%>
+                            </option>
+                            <% } %>
+                    </select>
+                </fieldset>
 
-            <fieldset class="form__fieldset">
-                <label class=fieldset__label for="">Color</label>
-                <select class="fieldset__select" name="color" id="color" multiple>
-                    <% for (let j = 0; j < colors.length; j++) { %> 
-                    <option class="select__option" value="<%=colors[j].id%>"><%=colors[j].name%></option>
-                <% } %> 
-                </select>
-            </fieldset>
+                <fieldset class="form__fieldset">
+                    <label class=fieldset__label for="">Color</label>
+                    <select class="fieldset__select" name="color" id="color" multiple>
+                        <% for (let j=0; j < colors.length; j++) { %>
+                            <option class="select__option" value="<%=colors[j].id%>">
+                                <%=colors[j].name%>
+                            </option>
+                            <% } %>
+                    </select>
+                    <% if (locals.errors && errors.color) { %>
+                        <p class="form__p form__p--error">
+                            <%= errors.color.msg %>
+                        </p>
+                        <% } %>
+                </fieldset>
 
-            <fieldset class="form__fieldset">
-                <label class=fieldset__label for="name">Cantidad</label>
-                <input class="fieldset__input" type="number" name="quantity" id="quantity">
-            </fieldset>
+                <fieldset class="form__fieldset">
+                    <label class=fieldset__label for="name">Cantidad</label>
+                    <input class="fieldset__input" type="number" name="quantity" id="quantity"
+                        value="<%= locals.old && old.quantity %>">
+                    <% if (locals.errors && errors.quantity) { %>
+                        <p class="form__p form__p--error">
+                            <%= errors.quantity.msg %>
+                        </p>
+                        <% } %>
+                </fieldset>
 
-            <fieldset class="form__fieldset">
+                <fieldset class="form__fieldset">
                     <label class="fieldset__label" for="price">Precio</label>
-                    <input class="fieldset__input fieldset__input--price" type="number" name="price" id="price" min="0">
-            </fieldset>
-            <button class="form__button" type="submit">Agregar</button>
-        </form>
-    </main>
+                    <input class="fieldset__input fieldset__input--price" type="number" name="price" id="price"
+                        value="<%= locals.old && old.price %>">
+                    <% if (locals.errors && errors.price) { %>
+                        <p class="form__p form__p--error">
+                            <%= errors.price.msg %>
+                        </p>
+                        <% } %>
+                </fieldset>
+                <button class="form__button" type="submit">Agregar</button>
+            </form>
+        </main>
 
-    <%- include('../partials/footer') %>
+        <%- include('../partials/footer') %>
 </body>
+
 </html>

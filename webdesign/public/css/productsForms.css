@@ -115,6 +115,21 @@
   position: relative;
 }
 
+.form__p {
+  color: #ece4b7;
+  text-align: center;
+}
+.form__p--error {
+  font-weight: 600;
+  margin-top: 2%;
+  color: #264935;
+  text-align: start;
+}
+.form__p--errorLogin {
+  margin-top: 0%;
+  margin-bottom: 4%;
+}
+
 /* Carga de archivos */
 .fieldset__input[type="file"] {
   border: none;
@@ -149,6 +164,10 @@
   }
 }
 
+.form__p {
+  font-size: 1.2em;
+}
+
 /* --TABLET/NETBOOK--*/
 @media (min-width: 769px) {
   .form {
@@ -177,6 +196,10 @@
   .form__fieldset {
     margin: 5% auto;
     width: 65%;
+  }
+
+  .form__p {
+    font-size: 1.3em;
   }
 
   .fieldset__label {

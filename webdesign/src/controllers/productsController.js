@@ -91,6 +91,7 @@ const productsController = {
             const colors = await db.Color.findAll()
             let errors = validationResult(req);
             if (errors.isEmpty()) {
+                const product = await db.Product.findByPk(req.params.id);
                 const updated = await product.update({
                     name: req.body.name,
                     description: req.body.description,
@@ -104,7 +105,7 @@ const productsController = {
                 res.render("products/edit", { search: search, category: category, totalColors: colors, errors: errors.mapped(), old: req.body })
             }
         } catch (error) {
-            return res.send("Existe un error");
+            return res.send(error);
         }
         res.redirect("/");
     },

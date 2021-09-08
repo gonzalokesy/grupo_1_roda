@@ -84,7 +84,7 @@
 
                 <fieldset class="form__fieldset">
                     <label class="fieldset__label" for="price">Precio</label>
-                    <input class="fieldset__input fieldset__input--price" type="number" name="price" id="price"
+                    <input class="fieldset__input fieldset__input--price" name="price" id="price" type="number" step="any"
                         value="<%= locals.old && old.price %>">
                     <% if (locals.errors && errors.price) { %>
                         <p class="form__p form__p--error">

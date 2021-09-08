@@ -17,7 +17,7 @@
           <h3 class="form__h3">Edición de producto</h3>
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="name">Nombre del producto</label>
-            <input class="fieldset__input" type="text" name="name" id="name" value="<%= search.name %>" />
+            <input class="fieldset__input" type="text" name="name" id="name" value="<%= locals.old != undefined ? locals.old && old.name : search.name %>" />
             <!--Enviamos el mensaje de error al usuario-->
             <% if (locals.errors && errors.name) { %>
               <p class="form__p form__p--error">
@@ -28,7 +28,7 @@
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="description">Descripción</label>
             <textarea class="fieldset__textarea" name="description" id="description" cols="30" rows="10">
-              <%= search.description %></textarea>
+              <%= locals.old != undefined ? locals.old && old.description : search.description %></textarea>
             <% if (locals.errors && errors.description) { %>
               <p class="form__p form__p--error">
                 <%= errors.description.msg %>
@@ -80,7 +80,7 @@
 
           <fieldset class="form__fieldset">
             <label class=fieldset__label for="name">Cantidad</label>
-            <input class="fieldset__input" type="number" name="quantity" id="quantity" value="<%=search.quantity%>">
+            <input class="fieldset__input" type="number" name="quantity" id="quantity" value="<%=locals.old != undefined ? locals.old && old.quantity : search.quantity%>">
             <% if (locals.errors && errors.quantity) { %>
               <p class="form__p form__p--error">
                 <%= errors.quantity.msg %>
@@ -90,8 +90,8 @@
 
           <fieldset class="form__fieldset">
             <label class="fieldset__label" for="price">Precio</label>
-            <input class="fieldset__input fieldset__input--price" type="number" name="price" id="price" min="0"
-              value="<%= search.price %>" />
+            <input class="fieldset__input fieldset__input--price" name="price" id="price" type="number" step="any"
+              value="<%= locals.old != undefined ? locals.old && old.price : search.price %>" />
             <% if (locals.errors && errors.price) { %>
               <p class="form__p form__p--error">
                 <%= errors.price.msg %>

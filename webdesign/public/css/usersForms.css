@@ -280,4 +280,38 @@
   .form__button--register {
     margin: 0px auto;
   }
+
+  /* Estilos de errores */
+  .fieldset__group {
+    position: relative;
+  }
+
+  .fieldset__valditation-status {
+    position: absolute;
+    color: #792e1b;
+    right: 3%;
+    top: 10%;
+    font-size: 1.5em ;
+    z-index: 100;
+    opacity: 0;
+  }
+
+  .fieldset__valditation-status--active{
+    opacity: 1;
+  }
+
+  .fieldset__error {
+    font-size: 1.2em;
+    margin-top: 5px;
+    display: none;
+    color: #792e1b;
+    font-weight: 600;
+  }
+
+  .fieldset__error--active {
+    display: block;
+  }
+
+
+
 }

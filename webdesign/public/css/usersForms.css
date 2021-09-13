@@ -12,7 +12,8 @@
     marron intermedio #792e1b
     marron claro #eabe7c
     verde agua #4c956c
-    verde fuerte #396e50
+    verde intermedio #396e50
+    verde fuerte #214631
     crema #ece4b7
 */
 
@@ -286,9 +287,9 @@
     position: relative;
   }
 
-  .fieldset__valditation-status {
+  .fieldset__validation-status--inactive{
     position: absolute;
-    color: #792e1b;
+    color: #214631;
     right: 3%;
     top: 10%;
     font-size: 1.5em ;
@@ -296,20 +297,40 @@
     opacity: 0;
   }
 
-  .fieldset__valditation-status--active{
+  .fieldset__validation-status--active--wrong{
+    position: absolute;
+    color: #214631;
+    right: 3%;
+    top: 10%;
+    font-size: 1.5em ;
+    z-index: 100;
     opacity: 1;
   }
 
-  .fieldset__error {
+  .fieldset__validation-status--active--correct{
+    position: absolute;
+    color: #ece4b7;
+    right: 3%;
+    top: 10%;
+    font-size: 1.5em ;
+    z-index: 100;
+    opacity: 100%;
+  }
+
+  .fieldset__error--inactive {
     font-size: 1.2em;
     margin-top: 5px;
     display: none;
-    color: #792e1b;
+    color: #214631;
     font-weight: 600;
   }
 
   .fieldset__error--active {
+    font-size: 1.2em;
+    margin-top: 5px;
     display: block;
+    color: #214631;
+    font-weight: 600;
   }
 
 

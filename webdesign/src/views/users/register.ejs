@@ -12,83 +12,55 @@
     <main class="mainForms">
       <form class="form" action="/users/save" method="POST" enctype="multipart/form-data">
         <h3 class="form__h3">Crea tu cuenta</h3>
-        <fieldset class="form__fieldset" id="group__email">
-          <% if (locals.errors && errors.email) { %>
-            <div>
-              <p class="form__p form__p--error form__p--errorRegister">
-                <%= errors.email.msg %>
-              </p>
-            </div>
-            <% } %> 
-            <% if (locals.errors && errors.password) { %>
-            <div>
-              <p class="form__p form__p--error form__p--errorRegister">
-                <%= errors.password.msg %>
-              </p>
-            </div>
-            <% } %>
-            <% if (locals.errors && errors.passwordConfirm) { %>
-              <div>
-                <p class="form__p form__p--error form__p--errorRegister">
-                  <%= errors.passwordConfirm.msg %>
-                </p>
-              </div>
-              <% } %>        
 
+        <fieldset class="form__fieldset" id="group__email">
             <label class="fieldset__label" for="email">Email</label>
-            <div class="fieldset__group">
-              <input
-                class="fieldset__input email"
-                type="email"
-                name="email"
-                id="email"
-              />
-              <i class="fieldset__validation-status--inactive fas fa-times-circle"></i>
+            <div class="fieldset__group">         
+            <input class="fieldset__input" type="email" name="email" id="email" value="<%= locals.old && old.email %>"/>
+            <i class="fieldset__validation-status--inactive fas fa-times-circle"></i>
             </div>
             <p class="fieldset__error--inactive">El email debe ser válido</p>
+            <!--Enviamos el mensaje de error al usuario-->
+            <% if (locals.errors && errors.email) { %>
+              <p class="form__p form__p--error"><%= errors.email.msg %></p>
+            <% } %>
         </fieldset>
 
-          <fieldset class="form__fieldset form__fieldset--forgetPass" id="group__password">
-            <label class="fieldset__label" for="password">Contraseña</label>
-            <div class="fieldset__group">
-              <input
-                class="fieldset__input"
-                type="password"
-                name="password"
-                id="password"
-              />
-              <i class="fieldset__validation-status--inactive fas fa-times-circle"></i>
-            </div>
-            <p class="fieldset__error--inactive">La contraseña debe tener entre 6 y 12 caracteres</p>
-          </fieldset> 
-
-          <fieldset class="form__fieldset form__fieldset--forgetPass" id="group__passwordConfirm">
-            <label class="fieldset__label" for="passwordConfirm">Confirmar Contraseña</label>
-            <div class="fieldset__group">
-              <input
-                class="fieldset__input"
-                type="password"
-                name="passwordConfirm"
-                id="passwordConfirm"
-              />
-              <i class="fieldset__validation-status--inactive fas fa-times-circle"></i>
-            </div>
-            <p class="fieldset__error--inactive">Prueba</p>
-          </fieldset> 
-
-          
-          
-       
-
+        <fieldset class="form__fieldset" id="group__password">
+          <label class="fieldset__label" for="password">Contraseña</label>
+          <div class="fieldset__group">
+          <input
+            class="fieldset__input"
+            type="password"
+            name="password"
+            id="password"
+          />
+          <i class="fieldset__validation-status--inactive fas fa-times-circle"></i>
+          </div>
+          <p class="fieldset__error--inactive">La contraseña debe tener entre 6 y 12 caracteres</p>
+          <!--Enviamos el mensaje al usuario-->
+          <% if (locals.errors && errors.password) { %>
+            <p class="form__p form__p--error"><%= errors.password.msg %></p>
+        <% } %>
+        </fieldset>
         
-
-
+        <fieldset class="form__fieldset" id="group__passwordConfirm">
+          <label class="fieldset__label" for="passwordConfirm">Confirmar contraseña</label>
+          <div class="fieldset__group">
+          <input
+            class="fieldset__input"
+            type="password"
+            name="passwordConfirm"
+            id="passwordConfirm"
+          />
+          <i class="fieldset__validation-status--inactive fas fa-times-circle"></i>
+          </div>
+          <p class="fieldset__error--inactive">Estamos probando si funciona las contraseñas</p>
           <!--Enviamos el mensaje al usuario-->
           <% if (locals.errors && errors.passwordConfirm) { %>
             <p class="form__p form__p--error"><%= errors.passwordConfirm.msg %></p>
         <% } %>
         </fieldset>
-        
         <fieldset class="form__fieldset">
           <label class="fieldset__label" for="image">Imagen de perfil</label>
           <input class="fieldset__input" type="file" name="avatar" id="image">
@@ -107,7 +79,7 @@
 
     <%- include('../partials/footer') %>
     
-    <script src="/validFront/validFrontLogin.js"></script>
+    <script src="/validFront/validFrontRegister.js"></script>
 
 
   </body>

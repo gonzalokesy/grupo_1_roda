@@ -2,7 +2,6 @@
 const expressions = {
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password: /^.{6,12}$/, // 6 a 12 digitos.
-    passwordConfirm: /^.{6,12}$/, // 6 a 12 digitos.
 };
 
 // Creamos un objeto para luego confirmar si hay errores
@@ -24,13 +23,14 @@ window.addEventListener("load", function () {
     const validForm = (e) => {
         switch (e.target.name) {
             case "email":
-                validField(expressions.email, e.target, "email", email);
+                validField(expressions.email, e.target, "email");
                 break;
             case "password":
-                validField(expressions.password, e.target, "password", password);
+                validField(expressions.password, e.target, "password");
+                validFieldPasswordConfirm();
                 break;
             case "passwordConfirm":
-                validFieldPasswordConfirm(expressions.passwordConfirm, e.target, "passwordConfirm", passwordConfirm);
+                validFieldPasswordConfirm();
                 break;
         }
     }
@@ -67,7 +67,16 @@ window.addEventListener("load", function () {
                 document.querySelector(`#group__passwordConfirm i`).classList.remove("fa-check-circle");
                 document.querySelector(`#group__passwordConfirm i`).classList.add("fa-times-circle");
                 document.querySelector(`#group__passwordConfirm p`).classList.remove("fieldset__error--inactive");
-                document.querySelector(`#group__passwordConfirm p`).classList.add("fieldset__error--active");                
+                document.querySelector(`#group__passwordConfirm p`).classList.add("fieldset__error--active");
+                fields.password = false;                
+            }else{
+                document.querySelector(`#group__passwordConfirm i`).classList.remove("fieldset__validation-status--inactive");
+                document.querySelector(`#group__passwordConfirm i`).classList.add("fieldset__validation-status--active--correct");
+                document.querySelector(`#group__passwordConfirm i`).classList.add("fa-check-circle");
+                document.querySelector(`#group__passwordConfirm i`).classList.remove("fa-times-circle");
+                document.querySelector(`#group__passwordConfirm p`).classList.add("fieldset__error--inactive");
+                document.querySelector(`#group__passwordConfirm p`).classList.remove("fieldset__error--active");
+                fields.password = true;   
             }
         }
     

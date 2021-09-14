@@ -346,7 +346,7 @@
     font-size: 1.5em ;
   }
 
-  .fieldset__validation-status--active--correct {
+  .fieldset__validation-status--active--correct{
     font-size: 1.5em ;
   }
 
@@ -357,7 +357,4 @@
   .fieldset__error--active {
     font-size: 1.2em;
   }
-
-
-
 }

@@ -13,10 +13,14 @@
         <main class="mainForms">
             <form class="form" action="/products/save" method="POST" enctype="multipart/form-data">
                 <h3 class="form__h3">Creación de producto</h3>
-                <fieldset class="form__fieldset">
+                <fieldset class="form__fieldset" id="group__name">
                     <label class=fieldset__label for="name">Nombre del producto</label>
+                    <div class="fieldset__group">
                     <input class="fieldset__input" type="text" name="name" id="name"
                         value="<%= locals.old && old.name %>">
+                        <i class="fieldset__validation-status--inactive"></i>
+                    </div>
+                    <p class="fieldset__error--inactive"></p>
                     <!--Enviamos el mensaje de error al usuario-->
                     <% if (locals.errors && errors.name) { %>
                         <p class="form__p form__p--error">
@@ -24,10 +28,14 @@
                         </p>
                         <% } %>
                 </fieldset>
-                <fieldset class="form__fieldset">
+                <fieldset class="form__fieldset" id="group__description">
                     <label class=fieldset__label for="description">Descripción</label>
+                    <div class="fieldset__group">
                     <textarea class="fieldset__textarea" name="description" id="description" cols="30"
                         rows="10"><%= locals.old && old.description %></textarea>
+                        <i class="fieldset__validation-status--inactive"></i>
+                    </div>
+                    <p class="fieldset__error--inactive"></p>                    
                     <% if (locals.errors && errors.description) { %>
                         <p class="form__p form__p--error">
                             <%= errors.description.msg %>

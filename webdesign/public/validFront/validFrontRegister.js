@@ -8,7 +8,6 @@ const expressions = {
 const fields = {
     email: false,
     password: false,
-    passwordConfirm: false,
     avatar:false
 }
 
@@ -32,6 +31,9 @@ window.addEventListener("load", function () {
             case "passwordConfirm":
                 validFieldPasswordConfirm();
                 break;
+                case "avatar":
+                    validAvatar();
+                    break;
         }
     }
 
@@ -80,6 +82,19 @@ window.addEventListener("load", function () {
             }
         }
     
+        //Validando Avatar
+
+        const validAvatar = function(){
+            let avatarForm = document.querySelector('#image');
+            if(avatarForm !== null){
+                fields.avatar = true
+            }else{                
+                fields.avatar = false
+            }
+        }
+
+        const validTerm = document.getElementById('termCondition');
+
         // Ejecución en cada input en los eventos keyup y blur
         inputs.forEach((input) => {
             input.addEventListener('keyup', validForm);
@@ -88,10 +103,11 @@ window.addEventListener("load", function () {
     
         // Prevenimos que el formulario no se envíe hasta que esté completamente correcto
         form.addEventListener("submit", function (e) {
-            if (fields.email && fields.password) {
+            if (fields.email && fields.password && fields.avatar && validTerm.checked) {
                 form.submit();
             } else {
                 e.preventDefault();
+                alert('Verifica que todos los campos esten correctos y que hayas cargado una imagen')
             }
         });
     

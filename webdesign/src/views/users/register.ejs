@@ -55,7 +55,7 @@
           />
           <i class="fieldset__validation-status--inactive fas fa-times-circle"></i>
           </div>
-          <p class="fieldset__error--inactive">Estamos probando si funciona las contraseñas</p>
+          <p class="fieldset__error--inactive">Deben coincidir las contraseñas</p>
           <!--Enviamos el mensaje al usuario-->
           <% if (locals.errors && errors.passwordConfirm) { %>
             <p class="form__p form__p--error"><%= errors.passwordConfirm.msg %></p>

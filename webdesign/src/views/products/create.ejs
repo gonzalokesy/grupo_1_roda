@@ -5,6 +5,7 @@
     <title>Crear producto</title>
     <%- include('../partials/head') %>
         <link rel="stylesheet" href="/css/productsForms.css" />
+        <link rel="stylesheet" href="/css/usersForms.css" />
 </head>
 
 <body class="body">
@@ -16,11 +17,11 @@
                 <fieldset class="form__fieldset" id="group__name">
                     <label class=fieldset__label for="name">Nombre del producto</label>
                     <div class="fieldset__group">
-                    <input class="fieldset__input" type="text" name="name" id="name"
-                        value="<%= locals.old && old.name %>">
-                        <i class="fieldset__validation-status--inactive"></i>
+                        <input class="fieldset__input" type="text" name="name" id="name"
+                            value="<%= locals.old && old.name %>">
+                        <i class="fieldset__validation-status--inactive fas fa-times-circle"></i>
                     </div>
-                    <p class="fieldset__error--inactive"></p>
+                    <p class="fieldset__error--inactive">Debe ingresar el nombre del producto</p>
                     <!--Enviamos el mensaje de error al usuario-->
                     <% if (locals.errors && errors.name) { %>
                         <p class="form__p form__p--error">
@@ -31,11 +32,11 @@
                 <fieldset class="form__fieldset" id="group__description">
                     <label class=fieldset__label for="description">Descripción</label>
                     <div class="fieldset__group">
-                    <textarea class="fieldset__textarea" name="description" id="description" cols="30"
-                        rows="10"><%= locals.old && old.description %></textarea>
-                        <i class="fieldset__validation-status--inactive"></i>
+                        <textarea class="fieldset__textarea" name="description" id="description" cols="30"
+                            rows="10"><%= locals.old && old.description %></textarea>
+                        <i class="fieldset__validation-status--inactive fas fa-times-circle"></i>
                     </div>
-                    <p class="fieldset__error--inactive"></p>                    
+                    <p class="fieldset__error--inactive">Debe ingresar una descripción</p>
                     <% if (locals.errors && errors.description) { %>
                         <p class="form__p form__p--error">
                             <%= errors.description.msg %>
@@ -79,10 +80,14 @@
                         <% } %>
                 </fieldset>
 
-                <fieldset class="form__fieldset">
+                <fieldset class="form__fieldset" id="group__quantity">
                     <label class=fieldset__label for="name">Cantidad</label>
-                    <input class="fieldset__input" type="number" name="quantity" id="quantity"
-                        value="<%= locals.old && old.quantity %>">
+                    <div class="fieldset__group">
+                        <input class="fieldset__input" type="number" name="quantity" id="quantity"
+                            value="<%= locals.old && old.quantity %>">
+                        <i class="fieldset__validation-status--inactive fas fa-times-circle"></i>
+                    </div>
+                    <p class="fieldset__error--inactive">Debe ingresar la cantidad</p>
                     <% if (locals.errors && errors.quantity) { %>
                         <p class="form__p form__p--error">
                             <%= errors.quantity.msg %>
@@ -90,10 +95,14 @@
                         <% } %>
                 </fieldset>
 
-                <fieldset class="form__fieldset">
+                <fieldset class="form__fieldset" id="group__price">
                     <label class="fieldset__label" for="price">Precio</label>
-                    <input class="fieldset__input fieldset__input--price" name="price" id="price" type="number" step="any"
-                        value="<%= locals.old && old.price %>">
+                    <div class="fieldset__group">
+                        <input class="fieldset__input fieldset__input--price" name="price" id="price" type="number"
+                            step="any" value="<%= locals.old && old.price %>">
+                        <i class="fieldset__validation-status--inactive fas fa-times-circle"></i>
+                    </div>
+                    <p class="fieldset__error--inactive">Debe ingresar el precio</p>
                     <% if (locals.errors && errors.price) { %>
                         <p class="form__p form__p--error">
                             <%= errors.price.msg %>
@@ -105,6 +114,7 @@
         </main>
 
         <%- include('../partials/footer') %>
+            <script src="/validFront/validFrontCreate.js"></script>
 </body>
 
 </html>

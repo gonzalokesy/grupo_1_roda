@@ -1,7 +1,7 @@
 // Creamos un objeto para luego confirmar si hay errores
 const expressions = {
-    name: null,
-    description: null,
+    name: /[a-z]/, // Todos los caracteres
+    description: /[a-z]/, // Todos los caracteres
     quantity: /^\d+$/, // Números enteros
     price: /^[+]?([1-9][0-9]*(?:[\.][0-9]*)?|0*\.0*[1-9][0-9]*)(?:[eE][+-][0-9]+)?$/ // Números positivos decimales
 };
@@ -21,6 +21,8 @@ const description = document.getElementById("description");
 // Inicio de la carga del sitio
 window.addEventListener("load", function () { 
 
+    console.log(description)
+
     // Switch donde se valida cada campo
     const validForm = (e) => {
         switch (e.target.name) {
@@ -28,7 +30,7 @@ window.addEventListener("load", function () {
                 validField(expressions.name, e.target, "name");
                 break;
             case "description":
-                validField(expressions.description, e.target, "descrption");
+                validField(expressions.description, e.target, "description");
                 break;
             case "quantity":
                 validField(expressions.quantity, e.target, "quantity");
@@ -68,10 +70,8 @@ window.addEventListener("load", function () {
         });
 
         // Ejecución en textarea los eventos keyup y blur
-        description.forEach((input) => {
-            input.addEventListener('keyup', validForm);
-            input.addEventListener('blur', validForm);
-        });
+            description.addEventListener('keyup', validForm);
+            description.addEventListener('blur', validForm);
     
         // Prevenimos que el formulario no se envíe hasta que esté completamente correcto
         form.addEventListener("submit", function (e) {

@@ -158,7 +158,7 @@
   margin-left: 0;
 }
 
-/* Estilos de errores */
+/* Estilos de validaciones */
 .fieldset__group {
   position: relative;
 }
@@ -333,7 +333,7 @@
     margin: 0px auto;
   }
 
-  /* Estilos de errores */
+  /* Estilos de validaciones */
   .fieldset__group {
     position: relative;
   }

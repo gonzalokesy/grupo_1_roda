@@ -53,3 +53,6 @@ app.use("/products", productsRoutes);
 const usersRoutes = require("./routes/usersRoutes");
 app.use("/users", usersRoutes);
 
+const apisRoutes = require("./routes/apisRoutes");
+app.use("/apis", apisRoutes);
+

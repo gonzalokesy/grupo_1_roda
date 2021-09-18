@@ -27,7 +27,8 @@ const diskStorage = multer.diskStorage( {
 const upload = multer({storage:diskStorage});
 
 // Rutas a lista general de productos
-router.get("/index", productsController.index);
+router.get("/indexBikes", productsController.indexBikes);
+router.get("/indexAccesories", productsController.indexAccesories);
 //router.get("/indexAccessories", productsController.indexAccessories); ESTO NO VA
 
 // Rutas a descripción de cada producto

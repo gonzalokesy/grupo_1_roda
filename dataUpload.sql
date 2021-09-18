@@ -1,24 +1,27 @@
 INSERT INTO categories (id, name)
-VALUES (1, 'accessory');
+VALUES (1, 'Urbana');
 
 INSERT INTO categories (id, name)
-VALUES (2, 'urban');
+VALUES (2, 'Paseo');
 
 INSERT INTO categories (id, name)
-VALUES (3, 'ride');
+VALUES (3, 'Seguridad');
+
+INSERT INTO categories (id, name)
+VALUES (4, 'Complemento');
 
 
 INSERT INTO colors (id, name, valueColor)
-VALUES (1, 'beige', 'rgb(207, 185, 151)');
+VALUES (1, 'Beige', 'rgb(207, 185, 151)');
 
 INSERT INTO colors (id, name, valueColor)
-VALUES (2, 'waterGreen', 'rgb(84, 201, 130)');
+VALUES (2, 'Verde agua', 'rgb(84, 201, 130)');
 
 INSERT INTO colors (id, name, valueColor)
-VALUES (3, 'black', 'rgb(30, 30, 30)');
+VALUES (3, 'Negro', 'rgb(30, 30, 30)');
 
 INSERT INTO colors (id, name, valueColor)
-VALUES (4, 'pink', 'rgb(255, 192, 203)');
+VALUES (4, 'Rosa', 'rgb(255, 192, 203)');
 
 
 INSERT INTO users (id, email, password, image)
@@ -41,19 +44,19 @@ VALUES (6, 'vicente.macchione1@gmail.com', '$2a$10$.WYxwyQqUishb1VQi6hHs.NEu7CY.
 
 
 INSERT INTO products (id, name, description, image, category_id, quantity, price)
-VALUES (1, 'Bicicleta 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625761759733.jpg", 3, DEFAULT, 50000);
+VALUES (1, 'Bicicleta 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625761759733.jpg", 1, DEFAULT, 50000);
 
 INSERT INTO products (id, name, description, image, category_id, quantity, price)
 VALUES (2, 'Bicicleta 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625761820052.jpg", 2, DEFAULT, 60000);
 
 INSERT INTO products (id, name, description, image, category_id, quantity, price)
-VALUES (3, 'Accesorio 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625762294167.jpg", 1, 2, 500);
+VALUES (3, 'Accesorio 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625762294167.jpg", 3, 2, 500);
 
 INSERT INTO products (id, name, description, image, category_id, quantity, price)
-VALUES (4, 'Accesorio 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625762334793.jpg", 1, 7, 700);
+VALUES (4, 'Accesorio 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625762334793.jpg", 3, 7, 700);
 
 INSERT INTO products (id, name, description, image, category_id, quantity, price)
-VALUES (5, 'Accesorio 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625762372240.jpg", 1, 5, 1000);
+VALUES (5, 'Accesorio 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', "gallery-1625762372240.jpg", 4, 5, 1000);
 
 
 INSERT INTO products_colors (id, product_id, color_id)

@@ -1,4 +1,5 @@
-let db = require("../database/models/index");
+const db = require("../database/models/index");
+const Op = db.Sequelize.Op
 const { validationResult } = require('express-validator');
 
 const productsController = {
@@ -11,8 +12,34 @@ const productsController = {
 
     },
 
+    indexBikes: (req, res) => {
+        db.Product.findAll({
+            where: {
+                category_id: {
+                    [Op.in]: [1,2]
+                }
+            }
+        })
+            .then((product) => {
+                res.render("products/indexBikes", { product: product })
+            }) 
+    },
+
+    indexAccesories: (req, res) => {
+        db.Product.findAll({
+            where: {
+                category_id: {
+                    [Op.in]: [3,4]
+                }
+            }
+        })
+            .then((product) => {
+                res.render("products/indexAccesories", { product: product })
+            }) 
+    },
+
     show: function (req, res) {
-        db.Product.findByPk(req.params.id, { include: [{ association: "colores" }, { association: "categoria" }] })
+        db.Product.findByPk(req.params.id, { include: [{ association: "colors" }, { association: "category" }] })
             .then((product) => {
                 res.render("products/show", { product: product })
             })

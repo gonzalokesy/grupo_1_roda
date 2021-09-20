@@ -41,7 +41,14 @@ const apisController = {
             attributes: {
                 exclude: ["price", "image", "quantity"]
             }
-        })
+        });
+
+        const countByCategory = await db.Product.findAll(
+            {
+                include: ["category"],
+                attributes: ['category_id', [sequelize.fn('COUNT', sequelize.col('category_id')), 'TotalCategory']],
+                group: ['category_id']
+            });
 
         const productsDetail = products.map (function(pd) {
             return {
@@ -50,12 +57,14 @@ const apisController = {
                 description: pd.description,
                 category: pd.category,
                 colors: pd.colors,
-                detail: "http://localhost:3030/apis/products/" + pd.id
+                detail: "http://localhost:3030/apis/products/" + pd.id,
             } 
         })
-
-        const count = await db.Product.findAll({ group: "name" });
-        return res.json(count)
+        return res.json({
+            count: products.length,
+            countByCategory: countByCategory,
+            products: productsDetail
+        })
     },
 
     showProducts: async (req, res) => {

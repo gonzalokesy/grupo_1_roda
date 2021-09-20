@@ -36,12 +36,35 @@ const apisController = {
     },
 
     listProducts: async (req, res) => {
-        const products = await db.Product.findAll()
-        return res.json(products)
+        const products = await db.Product.findAll({
+            include: ["colors", "category"],
+            attributes: {
+                exclude: ["price", "image", "quantity"]
+            }
+        })
+
+        const productsDetail = products.map (function(pd) {
+            return {
+                id: pd.id,
+                name: pd.name,
+                description: pd.description,
+                category: pd.category,
+                colors: pd.colors,
+                detail: "http://localhost:3030/apis/products/" + pd.id
+            } 
+        })
+
+        const count = await db.Product.findAll({ group: "name" });
+        return res.json(count)
     },
 
     showProducts: async (req, res) => {
-       
+        const products = await db.Product.findByPk(req.params.id,{
+            include: ["colors", "category"]
+        })
+        return res.json({
+            data: products,
+        })
     }, 
 
 }

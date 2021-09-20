@@ -1,6 +1,6 @@
 const db = require ('../database/models/index');
 
- module.exports = async (req, res, next) => {
+module.exports = async (req, res, next) => {
     res.locals.isLogged = false;
     let emailInCookie = req.cookies.userEmail;
     if (emailInCookie != undefined){
@@ -16,7 +16,6 @@ const db = require ('../database/models/index');
     if (req.session.userLogged) {
         res.locals.isLogged = true;
     }
-   
     next();
 }
 

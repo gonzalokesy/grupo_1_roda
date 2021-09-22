@@ -1,6 +1,10 @@
 //Requerir express
 const express = require("express");
 const app = express();
+const cors = require('cors')
+
+//CORS
+app.use(cors())
 
 //Express Session 
 const session = require("express-session");

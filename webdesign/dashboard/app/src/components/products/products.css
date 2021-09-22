@@ -1,0 +1,23 @@
+/*Estilos: 
+    Extra-light 200
+    Light 300
+    Regular 400
+    Medium 500
+    Semi-bold 600
+    Bold 700
+*/
+
+/* Paleta de colores: 
+    marron oscuro 5a1807
+    verde agua 4c956c
+    marron claro eabe7c
+    crema ece4b7
+*/
+
+div{
+    background-color: #eabe7c;
+    border: solid 1px #5a1807 ;
+    width: 100%;
+    align-items: center;
+    
+}

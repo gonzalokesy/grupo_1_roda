@@ -111,13 +111,6 @@
   color: #5a1807;
   background-color: #ece4b7;
 }
-.formToDelete {
-  position: relative;
-}
-.form__button--delete {
-  position: absolute;
-  top: 30%;
-}
 
 .form__p {
   color: #ece4b7;

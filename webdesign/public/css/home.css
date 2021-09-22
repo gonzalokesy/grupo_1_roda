@@ -45,8 +45,8 @@
 .sectionHome__figure {
     width: 100%;
     margin-bottom: -4px;
-    margin-right: -2px;
-    margin-left: -2px;
+    margin-right: -3px;
+    margin-left: -3px;
 }
 
 /* Slider */
@@ -90,7 +90,6 @@
 
 .figure__img {
     width: 100%;
-    margin: -4 -4 -4px;
     object-fit: cover;
 }
 

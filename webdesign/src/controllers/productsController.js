@@ -38,11 +38,15 @@ const productsController = {
             }) 
     },
 
-    show: function (req, res) {
-        db.Product.findByPk(req.params.id, { include: [{ association: "colors" }, { association: "category" }] })
-            .then((product) => {
-                res.render("products/show", { product: product })
-            })
+    show: async (req, res) => { 
+        try {
+            const product = await db.Product.findByPk(req.params.id, 
+                { include: [{ association: "colors" }, { association: "category" }] })
+                res.render("products/show", { product: product, user: req.session.userLogged })
+            }catch (error) {
+                return res.send(error);
+            }
+        
     },
 
     create: function (req, res) {

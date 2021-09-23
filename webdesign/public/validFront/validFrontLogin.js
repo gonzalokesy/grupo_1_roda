@@ -21,10 +21,10 @@ window.addEventListener("load", function () {
     const validForm = (e) => {
         switch (e.target.name) {
             case "email":
-                validField(expressions.email, e.target, "email", email);
+                validField(expressions.email, e.target, "email");
                 break;
             case "password":
-                validField(expressions.password, e.target, "password", password);
+                validField(expressions.password, e.target, "password");
                 break;
         }
     }
